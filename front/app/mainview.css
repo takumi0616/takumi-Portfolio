@@ -1,0 +1,49 @@
+.wrapper {
+	position: relative;
+	width: 100%;
+}
+
+/* Scroll Indicator */
+.scroll-indicator{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	margin-left: 45%;
+	top: 0;
+	z-index: 1;
+	height: 100%;
+	width: 50%;
+	text-align: center;
+	transform: translateZ(0);
+}
+
+/* Content */
+.content {
+	color: black;
+	margin-left: 15%;
+	
+	h1 {
+		font-size: 48px;
+	}
+	
+	p{
+		line-height: 1.5;
+		font-size: 16px;
+		margin: 1em 0;
+	}
+	
+	a {
+		color: black;
+	}
+}
+
+.content section {
+	opacity: 0; /* Set initial opacity to 0 */
+	font-family: 'Zen Kurenaido', sans-serif;
+	margin-bottom: 45vh; 
+	margin-top:45vh;
+}
+  
+  
