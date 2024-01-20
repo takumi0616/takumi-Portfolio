@@ -8,9 +8,13 @@ export default function mainview() {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-  
-    const sections = gsap.utils.toArray('.content section');
-    sections.forEach((section) => {
+
+    function updateAnimations() {
+      const isLandscape = window.innerWidth < window.innerHeight;
+      const startTrigger = isLandscape ? "bottom bottom" : "center center";
+
+      const sections = gsap.utils.toArray('.content section:not(.no-animation)');
+      sections.forEach((section) => {
         const el = section as Element;
         gsap.fromTo(el, 
           { opacity: 0 },
@@ -20,21 +24,27 @@ export default function mainview() {
             ease: 'power3.out',
             scrollTrigger: {
               trigger: el,
-              start: "center center", 
-              end: "center center", 
-              toggleActions: 'play none none none'
+              start: startTrigger,
+              end: "center center",
+              toggleActions: 'play none none reverse',
+              invalidateOnRefresh: true 
             }
           }
         );
       });
-      
+    }
+
+    updateAnimations();
+    window.addEventListener('resize', updateAnimations);
+
+    return () => {
+      window.removeEventListener('resize', updateAnimations);
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill()); 
+    };
   }, []);
   
   return (
       <div className="wrapper">
-      <style>
-        @import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
-      </style>
 
         <div className="scroll-indicator">
 
@@ -44,9 +54,9 @@ export default function mainview() {
 
         <div className="content">
 
-          <section>
-            <h1>髙 須 賀 匠</h1>
-          </section>
+        <section className="no-animation">
+          <h1>髙 須 賀 匠</h1>
+        </section>
           
           <section>
             <h1>髙 須 賀 匠</h1>

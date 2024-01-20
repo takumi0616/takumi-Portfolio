@@ -13,14 +13,16 @@ interface ThreeJsComponentProps {
 const ThreeJsComponent: React.FC<ThreeJsComponentProps> = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [canvasSize, setCanvasSize] = useState({
-    width: window.innerWidth ,
-    height: window.innerWidth * 0.5
+    width: 0 ,
+    height: 0
   });
 
   // ウィンドウサイズに応じてキャンバスサイズを更新する関数
   const updateCanvasSize = () => {
-    const width = window.innerWidth * 0.5; // ウィンドウ幅の半分
-    const height = width; // 幅と同じ高さ
+    // 縦横比がスマホなどのような時にウィンドウ幅の大きさにする
+    const isLandscape = window.innerWidth < window.innerHeight;
+    const width = isLandscape ? window.innerWidth * 0.7 : window.innerWidth * 0.5;
+    const height = width;
     setCanvasSize({ width, height });
   };
 
@@ -238,7 +240,7 @@ const ThreeJsComponent: React.FC<ThreeJsComponentProps> = () => {
       y: "+=10", // y軸を中心に10ラジアン回転
       ease: "none",
       scrollTrigger: {
-        trigger: "window", // トリガーとなる要素のクラス
+        trigger: "body", // トリガーとなる要素のクラス
         scrub: true // スクロール位置に応じてアニメーション
       }
     });

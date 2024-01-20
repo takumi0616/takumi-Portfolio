@@ -23,6 +23,7 @@
 .content {
 	color: black;
 	margin-left: 15%;
+	margin-right: 50vw;
 	
 	h1 {
 		font-size: 48px;
@@ -45,5 +46,22 @@
 	margin-bottom: 45vh; 
 	margin-top:45vh;
 }
+
+.content section.no-animation {
+	opacity: 1; /* アニメーションなしのセクションは常に表示 */
+}  
+
+/* 画面が横向きの場合（幅が縦より短い）に適用されるスタイル */
+@media screen and (max-aspect-ratio: 1/1) {
+	.scroll-indicator {
+	  margin-left: 0; /* アニメーションオブジェクトを左端に移動 */
+	  width: 100%; /* 幅を全体に拡大 */
+	  height: 50%; /* 高さを半分に */
+	}
   
-  
+	.content {
+	  margin-left: 10%;
+	  margin-right: 0;
+	  margin-top: 60vh; /* テキストを画面下部に移動 */
+	}
+}
