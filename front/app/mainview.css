@@ -42,7 +42,6 @@
 
 .content section {
 	opacity: 0; /* Set initial opacity to 0 */
-	font-family: 'Zen Kurenaido', sans-serif;
 	margin-bottom: 45vh; 
 	margin-top:45vh;
 }

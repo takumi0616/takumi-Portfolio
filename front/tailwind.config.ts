@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       // カスタムフォントの設定
       fontFamily: {
-        sans: ['Zen Kurenaido', 'sans-serif'],
+        zenKurenaido: ['var(--font-zenKurenaido)'],
       },
       // カスタムカラーの設定
       colors: {
