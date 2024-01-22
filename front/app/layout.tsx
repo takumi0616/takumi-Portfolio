@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${zenKurenaido.variable}`}>
-      <body>{children}</body>
+      <body className={'font-zenKurenaido'}>{children}</body>
     </html>
   );
 }

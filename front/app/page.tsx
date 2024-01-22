@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
 import React from 'react';
-import Mainview from './mainview';
+import MainView from './mainview';
 
-export default function mainview() {
-  return(
+export default function Home() {
+  return (
     <div>
-      <Mainview />
+      <MainView />
     </div>
   );
 }
