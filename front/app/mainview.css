@@ -70,7 +70,17 @@
 
   .content {
     margin-right: 0;
-    margin-top: 50%;
     width: 100%;
+    margin-top: 0;
+  }
+
+  .textArea {
+    margin-top: 0;
+  }
+
+  .content section {
+    opacity: 0; /* Set initial opacity to 0 */
+    margin-top: 0;
+    margin-bottom: 55vh;
   }
 }

@@ -1,0 +1,88 @@
+.work-card {
+  align-items: center;
+  width: 70vw;
+  overflow: hidden;
+  justify-content: center; /* コンテンツを中央揃えにする */
+}
+
+.container {
+  display: flex;
+}
+
+.work-image img {
+  object-fit: cover;
+}
+
+.work-text {
+  margin-left: auto;
+  width: 45%;
+}
+
+.work-text > * {
+  margin-top: 1em; /* 上部マージン */
+  margin-bottom: 1em; /* 下部マージン */
+}
+
+/* 最初の子要素の上部マージンを除去 */
+.work-text > *:first-child {
+  margin-top: 0;
+}
+
+/* 最後の子要素の下部マージンを除去 */
+.work-text > *:last-child {
+  margin-bottom: 0;
+}
+
+.work-text h3 {
+  font-size: 36px;
+}
+
+.button-text {
+  margin-right: 10px;
+}
+
+.git-link-button {
+  display: flex; /* アイコンとテキストを横に並べる */
+  align-items: center; /* 中央揃えにする */
+  justify-content: center; /* コンテンツを中央揃えにする */
+  padding: 8px 12px; /* ボタンの内側の余白 */
+  border: 1px solid #333; /* ボタンの境界線 */
+  border-radius: 4px; /* 境界線の角を丸くする */
+  text-decoration: none; /* 下線を無効にする */
+  color: #333; /* テキストの色 */
+  font-size: 16px; /* テキストのサイズ */
+  margin: 10px 0; /* 上下の余白 */
+}
+
+.git-link-button:hover {
+  background-color: #f0f0f0; /* ホバー時の背景色 */
+  color: #000; /* ホバー時のテキスト色 */
+}
+
+.git-link-button svg {
+  margin-right: 10px; /* アイコンの右側の余白 */
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+  .container {
+    flex-direction: column; /* 要素を縦に並べる */
+  }
+
+  .work-image {
+    width: 100%; /* 画像のコンテナの幅を100%に設定 */
+    display: flex; /* flexboxを有効化 */
+    justify-content: center; /* 水平方向の中央揃え */
+  }
+
+  .work-image img {
+    width: 70vw; /* 画像の幅を70%のビューポート幅に設定 */
+    max-width: 100%; /* 最大幅をコンテナの幅に制限 */
+    height: auto; /* 高さを自動調整 */
+    object-fit: cover; /* 画像のアスペクト比を維持 */
+  }
+
+  .work-text {
+    width: 90%;
+    margin: 0 auto;
+  }
+}

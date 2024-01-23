@@ -30,6 +30,7 @@ const ThreeJsComponentBack: React.FC<Props> = () => {
   useEffect(() => {
     // Initial setup for Three.js
     const container = containerRef.current;
+
     if (!container) return;
 
     const camera = new THREE.PerspectiveCamera(
@@ -43,15 +44,6 @@ const ThreeJsComponentBack: React.FC<Props> = () => {
     const scene = new THREE.Scene();
     const group = new THREE.Group();
     scene.add(group);
-
-    //四角の範囲を決める補助線
-    const helper = new THREE.BoxHelper(
-      new THREE.Mesh(new THREE.BoxGeometry(R, R, R))
-    );
-    helper.material.color.setHex(0xffffff);
-    helper.material.blending = THREE.AdditiveBlending;
-    helper.material.transparent = true;
-    group.add(helper);
 
     const segments = MAX_PARTICLE_COUNT * MAX_PARTICLE_COUNT;
     const positions = new Float32Array(segments * 3);
@@ -254,7 +246,7 @@ const ThreeJsComponentBack: React.FC<Props> = () => {
     };
   }, []);
 
-  return <div ref={containerRef} id="container" />;
+  return <div ref={containerRef} id="subContainer" />;
 };
 
 export default ThreeJsComponentBack;
