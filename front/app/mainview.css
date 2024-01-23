@@ -1,0 +1,76 @@
+.content section {
+  opacity: 0; /* Set initial opacity to 0 */
+  margin-top: 45vh;
+  margin-bottom: 55vh;
+}
+
+.content section.no-animation {
+  opacity: 1; /* アニメーションなしのセクションは常に表示 */
+}
+
+.mainContainer {
+  display: flex;
+  position: relative;
+  align-items: start;
+  max-width: 100%;
+}
+
+.content {
+  color: black;
+  width: 50%;
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 48px;
+  }
+
+  p {
+    line-height: 1.5;
+    font-size: 16px;
+    margin: 1em 0;
+  }
+
+  a {
+    color: black;
+  }
+}
+
+.textArea {
+  margin-left: 10vw;
+  margin-right: 5vw;
+}
+
+.stickyThreeJs {
+  position: sticky;
+  top: 0;
+  right: 0;
+}
+
+.stickyThreeJsPadding {
+  padding-top: var(--stickyThreeJsPaddingTop); /* カスタムプロパティを使用 */
+}
+
+/* 画面が横向きの場合（幅が縦より短い）に適用されるスタイル */
+@media screen and (max-aspect-ratio: 1/1) {
+  .mainContainer {
+    flex-direction: column-reverse; /* コンテンツを上に、ThreeJsComponentを下に配置 */
+  }
+
+  .stickyThreeJs {
+    position: sticky; /* sticky ポジションを保持 */
+    top: 0;
+    width: 100%; /* 幅を全体に拡大 */
+  }
+
+  .objectArea {
+    padding-top: 0; /* ウィンドウの縦の長さの4分の1 */
+  }
+
+  .content {
+    margin-right: 0;
+    margin-top: 50%;
+    width: 100%;
+  }
+}
