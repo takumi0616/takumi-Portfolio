@@ -8,24 +8,26 @@ gsap.registerPlugin(ScrollTrigger);
 
 interface ThreeJsComponentProps {
   className?: string;
+  onResize: (width: number, height: number) => void; // サイズ変更時のコールバック
 }
 
-const ThreeJsComponent: React.FC<ThreeJsComponentProps> = () => {
+const ThreeJsComponent: React.FC<ThreeJsComponentProps> = (props) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [canvasSize, setCanvasSize] = useState({
     width: 0,
     height: 0,
   });
 
+  const { onResize } = props;
+
   // ウィンドウサイズに応じてキャンバスサイズを更新する関数
   const updateCanvasSize = () => {
     // 縦横比がスマホなどのような時にウィンドウ幅の大きさにする
     const isLandscape = window.innerWidth < window.innerHeight;
-    const width = isLandscape
-      ? window.innerWidth * 0.7
-      : window.innerWidth * 0.5;
+    const width = isLandscape ? window.innerWidth : window.innerWidth * 0.5;
     const height = width;
     setCanvasSize({ width, height });
+    onResize(width, height); // 親コンポーネントにサイズを通知
   };
 
   // Constants

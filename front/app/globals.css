@@ -2,10 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+body,
+html {
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to right, #eef0f2 30%, #fafaff 70%);
+  background-image: linear-gradient(to right, #eef0f2 30%, #fafaff 80%);
 }

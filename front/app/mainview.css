@@ -1,30 +1,23 @@
-.wrapper {
-  position: relative;
-  width: 100%;
+.content section {
+  opacity: 0; /* Set initial opacity to 0 */
+  margin-top: 45vh;
+  margin-bottom: 55vh;
 }
 
-/* Scroll Indicator */
-.scroll-indicator {
+.content section.no-animation {
+  opacity: 1; /* アニメーションなしのセクションは常に表示 */
+}
+
+.mainContainer {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  margin-left: 45%;
-  top: 0;
-  z-index: 1;
-  height: 100%;
-  width: 50%;
-  text-align: center;
-  transform: translateZ(0);
+  position: relative;
+  align-items: start;
+  max-width: 100%;
 }
 
-/* Content */
 .content {
   color: black;
-  margin-left: 15%;
-  margin-right: 50vw;
-
+  width: 50%;
   h1 {
     font-size: 48px;
   }
@@ -44,27 +37,40 @@
   }
 }
 
-.content section {
-  opacity: 0; /* Set initial opacity to 0 */
-  margin-bottom: 45vh;
-  margin-top: 45vh;
+.textArea {
+  margin-left: 10vw;
+  margin-right: 5vw;
 }
 
-.content section.no-animation {
-  opacity: 1; /* アニメーションなしのセクションは常に表示 */
+.stickyThreeJs {
+  position: sticky;
+  top: 0;
+  right: 0;
+}
+
+.stickyThreeJsPadding {
+  padding-top: var(--stickyThreeJsPaddingTop); /* カスタムプロパティを使用 */
 }
 
 /* 画面が横向きの場合（幅が縦より短い）に適用されるスタイル */
 @media screen and (max-aspect-ratio: 1/1) {
-  .scroll-indicator {
-    margin-left: 0; /* アニメーションオブジェクトを左端に移動 */
+  .mainContainer {
+    flex-direction: column-reverse; /* コンテンツを上に、ThreeJsComponentを下に配置 */
+  }
+
+  .stickyThreeJs {
+    position: sticky; /* sticky ポジションを保持 */
+    top: 0;
     width: 100%; /* 幅を全体に拡大 */
-    height: 50%; /* 高さを半分に */
+  }
+
+  .objectArea {
+    padding-top: 0; /* ウィンドウの縦の長さの4分の1 */
   }
 
   .content {
-    margin-left: 10%;
     margin-right: 0;
-    margin-top: 60vh; /* テキストを画面下部に移動 */
+    margin-top: 50%;
+    width: 100%;
   }
 }
