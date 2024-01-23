@@ -42,7 +42,7 @@ export default function MainView() {
 
     function updateAnimations() {
       const isLandscape = window.innerWidth < window.innerHeight;
-      const startTrigger = isLandscape ? 'top top' : 'center center';
+      const startTrigger = isLandscape ? 'bottom top' : 'center center';
 
       const sections = gsap.utils.toArray(
         '.content section:not(.no-animation)'
