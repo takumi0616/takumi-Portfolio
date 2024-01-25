@@ -124,10 +124,11 @@ export default function MainView() {
           className="sticky top-0 right-0"
           style={{ height: `${mainContainerHeight / 2.2}px` }}
         >
-          <div 
-            className="stickyThreeJsPadding" 
-            style={{ paddingTop: "var(--stickyThreeJsPaddingTop)" }}
-            ref={threeJsRef}>
+          <div
+            className="stickyThreeJsPadding"
+            style={{ paddingTop: 'var(--stickyThreeJsPaddingTop)' }}
+            ref={threeJsRef}
+          >
             <ThreeJsComponent onResize={handleResize} />
           </div>
         </div>
