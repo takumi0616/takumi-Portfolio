@@ -7,7 +7,7 @@ interface WorkCardProps {
   title: string;
   description: string;
   myPart: string;
-  gitUrl: string;
+  gitHubUrl: string;
 }
 
 const WorkCard: React.FC<WorkCardProps> = ({
@@ -15,7 +15,7 @@ const WorkCard: React.FC<WorkCardProps> = ({
   title,
   description,
   myPart,
-  gitUrl,
+  gitHubUrl,
 }) => {
   return (
     <div className="justify-center items-center w-[70vw] overflow-hidden">
@@ -28,7 +28,7 @@ const WorkCard: React.FC<WorkCardProps> = ({
           <p>{description}</p>
           <p>担当箇所：{myPart}</p>
           <a
-            href={gitUrl}
+            href={gitHubUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="git-link-button flex items-center justify-center px-4 py-2 border border-gray-800 rounded text-gray-800 text-lg no-underline hover:bg-[#f0f0f0] hover:text-black"
