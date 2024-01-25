@@ -285,7 +285,7 @@ const ThreeJsComponent: React.FC<ThreeJsComponentProps> = (props) => {
     animate();
 
     gsap.to(group.rotation, {
-      y: '+=10', // y軸を中心に10ラジアン回転
+      y: '+=30', // y軸を中心に10ラジアン回転
       ease: 'none',
       scrollTrigger: {
         trigger: 'body', // トリガーとなる要素のクラス

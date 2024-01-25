@@ -1,5 +1,4 @@
 import React from 'react';
-import './WorkCardComponent.css'; // CSSファイルをインポート
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import { IoLogoGithub } from 'react-icons/io';
 
@@ -19,23 +18,23 @@ const WorkCard: React.FC<WorkCardProps> = ({
   gitUrl,
 }) => {
   return (
-    <div className="work-card">
-      <div className="container">
-        <div className="work-image">
-          <img src={image} alt={title} />
+    <div className="justify-center items-center w-[70vw] overflow-hidden">
+      <div className="flex portrait:flex-col">
+        <div className="portrait:w-full portrait:flex portrait:justify-center">
+          <img src={image} alt={title} className="object-cover portrait:w-full portrait:max-w-full portrait:h-auto" />
         </div>
-        <div className="work-text">
-          <h3>{title}</h3>
+        <div className="ml-auto w-[45%] space-y-4 portrait:w-[95%] portrait:mx-auto flex flex-col justify-between mb-4">
+          <h3 className="text-3xl">{title}</h3>
           <p>{description}</p>
           <p>担当箇所：{myPart}</p>
           <a
             href={gitUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="git-link-button"
+            className="git-link-button flex items-center justify-center px-4 py-2 border border-gray-800 rounded text-gray-800 text-lg no-underline hover:bg-[#f0f0f0] hover:text-black"
           >
-            <IoLogoGithub />
-            <div className="button-text">GitHub</div>
+            <IoLogoGithub className="mr-2.5" />
+            <div className="button-text mr-2.5">GitHub</div>
             <FaExternalLinkAlt />
           </a>
         </div>
