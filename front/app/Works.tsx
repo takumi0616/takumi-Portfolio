@@ -31,7 +31,7 @@ export default function Works({ onOpenModal }: WorksProps) {
               trigger: card,
               start: startTrigger,
               end: endTrigger,
-              toggleActions: 'play none none reverse',
+              toggleActions: 'play none none none',
               invalidateOnRefresh: true,
             },
           }

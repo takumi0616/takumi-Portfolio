@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ThreeJsComponentBack from './ThreeJsBack';
+import ThreeJsComponentBack from './SubCube';
 import Works from './Works';
 import WorkModal from './WorkModal';
 import { WorkCardProps } from './WorkCard';
@@ -16,7 +16,7 @@ export default function SubView() {
   };
 
   return (
-    <div style={{ marginTop: '-300px' }}>
+    <div className="mt-[-300px]">
       <div className="sticky top-0 w-full h-full">
         <ThreeJsComponentBack />
       </div>

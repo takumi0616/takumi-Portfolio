@@ -3,19 +3,24 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 import { IoLogoGithub } from 'react-icons/io';
 import WorkModal from './WorkModal';
 
-export interface WorkCardProps {
+export type WorkCardProps = {
   image: string;
   title: string;
   description: string;
   myPart: string;
   gitHubUrl: string;
-}
+} & { onOpenModal: (work: WorkCardProps) => void };
 
-const WorkCard: React.FC<
-  WorkCardProps & { onOpenModal: (work: WorkCardProps) => void }
-> = ({ image, title, description, myPart, gitHubUrl, onOpenModal }) => {
+const WorkCard: React.FC<WorkCardProps> = ({
+  image,
+  title,
+  description,
+  myPart,
+  gitHubUrl,
+  onOpenModal,
+}) => {
   const handleImageClick = () => {
-    onOpenModal({ image, title, description, myPart, gitHubUrl });
+    onOpenModal({ image, title, description, myPart, gitHubUrl, onOpenModal });
   };
 
   return (

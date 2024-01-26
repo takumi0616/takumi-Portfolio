@@ -19,10 +19,7 @@ const WorkModal: React.FC<WorkModalProps> = ({ title, image, onClose }) => {
       className="fixed inset-0 bg-black bg-opacity-30 z-120 flex justify-center items-center w-screen h-screen top-0 left-0"
       onClick={handleOutsideClick}
     >
-      <div
-        className="bg-white p-6 rounded-lg z-60 relative"
-        style={{ pointerEvents: 'auto' }}
-      >
+      <div className="bg-white p-6 rounded-lg z-60 relative pointer-events-auto">
         <CiCircleRemove
           className="absolute top-4 right-4 text-4xl text-gray-600 cursor-pointer"
           onClick={onClose}

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import ThreeJsComponent from './ThreeJs';
+import ThreeJsComponent from './MainCube';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
