@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ThreeJsComponentBack from './SubCube';
+import SubCube from './SubCube';
 import Works from './Works';
 import WorkModal from './WorkModal';
 import { WorkCardProps } from './WorkCard';
@@ -18,7 +18,7 @@ export default function SubView() {
   return (
     <div className="mt-[-300px]">
       <div className="sticky top-0 w-full h-full">
-        <ThreeJsComponentBack />
+        <SubCube />
       </div>
       <div className="relative w-full h-full overflow-hidden">
         <Works onOpenModal={openModal} />

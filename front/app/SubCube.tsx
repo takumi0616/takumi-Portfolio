@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 type Props = {};
 
-const ThreeJsComponentBack: React.FC<Props> = () => {
+const SubCube: React.FC<Props> = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Constants
@@ -249,4 +249,4 @@ const ThreeJsComponentBack: React.FC<Props> = () => {
   return <div ref={containerRef} id="subContainer" />;
 };
 
-export default ThreeJsComponentBack;
+export default SubCube;

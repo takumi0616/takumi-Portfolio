@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import ThreeJsComponent from './MainCube';
+import MainCube from './MainCube';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
@@ -129,7 +129,7 @@ export default function MainView() {
             style={{ paddingTop: 'var(--stickyThreeJsPaddingTop)' }}
             ref={threeJsRef}
           >
-            <ThreeJsComponent onResize={handleResize} />
+            <MainCube onResize={handleResize} />
           </div>
         </div>
       </div>

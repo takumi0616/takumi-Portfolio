@@ -4,7 +4,7 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { WorkCardProps } from './WorkCard';
 
-interface WorksProps {
+type WorksProps = {
   onOpenModal: (work: WorkCardProps) => void;
 }
 

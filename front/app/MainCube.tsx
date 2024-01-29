@@ -6,12 +6,12 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 // GSAPのプラグインを登録
 gsap.registerPlugin(ScrollTrigger);
 
-interface ThreeJsComponentProps {
+type MainCubeProps = {
   className?: string;
   onResize: (width: number, height: number) => void; // サイズ変更時のコールバック
 }
 
-const ThreeJsComponent: React.FC<ThreeJsComponentProps> = (props) => {
+const MainCube: React.FC<MainCubeProps> = (props) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [canvasSize, setCanvasSize] = useState({
     width: 0,
@@ -327,4 +327,4 @@ const ThreeJsComponent: React.FC<ThreeJsComponentProps> = (props) => {
   );
 };
 
-export default ThreeJsComponent;
+export default MainCube;

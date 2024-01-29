@@ -1,7 +1,7 @@
 import React from 'react';
 import { CiCircleRemove } from 'react-icons/ci';
 
-interface WorkModalProps {
+type WorkModalProps = {
   title: string;
   image: string;
   onClose: () => void;
