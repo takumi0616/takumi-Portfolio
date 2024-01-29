@@ -6,7 +6,7 @@ import { WorkCardProps } from './WorkCard';
 
 type WorksProps = {
   onOpenModal: (work: WorkCardProps) => void;
-}
+};
 
 export default function Works({ onOpenModal }: WorksProps) {
   useEffect(() => {
@@ -48,7 +48,7 @@ export default function Works({ onOpenModal }: WorksProps) {
   }, []);
 
   return (
-    <div>
+    <div className="mb-40">
       <div className="mb-20">
         <h2 className="text-center text-4xl">Works</h2>
       </div>
