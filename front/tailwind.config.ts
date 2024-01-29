@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        'portrait': {'raw': '(min-aspect-ratio: 1/1)'},
+      },
       // カスタムフォントの設定
       fontFamily: {
         zenKurenaido: ['var(--font-zenKurenaido)'],

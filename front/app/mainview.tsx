@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import ThreeJsComponent from './ThreeJsComponent';
-import './mainview.css';
+import MainCube from './MainCube';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
@@ -42,7 +41,7 @@ export default function MainView() {
 
     function updateAnimations() {
       const isLandscape = window.innerWidth < window.innerHeight;
-      const startTrigger = isLandscape ? 'bottom bottom' : 'center center';
+      const startTrigger = isLandscape ? 'bottom top' : 'center center';
 
       const sections = gsap.utils.toArray(
         '.content section:not(.no-animation)'
@@ -84,16 +83,19 @@ export default function MainView() {
 
   return (
     <div>
-      <div className="mainContainer">
-        <div className="content" ref={contentRef}>
-          <div className="textArea">
-            <section className="no-animation">
-              <h1>髙 須 賀 匠</h1>
+      <div className="flex relative items-start max-w-full portrait:flex-col-reverse">
+        <div
+          className="w-1/2 portrait:mr-0 portrait:w-full portrait:mt-0"
+          ref={contentRef}
+        >
+          <div className="content ml-[10vw] mr-[5vw] text-black portrait:mt-0">
+            <section className="no-animation opacity-100 mt-[45vh] mb-[55vh] portrait:mt-0">
+              <h1 className="text-5xl">髙 須 賀 匠</h1>
             </section>
 
-            <section>
-              <h2>髙 須 賀 匠</h2>
-              <p>
+            <section className="opacity-0 mt-[45vh] mb-[55vh] portrait:mt-0 portrait:mb-56">
+              <h2 className="text-5xl">髙 須 賀 匠</h2>
+              <p className="leading-normal text-base my-4">
                 フロントエンジニア/データエンジニア/データサイエンティスト
                 <br />
                 長岡技術科学大学 工学部 情報経営システム工学課程 3年 在学
@@ -102,8 +104,8 @@ export default function MainView() {
               </p>
             </section>
 
-            <section>
-              <p>
+            <section className="opacity-0 mt-[45vh] mb-[55vh]">
+              <p className="leading-normal text-base my-4">
                 大学の学祭の実行委員である情報局「NUTMEG」に所属し、
                 <br />
                 学祭をWebアプリでDXしています。
@@ -119,11 +121,15 @@ export default function MainView() {
         </div>
 
         <div
-          className="stickyThreeJs"
+          className="sticky top-0 right-0"
           style={{ height: `${mainContainerHeight / 2.2}px` }}
         >
-          <div className="stickyThreeJsPadding" ref={threeJsRef}>
-            <ThreeJsComponent onResize={handleResize} />
+          <div
+            className="stickyThreeJsPadding"
+            style={{ paddingTop: 'var(--stickyThreeJsPaddingTop)' }}
+            ref={threeJsRef}
+          >
+            <MainCube onResize={handleResize} />
           </div>
         </div>
       </div>
