@@ -4,6 +4,7 @@ import Works from './Works';
 import WorkModal from './WorkModal';
 import { WorkCardProps } from './WorkCard';
 import Skill from './Skill';
+import Activity from './Activity';
 
 export default function SubView() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,7 +19,7 @@ export default function SubView() {
 
   return (
     <div className="mt-[-300px]">
-      <div className="sticky top-0 w-full h-full">
+      <div className="sticky top-0 w-full h-full z-0">
         <SubCube />
       </div>
       <div className="relative w-full h-full overflow-hidden">
@@ -26,6 +27,9 @@ export default function SubView() {
       </div>
       <div>
         <Skill />
+      </div>
+      <div>
+        <Activity />
       </div>
 
       {isModalOpen && selectedWork && (
