@@ -13,10 +13,6 @@ export default function Works({ onOpenModal }: WorksProps) {
     gsap.registerPlugin(ScrollTrigger);
 
     function updateAnimations() {
-      const isLandscape = window.innerWidth < window.innerHeight;
-      const startTrigger = isLandscape ? 'top top' : 'top bottom';
-      const endTrigger = isLandscape ? 'center center' : 'bottom top';
-
       const workCards = gsap.utils.toArray<Element>('.work-card');
       workCards.forEach((card) => {
         gsap.fromTo(
@@ -29,8 +25,8 @@ export default function Works({ onOpenModal }: WorksProps) {
             ease: 'power3.out',
             scrollTrigger: {
               trigger: card,
-              start: startTrigger,
-              end: endTrigger,
+              start: 'top bottom',
+              end: 'bottom top',
               toggleActions: 'play none none none',
               invalidateOnRefresh: true,
             },
