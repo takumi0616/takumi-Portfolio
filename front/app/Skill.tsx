@@ -59,7 +59,7 @@ export default function Skill() {
         <div className="front w-3/5 mx-auto mb-12">
           <div className="mb-10 flex items-center">
             <div className="flex-grow border-t border-gray-300"></div>
-            <h2 className="text-center text-3xl mx-4">frontend</h2>
+            <h3 className="text-center text-3xl mx-4">frontend</h3>
             <div className="flex-grow border-t border-gray-300"></div>
           </div>
           <div className="flex justify-center space-x-8">
@@ -75,7 +75,7 @@ export default function Skill() {
           <div className="back w-1/3 mx-auto portrait:mb-12">
             <div className="mb-10 flex items-center">
               <div className="flex-grow border-t border-gray-300"></div>
-              <h2 className="text-center text-3xl mx-4">backend</h2>
+              <h3 className="text-center text-3xl mx-4">backend</h3>
               <div className="flex-grow border-t border-gray-300"></div>
             </div>
             <div className="flex justify-center space-x-8">
@@ -87,7 +87,7 @@ export default function Skill() {
           <div className="tools w-2/5 mx-auto">
             <div className="mb-10 flex items-center">
               <div className="flex-grow border-t border-gray-300"></div>
-              <h2 className="text-center text-3xl mx-4">tools</h2>
+              <h3 className="text-center text-3xl mx-4">tools</h3>
               <div className="flex-grow border-t border-gray-300"></div>
             </div>
             <div className="flex justify-center space-x-8">
