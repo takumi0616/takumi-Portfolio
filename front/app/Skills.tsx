@@ -62,7 +62,7 @@ export default function Skill() {
             <h3 className="text-center text-3xl mx-4">frontend</h3>
             <div className="flex-grow border-t border-gray-300"></div>
           </div>
-          <div className="flex justify-center space-x-8">
+          <div className="flex flex-wrap justify-center space-x-2 md:space-x-8 gap-y-8">
             <SkillCard Icon={SiJavascript} skillName="JavaScript" />
             <SkillCard Icon={SiTypescript} skillName="TypeScript" />
             <SkillCard Icon={SiReact} skillName="React" />
@@ -78,7 +78,7 @@ export default function Skill() {
               <h3 className="text-center text-3xl mx-4">backend</h3>
               <div className="flex-grow border-t border-gray-300"></div>
             </div>
-            <div className="flex justify-center space-x-8">
+            <div className="flex flex-wrap justify-center space-x-2 md:space-x-8 gap-y-8">
               <SkillCard Icon={SiRubyonrails} skillName="Ruby on Rails" />
               <SkillCard Icon={SiPython} skillName="Python" />
             </div>
@@ -90,7 +90,7 @@ export default function Skill() {
               <h3 className="text-center text-3xl mx-4">tools</h3>
               <div className="flex-grow border-t border-gray-300"></div>
             </div>
-            <div className="flex justify-center space-x-8">
+            <div className="flex flex-wrap justify-center space-x-2 md:space-x-8 gap-y-8">
               <SkillCard Icon={SiGithub} skillName="Github" />
               <SkillCard Icon={SiFigma} skillName="Figma" />
               <SkillCard Icon={SiGit} skillName="Git" />
