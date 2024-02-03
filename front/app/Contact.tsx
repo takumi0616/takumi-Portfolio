@@ -6,7 +6,6 @@ import { MdOutlineEmail } from 'react-icons/md';
 import { SiGithub, SiZenn } from 'react-icons/si';
 import { FaXTwitter } from 'react-icons/fa6';
 import { AiOutlineInstagram } from 'react-icons/ai';
-import { ElementType } from 'react';
 
 const contacts: ContactCardProps[] = [
   {
