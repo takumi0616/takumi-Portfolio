@@ -74,7 +74,7 @@ const Contact: React.FC = () => {
   return (
     <div className="mb-60 text-center">
       <h2 className="text-center text-4xl mb-20">Contact</h2>
-      <div className="card flex justify-center space-x-16">
+      <div className="flex flex-wrap justify-center items-center gap-8">
         {contacts.map((contact, index) => (
           <ContactCard
             key={index}
