@@ -9,7 +9,7 @@ const SkillCard: FC<SkillCardProps> = ({ Icon, skillName }) => {
   return (
     <div className="flex flex-col items-center">
       <Icon className="text-6xl" />
-      <span className="mt-2">{skillName}</span>
+      <h4 className="mt-2">{skillName}</h4>
     </div>
   );
 };
