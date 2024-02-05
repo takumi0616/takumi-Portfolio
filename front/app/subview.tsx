@@ -6,6 +6,7 @@ import { WorkCardProps } from './WorkCard';
 import Skills from './Skills';
 import Activity from './Activity';
 import Contributions from './Contributions';
+import Contact from './Contact';
 
 export default function SubView() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -25,15 +26,12 @@ export default function SubView() {
       </div>
       <div className="relative w-full h-full overflow-hidden z-10">
         <Works onOpenModal={openModal} />
-      </div>
-      <div>
         <Skills />
-      </div>
-      <div>
         <Activity />
         <div className="z-20">
           <Contributions />
         </div>
+        <Contact />
       </div>
 
       {isModalOpen && selectedWork && (
