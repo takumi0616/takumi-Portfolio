@@ -25,7 +25,7 @@ const contacts: ContactCardProps[] = [
   },
   {
     Icon: FaXTwitter,
-    contactName: 'Twitter',
+    contactName: 'X(Twitter)',
     link: 'https://twitter.com/takumi79977718',
   },
   {

@@ -12,7 +12,7 @@ const activities = [
   { date: '2023-10-28', event: 'JPhacks2023 出場' },
   { date: '2023-10-14', event: '技育CAMP マンスリーハッカソンvol10 出場' },
   { date: '2023-09-23', event: '技育展 決勝進出 「CARTA HOLDINGS賞」受賞' },
-];
+] satisfies Record<'date' | 'event', string>[];
 
 const Activity: React.FC = () => {
   const [pageIndex, setPageIndex] = useState(0);
