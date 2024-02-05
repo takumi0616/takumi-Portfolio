@@ -6,17 +6,13 @@ import { WorkCardProps } from './WorkCard';
 
 type WorksProps = {
   onOpenModal: (work: WorkCardProps) => void;
-}
+};
 
 export default function Works({ onOpenModal }: WorksProps) {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
     function updateAnimations() {
-      const isLandscape = window.innerWidth < window.innerHeight;
-      const startTrigger = isLandscape ? 'top top' : 'top bottom';
-      const endTrigger = isLandscape ? 'center center' : 'bottom top';
-
       const workCards = gsap.utils.toArray<Element>('.work-card');
       workCards.forEach((card) => {
         gsap.fromTo(
@@ -29,8 +25,8 @@ export default function Works({ onOpenModal }: WorksProps) {
             ease: 'power3.out',
             scrollTrigger: {
               trigger: card,
-              start: startTrigger,
-              end: endTrigger,
+              start: 'top bottom',
+              end: 'bottom top',
               toggleActions: 'play none none none',
               invalidateOnRefresh: true,
             },
@@ -48,7 +44,7 @@ export default function Works({ onOpenModal }: WorksProps) {
   }, []);
 
   return (
-    <div>
+    <div className="mb-40">
       <div className="mb-20">
         <h2 className="text-center text-4xl">Works</h2>
       </div>

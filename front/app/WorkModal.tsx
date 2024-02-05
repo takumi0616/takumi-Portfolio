@@ -5,7 +5,7 @@ type WorkModalProps = {
   title: string;
   image: string;
   onClose: () => void;
-}
+};
 
 const WorkModal: React.FC<WorkModalProps> = ({ title, image, onClose }) => {
   const handleOutsideClick = (e: React.MouseEvent<HTMLDivElement>) => {

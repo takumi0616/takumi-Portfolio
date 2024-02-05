@@ -3,6 +3,7 @@ import SubCube from './SubCube';
 import Works from './Works';
 import WorkModal from './WorkModal';
 import { WorkCardProps } from './WorkCard';
+import Skills from './Skills';
 
 export default function SubView() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -23,6 +24,10 @@ export default function SubView() {
       <div className="relative w-full h-full overflow-hidden">
         <Works onOpenModal={openModal} />
       </div>
+      <div>
+        <Skills />
+      </div>
+
       {isModalOpen && selectedWork && (
         <WorkModal
           title={selectedWork.title}
