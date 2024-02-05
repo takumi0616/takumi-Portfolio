@@ -16,7 +16,7 @@ const activities = [
 
 const Activity: React.FC = () => {
   const [pageIndex, setPageIndex] = useState(0);
-  const itemsPerPage = 4; 
+  const itemsPerPage = 4;
   const maxPageIndex = Math.ceil(activities.length / itemsPerPage) - 1;
 
   const nextPage = () => {
