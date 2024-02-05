@@ -27,7 +27,7 @@ export default function SubView() {
         <Works onOpenModal={openModal} />
       </div>
       <div>
-        <Skills />
+        <Skill />
       </div>
       <div>
         <Activity />
