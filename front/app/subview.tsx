@@ -25,7 +25,11 @@ export default function SubView() {
       </div>
       <div className="relative w-full h-full overflow-hidden z-10">
         <Works onOpenModal={openModal} />
-        <Skill />
+      </div>
+      <div>
+        <Skills />
+      </div>
+      <div>
         <Activity />
         <div className="z-20">
           <Contributions />
