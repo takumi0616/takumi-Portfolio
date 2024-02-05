@@ -33,12 +33,6 @@ export default function SubView() {
         </div>
         <Contact />
       </div>
-      <div>
-        <Activity />
-        <div className="z-20">
-          <Contributions />
-        </div>
-      </div>
 
       {isModalOpen && selectedWork && (
         <WorkModal
