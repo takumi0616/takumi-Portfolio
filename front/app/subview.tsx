@@ -3,7 +3,7 @@ import SubCube from './SubCube';
 import Works from './Works';
 import WorkModal from './WorkModal';
 import { WorkCardProps } from './WorkCard';
-import Skill from './Skill';
+import Skills from './Skills';
 import Activity from './Activity';
 import Contributions from './Contributions';
 import Contact from './Contact';
@@ -26,12 +26,18 @@ export default function SubView() {
       </div>
       <div className="relative w-full h-full overflow-hidden z-10">
         <Works onOpenModal={openModal} />
-        <Skill />
+        <Skills />
         <Activity />
         <div className="z-20">
           <Contributions />
         </div>
         <Contact />
+      </div>
+      <div>
+        <Activity />
+        <div className="z-20">
+          <Contributions />
+        </div>
       </div>
 
       {isModalOpen && selectedWork && (

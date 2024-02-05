@@ -10,7 +10,9 @@ const Contributions: React.FC = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     function updateAnimations() {
-      const contributionsImage = gsap.utils.toArray<Element>('.contributions-image');
+      const contributionsImage = gsap.utils.toArray<Element>(
+        '.contributions-image'
+      );
       contributionsImage.forEach((image) => {
         gsap.fromTo(
           image,
