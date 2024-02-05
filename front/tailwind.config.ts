@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
-        'portrait': {'raw': '(min-aspect-ratio: 1/1)'},
+        portrait: { raw: '(min-aspect-ratio: 1/1)' },
       },
       // カスタムフォントの設定
       fontFamily: {
@@ -27,11 +27,12 @@ const config: Config = {
       // カスタム背景イメージの設定
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
   },
   plugins: [],
-}
+};
 
-export default config
+export default config;

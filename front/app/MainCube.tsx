@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 type MainCubeProps = {
   className?: string;
   onResize: (width: number, height: number) => void; // サイズ変更時のコールバック
-}
+};
 
 const MainCube: React.FC<MainCubeProps> = (props) => {
   const containerRef = useRef<HTMLDivElement>(null);

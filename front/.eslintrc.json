@@ -1,21 +1,29 @@
 {
-  "extends": ["eslint:recommended", "next/core-web-vitals", "plugin:@typescript-eslint/recommended", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
   // ESLintの推奨設定、Next.jsのコアWebビタル設定、TypeScriptのESLintプラグインの推奨設定、Prettierとの互換性を拡張しています。
 
   "rules": {
-    "@typescript-eslint/no-unused-vars": ["warn", {
-      "argsIgnorePattern": "^_",
-      // TypeScriptの未使用変数に対して警告を出すが、引数名が'_'で始まる場合は無視する。
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_",
+        // TypeScriptの未使用変数に対して警告を出すが、引数名が'_'で始まる場合は無視する。
 
-      "caughtErrorsIgnorePattern": "^_",
-      // catchブロックのエラー変数が'_'で始まる場合は未使用でも警告しない。
+        "caughtErrorsIgnorePattern": "^_",
+        // catchブロックのエラー変数が'_'で始まる場合は未使用でも警告しない。
 
-      "destructuredArrayIgnorePattern": "^_",
-      // 分割代入で'_'で始まる変数は未使用でも警告しない。
+        "destructuredArrayIgnorePattern": "^_",
+        // 分割代入で'_'で始まる変数は未使用でも警告しない。
 
-      "varsIgnorePattern": "^_"
-      // 変数名が'_'で始まる場合は未使用でも警告しない。
-    }],
+        "varsIgnorePattern": "^_"
+        // 変数名が'_'で始まる場合は未使用でも警告しない。
+      }
+    ],
 
     "no-duplicate-imports": "error",
     // 同じモジュールからの重複したインポートを禁止する。
@@ -32,7 +40,7 @@
     "no-param-reassign": "error",
     // 関数のパラメータを再代入することを禁止する。
 
-    "no-restricted-imports": ["error", {"patterns": ["../*"]}],
+    "no-restricted-imports": ["error", { "patterns": ["../*"] }],
     // 特定のパターンにマッチするインポート（この場合は親ディレクトリからのインポート）を禁止する。
 
     "no-return-assign": "error",
@@ -50,13 +58,18 @@
     "yoda": "error",
     // Yoda条件（リテラルが変数より先にくる比較）を禁止する。
 
-    "import/order": ["error", {
-      "alphabetize": {"order": "asc"},
-      // インポートするモジュール名をアルファベット順に並べる。
+    "import/order": [
+      "error",
+      {
+        "alphabetize": { "order": "asc" },
+        // インポートするモジュール名をアルファベット順に並べる。
 
-      "distinctGroup": false,
-      "pathGroups": [{"pattern": "@/**", "group": "parent", "position": "before"}]
-      // 特定のパターン（ここでは '@' で始まるパス）のインポートを親グループの前に配置する。
-    }]
+        "distinctGroup": false,
+        "pathGroups": [
+          { "pattern": "@/**", "group": "parent", "position": "before" }
+        ]
+        // 特定のパターン（ここでは '@' で始まるパス）のインポートを親グループの前に配置する。
+      }
+    ]
   }
 }

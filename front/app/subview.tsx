@@ -3,7 +3,7 @@ import SubCube from './SubCube';
 import Works from './Works';
 import WorkModal from './WorkModal';
 import { WorkCardProps } from './WorkCard';
-import Skill from './Skill';
+import Skills from './Skills';
 import Activity from './Activity';
 import Contributions from './Contributions';
 
