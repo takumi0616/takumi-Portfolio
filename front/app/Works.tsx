@@ -26,7 +26,6 @@ export default function Works({ onOpenModal }: WorksProps) {
             scrollTrigger: {
               trigger: card,
               start: 'top bottom',
-              end: 'bottom top',
               toggleActions: 'play none none none',
               invalidateOnRefresh: true,
             },

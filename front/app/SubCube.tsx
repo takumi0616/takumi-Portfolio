@@ -105,7 +105,7 @@ const SubCube: React.FC<Props> = () => {
     geometry.setDrawRange(0, 0);
 
     const material = new THREE.LineBasicMaterial({
-      color: 0x7d7d7d, 
+      color: 0x7d7d7d,
       blending: THREE.AdditiveBlending,
       transparent: true,
     });

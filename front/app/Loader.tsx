@@ -15,13 +15,21 @@ const Loader = () => {
       }, 4500),
     ];
 
-    return () => timers.forEach(timer => clearTimeout(timer));
+    return () => timers.forEach((timer) => clearTimeout(timer));
   }, []);
 
   return (
-    <div className="loader fixed w-full h-full bg-white z-50 top-0 left-0 flex justify-center items-center"
-         style={{backgroundImage: 'linear-gradient(to right, #c9d6df 30%, #fafaff 70%)'}}>
-      <p className={`txt font-bold text-4xl color-[rgb(30,50,93)] ${showText ? 'block' : 'hidden'}`}>
+    <div
+      className="loader fixed w-full h-full bg-white z-50 top-0 left-0 flex justify-center items-center"
+      style={{
+        backgroundImage: 'linear-gradient(to right, #c9d6df 30%, #fafaff 70%)',
+      }}
+    >
+      <p
+        className={`txt font-bold text-4xl color-[rgb(30,50,93)] ${
+          showText ? 'block' : 'hidden'
+        }`}
+      >
         roading ...
       </p>
     </div>
