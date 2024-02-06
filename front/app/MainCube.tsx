@@ -24,7 +24,9 @@ const MainCube: React.FC<MainCubeProps> = (props) => {
   const updateCanvasSize = () => {
     // 縦横比がスマホなどのような時にウィンドウ幅の大きさにする
     const isLandscape = window.innerWidth < window.innerHeight;
-    const width = isLandscape ? window.innerWidth : window.innerWidth * 0.3;
+    const width = isLandscape
+      ? window.innerWidth * 0.8
+      : window.innerWidth * 0.5;
     const height = width;
     setCanvasSize({ width, height });
     onResize(width, height); // 親コンポーネントにサイズを通知
