@@ -19,11 +19,11 @@ export const useTypingText = (text: string, speed: number) => {
 };
 
 const Loader = () => {
-  const typedText = useTypingText('loading...', 150);
+  const typedText = useTypingText('Loading...', 150);
   const [isLoadingEnd, setIsLoadingEnd] = useState(false);
 
   useEffect(() => {
-    if (typedText === 'loading...') {
+    if (typedText === 'Loading...') {
       setTimeout(() => setIsLoadingEnd(true), 500); 
     }
   }, [typedText]);
