@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen relative">
       <Header />
-      <div className="flex-grow mt-16">
+      <div className="flex-grow">
         <MainView />
         <SubView />
       </div>

@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { IoIosMenu } from 'react-icons/io';
 
+const menuItems = [
+  { id: 'works', label: 'Works' },
+  { id: 'skills', label: 'Skills' },
+  { id: 'activity', label: 'Activity' },
+  { id: 'contributions', label: 'Contributions' },
+  { id: 'contact', label: 'Contact' },
+];
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -24,7 +32,7 @@ const Header = () => {
   }, [isOpen]);
 
   const handleClick = (
-    event: React.MouseEvent<HTMLAnchorElement>,
+    event: React.MouseEvent<HTMLElement>,
     sectionId: string
   ) => {
     event.preventDefault();
@@ -54,42 +62,19 @@ const Header = () => {
         className="text-5xl cursor-pointer mr-[36px]"
         onClick={toggleMenu}
       />
-      <div
+      <nav
         className={`absolute top-full right-[36px] mt-2 p-5 bg-white shadow-md rounded-lg select-none transition-opacity duration-500 menu-container ${
           isOpen ? 'opacity-100' : 'opacity-0 invisible'
         }`}
       >
         <ul className="text-lg lg:text-2xl">
-          <li className="my-1">
-            <a href="#works" onClick={(e) => handleClick(e, 'works')}>
-              Works
-            </a>
-          </li>
-          <li className="my-1">
-            <a href="#skills" onClick={(e) => handleClick(e, 'skills')}>
-              Skills
-            </a>
-          </li>
-          <li className="my-1">
-            <a href="#activity" onClick={(e) => handleClick(e, 'activity')}>
-              Activity
-            </a>
-          </li>
-          <li className="my-1">
-            <a
-              href="#contributions"
-              onClick={(e) => handleClick(e, 'contributions')}
-            >
-              Contributions
-            </a>
-          </li>
-          <li className="my-1">
-            <a href="#contact" onClick={(e) => handleClick(e, 'contact')}>
-              Contact
-            </a>
-          </li>
+          {menuItems.map(({ id, label }) => (
+            <li key={id} className="my-1" onClick={(e) => handleClick(e, id)}>
+              {label}
+            </li>
+          ))}
         </ul>
-      </div>
+      </nav>
     </div>
   );
 };
