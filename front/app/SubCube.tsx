@@ -50,7 +50,7 @@ const SubCube: React.FC<Props> = () => {
     const colors = new Float32Array(segments * 3);
 
     const pMaterial = new THREE.PointsMaterial({
-      color: 0x000000,
+      color: 0x7d7d7d,
       size: 3,
       blending: THREE.AdditiveBlending,
       transparent: true,
@@ -105,7 +105,7 @@ const SubCube: React.FC<Props> = () => {
     geometry.setDrawRange(0, 0);
 
     const material = new THREE.LineBasicMaterial({
-      color: 0x000000, // 赤色
+      color: 0x7d7d7d, 
       blending: THREE.AdditiveBlending,
       transparent: true,
     });

@@ -19,7 +19,7 @@ export default function MainView() {
     const windowHeight = window.innerHeight;
     const windowWidth = window.innerWidth;
 
-    let paddingTop = 0;
+    let paddingTop = 45;
     if (windowHeight <= windowWidth) {
       paddingTop = Math.max(0, (windowHeight - canvasHeight) / 2);
     }
