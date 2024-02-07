@@ -1,19 +1,21 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import SkillCard from './SkillCard'; // SkillCard コンポーネントをインポート
+import SkillCard from './SkillCard';
 import {
   SiJavascript,
   SiTypescript,
   SiReact,
   SiNextdotjs,
   SiVuedotjs,
-} from 'react-icons/si'; // フロント
-import { SiRubyonrails, SiPython } from 'react-icons/si'; // バック
-import { SiGithub, SiFigma, SiGit } from 'react-icons/si'; // ツール
+  SiRubyonrails,
+  SiPython,
+  SiGithub,
+  SiFigma,
+  SiGit,
+} from 'react-icons/si';
 
 export default function Skills() {
-
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -33,7 +35,6 @@ export default function Skills() {
             scrollTrigger: {
               trigger: set,
               start: 'top bottom',
-              end: 'bottom top',
               toggleActions: 'play none none none',
               invalidateOnRefresh: true,
             },
@@ -59,11 +60,11 @@ export default function Skills() {
       <div className="skillset-front w-3/5 mx-auto portrait:w-4/5">
         <div className="front w-3/5 mx-auto mb-12">
           <div className="mb-10 flex items-center">
-            <div className="flex-grow border-t border-gray-300"></div>
+            <div className="flex-grow border-t border-black mt-2"></div>
             <h3 className="text-center text-3xl mx-4">frontend</h3>
-            <div className="flex-grow border-t border-gray-300"></div>
+            <div className="flex-grow border-t border-black mt-2"></div>
           </div>
-          <div className="flex flex-wrap justify-center space-x-2 md:space-x-8 gap-y-8">
+          <div className="flex flex-wrap justify-center">
             <SkillCard Icon={SiJavascript} skillName="JavaScript" />
             <SkillCard Icon={SiTypescript} skillName="TypeScript" />
             <SkillCard Icon={SiReact} skillName="React" />
@@ -75,11 +76,11 @@ export default function Skills() {
         <div className="skillsets flex justify-center portrait:flex-col">
           <div className="back w-1/3 mx-auto portrait:mb-12">
             <div className="mb-10 flex items-center">
-              <div className="flex-grow border-t border-gray-300"></div>
+              <div className="flex-grow border-t border-black mt-2"></div>
               <h3 className="text-center text-3xl mx-4">backend</h3>
-              <div className="flex-grow border-t border-gray-300"></div>
+              <div className="flex-grow border-t border-black mt-2"></div>
             </div>
-            <div className="flex flex-wrap justify-center space-x-2 md:space-x-8 gap-y-8">
+            <div className="flex flex-wrap justify-center">
               <SkillCard Icon={SiRubyonrails} skillName="Ruby on Rails" />
               <SkillCard Icon={SiPython} skillName="Python" />
             </div>
@@ -87,11 +88,11 @@ export default function Skills() {
 
           <div className="tools w-2/5 mx-auto">
             <div className="mb-10 flex items-center">
-              <div className="flex-grow border-t border-gray-300"></div>
+              <div className="flex-grow border-t border-black mt-2"></div>
               <h3 className="text-center text-3xl mx-4">tools</h3>
-              <div className="flex-grow border-t border-gray-300"></div>
+              <div className="flex-grow border-t border-black mt-2"></div>
             </div>
-            <div className="flex flex-wrap justify-center space-x-2 md:space-x-8 gap-y-8">
+            <div className="flex flex-wrap justify-center">
               <SkillCard Icon={SiGithub} skillName="Github" />
               <SkillCard Icon={SiFigma} skillName="Figma" />
               <SkillCard Icon={SiGit} skillName="Git" />

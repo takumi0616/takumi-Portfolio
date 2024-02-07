@@ -16,7 +16,7 @@ const WorkModal: React.FC<WorkModalProps> = ({ title, image, onClose }) => {
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-30 z-120 flex justify-center items-center w-screen h-screen top-0 left-0"
+      className="fixed inset-0 bg-black bg-opacity-30 flex justify-center items-center w-screen h-screen top-0 left-0"
       onClick={handleOutsideClick}
     >
       <div className="bg-white p-6 rounded-lg z-60 relative pointer-events-auto">

@@ -11,24 +11,8 @@ const config: Config = {
       screens: {
         portrait: { raw: '(min-aspect-ratio: 1/1)' },
       },
-      // カスタムフォントの設定
       fontFamily: {
         zenKurenaido: ['var(--font-zenKurenaido)'],
-      },
-      // カスタムカラーの設定
-      colors: {
-        white: '#FFFFFF',
-        black: '#1F2022',
-        gray: '#E1E1E1',
-        'gray-dark': '#4F626D',
-        'gray-light': '#C6D7E0',
-        'off-white': '#F7F9FD',
-      },
-      // カスタム背景イメージの設定
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
   },

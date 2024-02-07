@@ -66,8 +66,12 @@ const Header = () => {
       >
         <ul className="text-lg lg:text-2xl">
           {menuItems.map(({ id, label }) => (
-            <li key={id} className="my-1" onClick={(e) => handleClick(e, id)}>
-              {label}
+            <li
+              key={id}
+              className="my-1 hover:bg-gray-200 cursor-pointer rounded-md"
+              onClick={(e) => handleClick(e, id)}
+            >
+              <p className="ml-2">{label}</p>
             </li>
           ))}
         </ul>

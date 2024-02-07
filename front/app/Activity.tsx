@@ -11,7 +11,7 @@ const activities = [
   { date: '2023-11-16', event: 'CA Tech Accel参加' },
   { date: '2023-10-28', event: 'JPhacks2023 出場' },
   { date: '2023-10-14', event: '技育CAMP マンスリーハッカソンvol10 出場' },
-  { date: '2023-09-23', event: '技育展 決勝進出 「CARTA HOLDINGS賞」受賞' },
+  { date: '2023-09-23', event: '技育展 決勝進出 「CARTA HOLDINGS賞」' },
 ] satisfies Record<'date' | 'event', string>[];
 
 const Activity: React.FC = () => {
@@ -44,7 +44,7 @@ const Activity: React.FC = () => {
         <h2 className="text-center text-4xl">Activity</h2>
       </div>
       <div className="flex items-center justify-center">
-        <div className="px-4 py-4 z-50">
+        <div className="px-4 py-4">
           {pageIndex > 0 ? (
             <button onClick={prevPage} className="flex items-center">
               <MdArrowBackIos />
@@ -64,7 +64,7 @@ const Activity: React.FC = () => {
           ))}
         </div>
 
-        <div className="px-4 py-4 z-50">
+        <div className="px-4 py-4">
           {pageIndex < maxPageIndex ? (
             <button onClick={nextPage} className="flex items-center">
               <MdArrowForwardIos />

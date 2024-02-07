@@ -25,7 +25,6 @@ const Contributions: React.FC = () => {
             scrollTrigger: {
               trigger: image,
               start: 'top bottom',
-              end: 'bottom top',
               toggleActions: 'play none none none',
               invalidateOnRefresh: true,
             },

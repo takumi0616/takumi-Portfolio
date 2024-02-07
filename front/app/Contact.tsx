@@ -53,7 +53,6 @@ const Contact: React.FC = () => {
             scrollTrigger: {
               trigger: card,
               start: 'top bottom',
-              end: 'bottom top',
               toggleActions: 'play none none none',
               invalidateOnRefresh: true,
             },
