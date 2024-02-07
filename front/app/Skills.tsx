@@ -1,16 +1,19 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import SkillCard from './SkillCard'; // SkillCard コンポーネントをインポート
+import SkillCard from './SkillCard';
 import {
   SiJavascript,
   SiTypescript,
   SiReact,
   SiNextdotjs,
   SiVuedotjs,
-} from 'react-icons/si'; // フロント
-import { SiRubyonrails, SiPython } from 'react-icons/si'; // バック
-import { SiGithub, SiFigma, SiGit } from 'react-icons/si'; // ツール
+  SiRubyonrails,
+  SiPython,
+  SiGithub,
+  SiFigma,
+  SiGit,
+} from 'react-icons/si';
 
 export default function Skills() {
   useEffect(() => {

@@ -81,7 +81,7 @@ export default function MainView() {
           className="w-1/2 portrait:mr-0 portrait:w-full portrait:mt-[-200px]"
           ref={contentRef}
         >
-          <div className="content ml-[10vw] mr-[5vw] text-black portrait:mt-0">
+          <div className="content ml-[10vw] mr-[5vw] portrait:mt-0">
             <section className="no-animation opacity-100 mt-[45vh] mb-[55vh] portrait:mt-0">
               <h1 className="text-5xl">髙 須 賀 匠</h1>
             </section>
