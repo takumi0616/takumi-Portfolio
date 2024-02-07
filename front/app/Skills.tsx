@@ -12,7 +12,8 @@ import {
 import { SiRubyonrails, SiPython } from 'react-icons/si'; // バック
 import { SiGithub, SiFigma, SiGit } from 'react-icons/si'; // ツール
 
-export default function Skill() {
+export default function Skills() {
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -52,7 +53,7 @@ export default function Skill() {
   return (
     <div className="mb-60">
       <div className="mb-20">
-        <h2 className="text-center text-4xl">Skill</h2>
+        <h2 className="text-center text-4xl">Skills</h2>
       </div>
 
       <div className="skillset-front w-3/5 mx-auto portrait:w-4/5">

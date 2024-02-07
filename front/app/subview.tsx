@@ -25,13 +25,21 @@ export default function SubView() {
         <SubCube />
       </div>
       <div className="relative w-full h-full overflow-hidden z-10">
-        <Works onOpenModal={openModal} />
-        <Skills />
-        <Activity />
-        <div className="z-20">
+        <div id="works">
+          <Works onOpenModal={openModal} />
+        </div>
+        <div id="skills">
+          <Skills />
+        </div>
+        <div id="activity">
+          <Activity />
+        </div>
+        <div id="contributions" className="z-20">
           <Contributions />
         </div>
-        <Contact />
+        <div id="contact">
+          <Contact />
+        </div>
       </div>
 
       {isModalOpen && selectedWork && (
