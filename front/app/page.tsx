@@ -11,10 +11,9 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // ここでロード画面の表示時間を延長する
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 5000);
+    }, 4000);
 
     return () => clearTimeout(timer);
   }, []);

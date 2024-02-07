@@ -24,11 +24,8 @@ const Header = () => {
 
     if (isOpen) {
       document.addEventListener('click', closeMenu);
+      return () => document.removeEventListener('click', closeMenu);
     }
-
-    return () => {
-      document.removeEventListener('click', closeMenu);
-    };
   }, [isOpen]);
 
   const handleClick = (
@@ -41,8 +38,8 @@ const Header = () => {
     if (section) {
       const offsetTop =
         section.getBoundingClientRect().top + window.pageYOffset;
-      const headerHeight = 100;
-      const scrollToPosition = offsetTop - headerHeight;
+      const HEADER_HEIGHT = 100;
+      const scrollToPosition = offsetTop - HEADER_HEIGHT;
 
       window.scrollTo({
         top: scrollToPosition,
