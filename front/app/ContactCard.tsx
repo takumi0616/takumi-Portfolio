@@ -13,7 +13,6 @@ const ContactCard: FC<ContactCardProps> = ({ Icon, contactName, link }) => {
       target="_blank"
       rel="noopener noreferrer"
       className="card flex flex-col items-center"
-      aria-label={`${contactName}のページへ`}
     >
       <Icon className="text-6xl" />
       <span className="mt-2">{contactName}</span>

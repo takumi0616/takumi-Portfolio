@@ -10,11 +10,11 @@ const ActivityItem: React.FC<ActivityItemProps> = ({ date, event }) => {
 
   return (
     <div className="flex py-2">
-      <h3>
+      <h4>
         <time className="mr-4">{formattedDate}</time>
         <span className="mr-4">|</span>
         <span>{event}</span>
-      </h3>
+      </h4>
     </div>
   );
 };
