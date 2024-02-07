@@ -21,10 +21,10 @@ export default function SubView() {
 
   return (
     <div className="mt-[-300px]">
-      <div className="sticky top-0 w-full h-full z-0">
+      <div className="sticky top-0 w-full h-full">
         <SubCube />
       </div>
-      <div className="relative w-full h-full overflow-hidden z-10">
+      <div className="relative w-full h-full overflow-hidden">
         <div id="works">
           <Works onOpenModal={openModal} />
         </div>
@@ -34,7 +34,7 @@ export default function SubView() {
         <div id="activity">
           <Activity />
         </div>
-        <div id="contributions" className="z-20">
+        <div id="contributions" className="">
           <Contributions />
         </div>
         <div id="contact">
