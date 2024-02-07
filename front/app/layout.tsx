@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Zen_Kurenaido } from 'next/font/google';
 import './globals.css';
 import React from 'react';
+import { GoogleTagManager } from '@next/third-parties/google'
 
 const zenKurenaido = Zen_Kurenaido({
   subsets: ['latin'],
@@ -24,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="ja" className={`${zenKurenaido.variable}`}>
       <body className={'font-zenKurenaido'}>{children}</body>
+      <GoogleTagManager gtmId="G-PDDGC0DZS0" />
     </html>
   );
 }
