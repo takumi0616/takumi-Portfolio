@@ -46,7 +46,11 @@ const Activity: React.FC = () => {
       <div className="flex items-center justify-center">
         <div className="px-4 py-4">
           {pageIndex > 0 ? (
-            <button onClick={prevPage} className="flex items-center">
+            <button
+              onClick={prevPage}
+              className="flex items-center"
+              aria-label="前のページへ"
+            >
               <MdArrowBackIos />
             </button>
           ) : (
@@ -66,7 +70,11 @@ const Activity: React.FC = () => {
 
         <div className="px-4 py-4">
           {pageIndex < maxPageIndex ? (
-            <button onClick={nextPage} className="flex items-center">
+            <button
+              onClick={nextPage}
+              className="flex items-center"
+              aria-label="次のページへ"
+            >
               <MdArrowForwardIos />
             </button>
           ) : (
