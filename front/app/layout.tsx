@@ -3,6 +3,8 @@ import { Zen_Kurenaido } from 'next/font/google';
 import './globals.css';
 import React from 'react';
 import GoogleAnalytics from './GoogleAnalytics';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/react';
 
 const zenKurenaido = Zen_Kurenaido({
   subsets: ['latin'],
@@ -29,7 +31,11 @@ export default function RootLayout({
       <head>
         <GoogleAnalytics />
       </head>
-      <body className={'font-zenKurenaido'}>{children}</body>
+      <body className={'font-zenKurenaido'}>
+        {children}
+        <SpeedInsights />
+        <Analytics />
+      </body>
     </html>
   );
 }
