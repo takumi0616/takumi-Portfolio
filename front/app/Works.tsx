@@ -51,7 +51,7 @@ export default function Works({ onOpenModal }: WorksProps) {
       <div className="flex flex-col items-center justify-center">
         <div className="work-card mt-20 mb-20">
           <WorkCard
-            image="NS.png"
+            image="NS.avif"
             title="NUTMEG-Seeds"
             description="私が所属している団体「NUTMEG」内での技術の知見を共有しているWebアプリです。NUTMEGのイメージカラーであるオレンジをテーマカラーにしており、細部までデザインを凝っています。"
             myPart="フロント、PM"
@@ -61,7 +61,7 @@ export default function Works({ onOpenModal }: WorksProps) {
         </div>
         <div className="work-card mt-20 mb-20">
           <WorkCard
-            image="GM2.png"
+            image="GM2.avif"
             title="Group-manager-2"
             description="長岡技術科学大学の学祭に登録する際にこのWebアプリを使います。PDF出力や統計データの表示など機能面に優れています。黒を基調としており、スタイリッシュなデザインです。"
             myPart="フロント、バック"
@@ -71,7 +71,7 @@ export default function Works({ onOpenModal }: WorksProps) {
         </div>
         <div className="work-card mt-20 mb-20">
           <WorkCard
-            image="SMF.png"
+            image="SMF.avif"
             title="Slack-message-finder"
             description="Slackのログをリアルタイムに取得して保存し、Slackライクなデザインのページで表示するWebアプリです。チャンネルの上下表示や、特定のユーザーの1週間の活動を知る機能があります。"
             myPart="フロント、バック"
@@ -81,7 +81,7 @@ export default function Works({ onOpenModal }: WorksProps) {
         </div>
         <div className="work-card mt-20 mb-20">
           <WorkCard
-            image="MMA.png"
+            image="MMA.avif"
             title="Menter-management-app"
             description="メンター制度をサポートするWebアプリです。メンターとメンティーを紐づけて、メンティーの学習記録を確認することができます。管理者が管理するシンプルなWebアプリです。"
             myPart="フロント、バック"

@@ -5,16 +5,15 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 
 export default function MainView() {
   const threeJsRef = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null); // contentセクションの参照
+  const contentRef = useRef<HTMLDivElement>(null);
   const [canvasSize, setCanvasSize] = useState({ width: 0, height: 0 });
-  const [mainContainerHeight, setMainContainerHeight] = useState(0); // mainContainerの高さ
+  const [mainContainerHeight, setMainContainerHeight] = useState(0);
 
   const handleResize = (width: number, height: number) => {
     setCanvasSize({ width, height });
     updatePadding(height);
   };
 
-  // キャンバスの高さに基づいてパディングを更新する関数
   const updatePadding = (canvasHeight: number) => {
     const windowHeight = window.innerHeight;
     const windowWidth = window.innerWidth;
@@ -29,7 +28,6 @@ export default function MainView() {
     }
   };
 
-  // contentの高さに基づいてmainContainerの高さを更新
   const updateMainContainerHeight = () => {
     if (contentRef.current) {
       setMainContainerHeight(contentRef.current.clientHeight);

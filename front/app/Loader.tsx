@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 export const useTypingText = (text: string, speed: number) => {
   const [textState, setTextState] = useState('');
-  const [index, setIndex] = useState(0); // 現在表示している文字のインデックス
+  const [index, setIndex] = useState(0);
   const chars = text.split('');
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const Loader = () => {
 
   useEffect(() => {
     if (typedText === 'Loading...') {
-      setTimeout(() => setIsLoadingEnd(true), 500); 
+      setTimeout(() => setIsLoadingEnd(true), 500);
     }
   }, [typedText]);
 
@@ -37,7 +37,7 @@ const Loader = () => {
         backgroundImage: 'linear-gradient(to right, #c9d6df 30%, #fafaff 70%)',
       }}
     >
-      <p className="font-bold text-4xl color-[rgb(30,50,93)]">{typedText}</p>
+      <p className="text-4xl color-[rgb(30,50,93)]">{typedText}</p>
     </div>
   );
 };

@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${zenKurenaido.variable}`}>
+    <html lang="ja" className={`${zenKurenaido.variable}`}>
       <body className={'font-zenKurenaido'}>{children}</body>
     </html>
   );

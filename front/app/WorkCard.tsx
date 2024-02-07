@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import { IoLogoGithub } from 'react-icons/io';
 
