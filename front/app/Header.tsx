@@ -70,6 +70,7 @@ const Header = () => {
               key={id}
               className="my-1 hover:bg-gray-200 cursor-pointer rounded-md"
               onClick={(e) => handleClick(e, id)}
+              aria-label={`${label} sectionへスクロールする`}
             >
               <p className="ml-2">{label}</p>
             </li>

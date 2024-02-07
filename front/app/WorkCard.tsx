@@ -44,6 +44,7 @@ const WorkCard: React.FC<WorkCardProps> = ({
               target="_blank"
               rel="noopener noreferrer"
               className="git-link-button flex items-center justify-center px-4 py-2 border border-gray-800 rounded text-lg no-underline hover:bg-[#f0f0f0]"
+              aria-label={`${title}のソースコードをGitHubで見る`}
             >
               <IoLogoGithub className="mr-2.5" />
               <div className="button-text mr-2.5">GitHub</div>
