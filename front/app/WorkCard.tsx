@@ -24,7 +24,7 @@ const WorkCard: React.FC<WorkCardProps> = ({
 
   return (
     <>
-      <div className="justify-center items-center w-[70vw] overflow-hidden">
+      <div className="justify-center items-center w-[70vw] overflow-hidden portrait:w-[90vw]">
         <div className="flex portrait:flex-col">
           <div className="portrait:w-full portrait:flex portrait:justify-center mr-4">
             <div onClick={handleImageClick} className="cursor-pointer">
