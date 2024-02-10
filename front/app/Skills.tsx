@@ -74,7 +74,7 @@ export default function Skills() {
         </div>
 
         <div className="skillsets flex justify-center portrait:flex-col">
-          <div className="back w-1/3 mx-auto portrait:mb-12">
+          <div className="back w-1/3 mx-auto portrait:mb-12 portrait:w-3/5">
             <div className="mb-10 flex items-center">
               <div className="flex-grow border-t border-black mt-2"></div>
               <h3 className="text-center text-3xl mx-4">backend</h3>
@@ -86,7 +86,7 @@ export default function Skills() {
             </div>
           </div>
 
-          <div className="tools w-2/5 mx-auto">
+          <div className="tools w-2/5 mx-auto  portrait:w-3/5">
             <div className="mb-10 flex items-center">
               <div className="flex-grow border-t border-black mt-2"></div>
               <h3 className="text-center text-3xl mx-4">tools</h3>
