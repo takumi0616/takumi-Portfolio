@@ -56,7 +56,7 @@ const Contributions: React.FC = () => {
   }, []);
 
   return (
-    <div className="mb-40 text-center">
+    <div className="mb-60 text-center">
       <h2 className="text-center text-4xl mb-20">Contributions</h2>
       <div className="contributions ">
         <img

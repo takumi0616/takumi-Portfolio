@@ -2,8 +2,8 @@
 
 import React, { useEffect, useState } from 'react';
 import Loader from './components/layouts/Loader';
-import MainView from './common/mainview';
-import SubView from './common/subview';
+import MainView from './common/MainView';
+import SubView from './common/SubView';
 import Footer from './components/layouts/Footer';
 import Header from './components/layouts/Header';
 

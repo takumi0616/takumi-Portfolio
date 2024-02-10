@@ -39,7 +39,7 @@ const Activity: React.FC = () => {
   );
 
   return (
-    <div className="mb-40">
+    <div className="mb-60">
       <div className="mb-20">
         <h2 className="text-center text-4xl">Activity</h2>
       </div>
