@@ -2,10 +2,10 @@
 
 import React, { useEffect, useState } from 'react';
 import Loader from './components/layouts/Loader';
-import MainView from './common/MainView';
-import SubView from './common/SubView';
 import Footer from './components/layouts/Footer';
 import Header from './components/layouts/Header';
+import MainView from './common/mainview';
+import SubView from './common/subview';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
