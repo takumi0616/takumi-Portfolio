@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import ContactCard, { ContactCardProps } from './ContactCard';
+import ContactCard, { ContactCardProps } from './cards/ContactCard';
 import { MdOutlineEmail } from 'react-icons/md';
 import { SiGithub, SiZenn } from 'react-icons/si';
 import { FaXTwitter } from 'react-icons/fa6';

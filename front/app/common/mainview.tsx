@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import MainCube from './MainCube';
+import MainCube from '../components/cube/MainCube';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 

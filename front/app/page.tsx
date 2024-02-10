@@ -1,11 +1,11 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import Loader from './Loader';
-import MainView from './mainview';
-import SubView from './subview';
-import Footer from './Footer';
-import Header from './Header';
+import Loader from './components/layouts/Loader';
+import MainView from './common/mainview';
+import SubView from './common/subview';
+import Footer from './components/layouts/Footer';
+import Header from './components/layouts/Header';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);

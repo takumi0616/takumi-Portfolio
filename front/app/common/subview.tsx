@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import SubCube from './SubCube';
-import Works from './Works';
-import WorkModal from './WorkModal';
-import { WorkCardProps } from './WorkCard';
-import Skills from './Skills';
-import Activity from './Activity';
-import Contributions from './Contributions';
-import Contact from './Contact';
+import SubCube from '../components/cube/SubCube';
+import Works from '../components/Works';
+import WorkModal from '../components/modal/WorkModal';
+import { WorkCardProps } from '../components/cards/WorkCard';
+import Skills from '../components/Skills';
+import Activity from '../components/Activity';
+import Contributions from '../components/Contributions';
+import Contact from '../components/Contact';
 
 export default function SubView() {
   const [isModalOpen, setIsModalOpen] = useState(false);
