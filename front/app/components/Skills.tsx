@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import SkillCard from './cards,item/SkillCard';
+import SkillCard from './cards/SkillCard';
 import {
   SiJavascript,
   SiTypescript,
