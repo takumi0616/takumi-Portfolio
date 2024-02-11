@@ -5,7 +5,7 @@ import Loader from './_components/layouts/Loader';
 import Footer from './_components/layouts/Footer';
 import Header from './_components/layouts/Header';
 import MainView from './_components/hero/HeroView';
-import SubCube from './_components/SubCube';
+import BackAnimation from './_components/layouts/BackAnimation';
 import Works from './_components/works/Works';
 import WorkModal from './_components/works/WorkModal';
 import { WorkCardProps } from './_components/works/WorkCard';
@@ -47,7 +47,7 @@ export default function Home() {
           <MainView />
           <div className="mt-[-400px]">
             <div className="sticky top-0 w-full h-full">
-              <SubCube />
+              <BackAnimation />
             </div>
             <div className="relative w-full h-full overflow-hidden">
               <div id="works">

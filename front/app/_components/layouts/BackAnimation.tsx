@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 type Props = {};
 
-const SubCube: React.FC<Props> = () => {
+const BackAnimation: React.FC<Props> = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const MAX_PARTICLE_COUNT = 200;
   const PARTICLE_COUNT = 70;
@@ -218,4 +218,4 @@ const SubCube: React.FC<Props> = () => {
   return <div ref={containerRef} id="subContainer" />;
 };
 
-export default SubCube;
+export default BackAnimation;
