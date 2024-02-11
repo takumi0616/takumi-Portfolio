@@ -30,8 +30,8 @@ const WorkModal: React.FC<WorkModalProps> = ({ title, image, onClose }) => {
           alt={title}
           className="max-w-full h-auto rounded"
           loading="lazy"
-          width="543" 
-          height="324" 
+          width="815"
+          height="486"
         />
       </div>
     </div>
