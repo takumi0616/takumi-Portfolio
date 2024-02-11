@@ -25,7 +25,14 @@ const WorkModal: React.FC<WorkModalProps> = ({ title, image, onClose }) => {
           onClick={onClose}
         />
         <h2 className="text-2xl mb-4">{title}</h2>
-        <img src={image} alt={title} className="max-w-full h-auto rounded" loading='lazy'/>
+        <img
+          src={image}
+          alt={title}
+          className="max-w-full h-auto rounded"
+          loading="lazy"
+          width="543" 
+          height="324" 
+        />
       </div>
     </div>
   );

@@ -32,6 +32,9 @@ const WorkCard: React.FC<WorkCardProps> = ({
                 src={image}
                 alt={title}
                 className="object-cover portrait:w-full portrait:max-w-full portrait:h-auto"
+                loading="lazy"
+                width="543"
+                height="324"
               />
             </div>
           </div>
