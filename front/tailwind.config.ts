@@ -14,6 +14,9 @@ const config: Config = {
       fontFamily: {
         zenKurenaido: ['var(--font-zenKurenaido)'],
       },
+      boxShadow: {
+        custom: '4px 4px 8px #aaaaaa',
+      },
     },
   },
   plugins: [],
