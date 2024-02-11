@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Zen_Kurenaido } from 'next/font/google';
 import './globals.css';
 import React from 'react';
-import GoogleAnalytics from './common/GoogleAnalytics';
+import GoogleAnalytics from './_components/thirdparty/GoogleAnalytics';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ActivityItem from './cards/ActivityCard';
+import ActivityItem from './ActivityCard';
 import { MdArrowForwardIos } from 'react-icons/md';
 import { MdArrowBackIos } from 'react-icons/md';
 

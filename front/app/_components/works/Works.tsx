@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import WorkCard from './cards/WorkCard';
+import WorkCard from './WorkCard';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import { WorkCardProps } from './cards/WorkCard';
+import { WorkCardProps } from './WorkCard';
 
 type WorksProps = {
   onOpenModal: (work: WorkCardProps) => void;
