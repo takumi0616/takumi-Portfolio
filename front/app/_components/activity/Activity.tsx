@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ActivityItem from './ActivityItem';
+import ActivityItem from './ActivityCard';
 import { MdArrowForwardIos } from 'react-icons/md';
 import { MdArrowBackIos } from 'react-icons/md';
 
@@ -39,7 +39,7 @@ const Activity: React.FC = () => {
   );
 
   return (
-    <div className="mb-40">
+    <div className="mb-60">
       <div className="mb-20">
         <h2 className="text-center text-4xl">Activity</h2>
       </div>

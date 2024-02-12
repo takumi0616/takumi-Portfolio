@@ -53,13 +53,11 @@ export default function Skills() {
 
   return (
     <div className="mb-60">
-      <div className="mb-20">
-        <h2 className="text-center text-4xl">Skills</h2>
-      </div>
+      <h2 className="text-center text-4xl mb-20">Skills</h2>
 
       <div className="skillset-front w-3/5 mx-auto portrait:w-4/5">
-        <div className="front w-3/5 mx-auto mb-12">
-          <div className="mb-10 flex items-center">
+        <div className="front w-3/5 mx-auto mb-10">
+          <div className="mb-8 flex items-center">
             <div className="flex-grow border-t border-black mt-2"></div>
             <h3 className="text-center text-3xl mx-4">frontend</h3>
             <div className="flex-grow border-t border-black mt-2"></div>
@@ -74,20 +72,20 @@ export default function Skills() {
         </div>
 
         <div className="skillsets flex justify-center portrait:flex-col">
-          <div className="back w-1/3 mx-auto portrait:mb-12">
-            <div className="mb-10 flex items-center">
+          <div className="back w-1/3 mx-auto portrait:mb-12 portrait:w-3/5">
+            <div className="mb-8 flex items-center">
               <div className="flex-grow border-t border-black mt-2"></div>
               <h3 className="text-center text-3xl mx-4">backend</h3>
               <div className="flex-grow border-t border-black mt-2"></div>
             </div>
             <div className="flex flex-wrap justify-center">
-              <SkillCard Icon={SiRubyonrails} skillName="Ruby on Rails" />
+              <SkillCard Icon={SiRubyonrails} skillName="Rails" />
               <SkillCard Icon={SiPython} skillName="Python" />
             </div>
           </div>
 
-          <div className="tools w-2/5 mx-auto">
-            <div className="mb-10 flex items-center">
+          <div className="tools w-2/5 mx-auto  portrait:w-3/5">
+            <div className="mb-8 flex items-center">
               <div className="flex-grow border-t border-black mt-2"></div>
               <h3 className="text-center text-3xl mx-4">tools</h3>
               <div className="flex-grow border-t border-black mt-2"></div>

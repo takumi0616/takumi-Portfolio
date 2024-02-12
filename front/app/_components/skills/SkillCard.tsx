@@ -7,9 +7,9 @@ type SkillCardProps = {
 
 const SkillCard: FC<SkillCardProps> = ({ Icon, skillName }) => {
   return (
-    <div className="flex flex-col items-center ml-3 mr-3">
+    <div className="flex flex-col items-center ml-3 mr-3 mt-4">
       <Icon className="text-6xl" />
-      <h4 className="mt-2">{skillName}</h4>
+      <h4 className="mt-1">{skillName}</h4>
     </div>
   );
 };

@@ -50,13 +50,20 @@ const Header = () => {
     setIsOpen(false);
   };
 
+  const reloadPage = () => {
+    window.location.reload();
+  };
+
   return (
-    <div className="flex justify-between items-center p-6 bg-transparent fixed top-0 left-0 right-0 z-50">
-      <div className="text-lg lg:text-3xl ml-[36px] tracking-wider">
+    <header className="flex justify-between items-center p-6 bg-transparent fixed top-0 left-0 right-0 z-50">
+      <div
+        className="text-lg lg:text-3xl ml-8 tracking-wider portrait:ml-0 cursor-pointer"
+        onClick={reloadPage}
+      >
         Takasuka Takumi
       </div>
       <IoIosMenu
-        className="text-5xl cursor-pointer mr-[36px]"
+        className="text-5xl cursor-pointer mr-8 portrait:mr-0"
         onClick={toggleMenu}
       />
       <nav
@@ -77,7 +84,7 @@ const Header = () => {
           ))}
         </ul>
       </nav>
-    </div>
+    </header>
   );
 };
 

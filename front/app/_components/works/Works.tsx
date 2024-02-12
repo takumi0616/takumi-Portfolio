@@ -44,12 +44,10 @@ export default function Works({ onOpenModal }: WorksProps) {
 
   return (
     <div className="mb-40">
-      <div className="mb-20">
-        <h2 className="text-center text-4xl">Works</h2>
-      </div>
+      <h2 className="text-center text-4xl mb-20">Works</h2>
 
       <div className="flex flex-col items-center justify-center">
-        <div className="work-card mt-20 mb-20">
+        <div className="work-card mt-10 mb-20">
           <WorkCard
             image="NS.avif"
             title="NUTMEG-Seeds"
@@ -59,7 +57,7 @@ export default function Works({ onOpenModal }: WorksProps) {
             onOpenModal={onOpenModal}
           />
         </div>
-        <div className="work-card mt-20 mb-20">
+        <div className="work-card mt-10 mb-20">
           <WorkCard
             image="GM2.avif"
             title="Group-manager-2"
@@ -69,7 +67,7 @@ export default function Works({ onOpenModal }: WorksProps) {
             onOpenModal={onOpenModal}
           />
         </div>
-        <div className="work-card mt-20 mb-20">
+        <div className="work-card mt-10 mb-20">
           <WorkCard
             image="SMF.avif"
             title="Slack-message-finder"
@@ -79,7 +77,7 @@ export default function Works({ onOpenModal }: WorksProps) {
             onOpenModal={onOpenModal}
           />
         </div>
-        <div className="work-card mt-20 mb-20">
+        <div className="work-card mt-10 mb-20">
           <WorkCard
             image="MMA.avif"
             title="Menter-management-app"
