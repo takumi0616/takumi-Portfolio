@@ -26,14 +26,14 @@ const WorkCard: React.FC<WorkCardProps> = ({
     <>
       <div className="justify-center items-center w-[70vw] overflow-hidden portrait:w-[90vw]">
         <div className="flex portrait:flex-col">
-          <div className="portrait:w-full portrait:flex portrait:justify-center mr-4">
+          <div className="portrait:w-full portrait:flex portrait:justify-center mr-16">
             <div onClick={handleImageClick} className="cursor-pointer m-3">
               <img
                 src={image}
                 alt={title}
                 className="object-cover portrait:w-full portrait:max-w-full portrait:h-auto rounded-lg shadow-custom"
                 loading="lazy"
-                width="543"
+                width="500"
                 height="auto"
               />
             </div>
