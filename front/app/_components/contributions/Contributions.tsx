@@ -65,6 +65,9 @@ const Contributions: React.FC = () => {
           className={`inline-block ${
             isFallbackImage ? 'w-8 h-8' : 'w-full max-w-4xl'
           }`}
+          loading="lazy"
+          width="896"
+          height="auto"
         />
         {isFallbackImage && (
           <p className="mt-4 text-sm text-black">

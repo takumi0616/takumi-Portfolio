@@ -34,7 +34,7 @@ const WorkCard: React.FC<WorkCardProps> = ({
                 className="object-cover portrait:w-full portrait:max-w-full portrait:h-auto rounded-lg shadow-custom"
                 loading="lazy"
                 width="543"
-                height="324"
+                height="auto"
               />
             </div>
           </div>
