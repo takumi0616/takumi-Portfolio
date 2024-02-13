@@ -67,7 +67,7 @@ const Contributions: React.FC = () => {
           }`}
           loading="lazy"
           width="896"
-          height="auto"
+          height="160"
         />
         {isFallbackImage && (
           <p className="mt-4 text-sm text-black">
