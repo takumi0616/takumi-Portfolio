@@ -31,7 +31,7 @@ const contacts: ContactCardProps[] = [
   {
     Icon: AiOutlineInstagram,
     contactName: 'Instagram',
-    link: 'https://www.instagram.com/takumi0616t/',
+    link: 'https://www.instagram.com/takumin0616t/',
   },
 ];
 

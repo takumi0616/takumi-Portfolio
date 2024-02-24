@@ -87,6 +87,16 @@ export default function Works({ onOpenModal }: WorksProps) {
             onOpenModal={onOpenModal}
           />
         </div>
+        <div className="work-card mt-10 mb-20">
+          <WorkCard
+            image="CAI.avif"
+            title="Communication-AI"
+            description="生成AIと会話できるWebアプリです。会話部分は単純なシステムですが、デザインやアクセシビリティに配慮しており、あらゆるユーザーが使うことを想定した機能や設計を考えています。"
+            myPart="フロント、デザイン"
+            gitHubUrl="https://github.com/takumi0616/communication-ai"
+            onOpenModal={onOpenModal}
+          />
+        </div>
       </div>
     </div>
   );
