@@ -4,6 +4,8 @@ import { MdArrowForwardIos } from 'react-icons/md';
 import { MdArrowBackIos } from 'react-icons/md';
 
 const activities = [
+  { date: '2024-02-21', event: 'CTA_Abema Tower会社見学' },
+  { date: '2024-02-20', event: 'マネーの龍最終発表 支援金19万円獲得' },
   { date: '2024-02-02', event: '技育CAMP マンスリーハッカソンvol14 出場' },
   { date: '2024-01-30', event: 'マネーの龍 1次審査通過' },
   { date: '2024-01-27', event: 'マネーの龍 出場' },
