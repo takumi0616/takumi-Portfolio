@@ -4,6 +4,11 @@ import { MdArrowForwardIos } from 'react-icons/md';
 import { MdArrowBackIos } from 'react-icons/md';
 
 const activities = [
+  { date: '2024-03-17', event: 'LinkX Japan株式会社_長期インターン開始' },
+  { date: '2024-03-16', event: '技育祭2024_参加' },
+  { date: '2024-03-13', event: '日本気象学会機関誌「天気」_短報提出' },
+  { date: '2024-03-13', event: 'LinkX Japan株式会社_長期インターン_面談' },
+  { date: '2024-03-02', event: '技育博2024_vol1_参加' },
   { date: '2024-02-21', event: 'CTA_Abema Tower会社見学' },
   { date: '2024-02-20', event: 'マネーの龍最終発表 支援金19万円獲得' },
   { date: '2024-02-02', event: '技育CAMP マンスリーハッカソンvol14 出場' },
