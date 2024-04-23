@@ -92,7 +92,7 @@ export default function MainView() {
                 <p className="leading-normal text-base my-4">
                   フロントエンジニア/データエンジニア/データサイエンティスト
                   <br />
-                  長岡技術科学大学 工学部 情報経営システム工学課程 3年 在学
+                  長岡技術科学大学 工学部 情報経営システム工学課程 4年 在学
                   <br />
                   機械学習理論研究室所属
                 </p>
