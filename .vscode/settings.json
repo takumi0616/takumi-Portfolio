@@ -2,13 +2,13 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": "explicit"
+    "source.fixAll.eslint": "explicit"
   },
   "editor.quickSuggestions": {
-      "strings": true
+    "strings": true
   },
   "[markdown]": {
-      "files.trimTrailingWhitespace": false
+    "files.trimTrailingWhitespace": false
   },
   "css.validate": true,
   "scss.validate": true,

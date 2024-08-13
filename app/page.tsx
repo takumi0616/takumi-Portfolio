@@ -13,6 +13,7 @@ import Skills from './_components/skills/Skills';
 import Activity from './_components/activity/Activity';
 import Contributions from './_components/contributions/Contributions';
 import Contact from './_components/contact/Contact';
+import Publications from './_components/publications/Publications';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -52,6 +53,9 @@ export default function Home() {
             <div className="relative w-full h-full overflow-hidden">
               <div id="works">
                 <Works onOpenModal={openModal} />
+              </div>
+              <div id="publications">
+                <Publications/>
               </div>
               <div id="skills">
                 <Skills />
