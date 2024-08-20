@@ -21,12 +21,10 @@ jobs:
 
       - name: Install packages
         run: |
-          cd next
           npm install
 
       - name: Run eslint
         run: |
-          cd next
           npm run lint
 
   prettier:
@@ -41,12 +39,10 @@ jobs:
 
       - name: Install packages
         run: |
-          cd next
           npm install
 
       - name: Run format
         run: |
-          cd next
           npm run format
           clean=$(git status | grep "nothing to commit" || true)
           if [ -z "$clean" ]; then
