@@ -1,42 +1,42 @@
-'use client';
+'use client'
 
-import React, { useEffect, useState } from 'react';
-import Loader from './_components/layouts/Loader';
-import Footer from './_components/layouts/Footer';
-import Header from './_components/layouts/Header';
-import MainView from './_components/hero/HeroView';
-import BackAnimation from './_components/layouts/BackAnimation';
-import Works from './_components/works/Works';
-import WorkModal from './_components/works/WorkModal';
-import { WorkCardProps } from './_components/works/WorkCard';
-import Skills from './_components/skills/Skills';
-import Activity from './_components/activity/Activity';
-import Contributions from './_components/contributions/Contributions';
-import Contact from './_components/contact/Contact';
-import Publications from './_components/publications/Publications';
+import React, { useEffect, useState } from 'react'
+import Loader from '@/components/layouts/Loader'
+import Footer from '@/components/layouts/Footer'
+import Header from '@/components/layouts/Header'
+import MainView from '@/components/hero/HeroView'
+import BackAnimation from '@/components/layouts/BackAnimation'
+import Works from '@/components/works/Works'
+import WorkModal from '@/components/works/WorkModal'
+import { WorkCardProps } from '@/components/works/WorkCard'
+import Skills from '@/components/skills/Skills'
+import Activity from '@/components/activity/Activity'
+import Contributions from '@/components/contributions/Contributions'
+import Contact from '@/components/contact/Contact'
+import Publications from '@/components/publications/Publications'
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedWork, setSelectedWork] = useState<WorkCardProps | undefined>(
-    undefined
-  );
+  const [isLoading, setIsLoading] = useState(true)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [selectedWork, setSelectedWork] = useState<
+    Omit<WorkCardProps, 'onOpenModal'> | undefined
+  >(undefined)
 
-  const openModal = (work: WorkCardProps) => {
-    setSelectedWork(work);
-    setIsModalOpen(true);
-  };
+  const openModal = (work: Omit<WorkCardProps, 'onOpenModal'>) => {
+    setSelectedWork(work)
+    setIsModalOpen(true)
+  }
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 4000);
+      setIsLoading(false)
+    }, 4000)
 
-    return () => clearTimeout(timer);
-  }, []);
+    return () => clearTimeout(timer)
+  }, [])
 
   return (
-    <div className="flex flex-col min-h-screen relative">
+    <div className="relative flex min-h-screen flex-col">
       {isLoading && <Loader />}
       <div
         className={`absolute w-full transition-opacity duration-1000 ease-out ${
@@ -44,18 +44,18 @@ export default function Home() {
         }`}
       >
         <Header />
-        <div className="flex-grow">
+        <div className="grow">
           <MainView />
           <div className="mt-[-400px]">
-            <div className="sticky top-0 w-full h-full">
+            <div className="sticky top-0 size-full">
               <BackAnimation />
             </div>
-            <div className="relative w-full h-full overflow-hidden">
+            <div className="relative size-full overflow-hidden">
               <div id="works">
                 <Works onOpenModal={openModal} />
               </div>
               <div id="publications">
-                <Publications/>
+                <Publications />
               </div>
               <div id="skills">
                 <Skills />
@@ -83,5 +83,5 @@ export default function Home() {
         <Footer />
       </div>
     </div>
-  );
+  )
 }

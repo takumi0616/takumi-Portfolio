@@ -1,15 +1,14 @@
-import React, { useEffect } from 'react';
-import PublicationCard from './PublicationCard';
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
-import { PublicationCardProps } from './PublicationCard';
+import React, { useEffect } from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import PublicationCard, { PublicationCardProps } from './PublicationCard'
 
 export default function Publications() {
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger)
 
     function updateAnimations() {
-      const workCards = gsap.utils.toArray<Element>('.work-card');
+      const workCards = gsap.utils.toArray<Element>('.work-card')
       workCards.forEach((card) => {
         gsap.fromTo(
           card,
@@ -25,25 +24,25 @@ export default function Publications() {
               toggleActions: 'play none none none',
               invalidateOnRefresh: true,
             },
-          }
-        );
-      });
+          },
+        )
+      })
     }
-    updateAnimations();
-    window.addEventListener('resize', updateAnimations);
+    updateAnimations()
+    window.addEventListener('resize', updateAnimations)
 
     return () => {
-      window.removeEventListener('resize', updateAnimations);
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
+      window.removeEventListener('resize', updateAnimations)
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
+    }
+  }, [])
 
   return (
     <div className="mb-40">
-      <h2 className="text-center text-4xl mb-20">Publications</h2>
+      <h2 className="mb-20 text-center text-4xl">Publications</h2>
 
       <div className="flex flex-col items-center justify-center">
-        <div className="work-card mt-10 mb-20">
+        <div className="work-card mb-20 mt-10">
           <PublicationCard
             image="public1.png"
             title="Recognition Performance Validation of Weather Map Images by ChatGPT"
@@ -63,7 +62,7 @@ export default function Publications() {
             engineering."
           />
         </div>
-        <div className="work-card mt-10 mb-20">
+        <div className="work-card mb-20 mt-10">
           <PublicationCard
             image="public2.png"
             title="ChatGPTによる天気図画像からの天気コメント生成の検証"
@@ -73,5 +72,5 @@ export default function Publications() {
         </div>
       </div>
     </div>
-  );
+  )
 }

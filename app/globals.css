@@ -10,3 +10,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   background-image: linear-gradient(to right, #c9d6df 30%, #fafaff 70%);
 }
+
+body {
+  overflow-x: hidden;
+}

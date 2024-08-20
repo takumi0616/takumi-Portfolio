@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
-import ContactCard, { ContactCardProps } from './ContactCard';
-import { MdOutlineEmail } from 'react-icons/md';
-import { SiGithub, SiZenn } from 'react-icons/si';
-import { FaXTwitter } from 'react-icons/fa6';
-import { AiOutlineInstagram } from 'react-icons/ai';
+import React, { useEffect } from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { MdOutlineEmail } from 'react-icons/md'
+import { SiGithub, SiZenn } from 'react-icons/si'
+import { FaXTwitter } from 'react-icons/fa6'
+import { AiOutlineInstagram } from 'react-icons/ai'
+import ContactCard, { ContactCardProps } from './ContactCard'
 
 const contacts: ContactCardProps[] = [
   {
@@ -33,14 +33,14 @@ const contacts: ContactCardProps[] = [
     contactName: 'Instagram',
     link: 'https://www.instagram.com/takumin0616t/',
   },
-];
+]
 
 const Contact: React.FC = () => {
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger)
 
     function updateAnimations() {
-      const cards = gsap.utils.toArray<Element>('.card');
+      const cards = gsap.utils.toArray<Element>('.card')
       cards.forEach((card) => {
         gsap.fromTo(
           card,
@@ -56,23 +56,23 @@ const Contact: React.FC = () => {
               toggleActions: 'play none none none',
               invalidateOnRefresh: true,
             },
-          }
-        );
-      });
+          },
+        )
+      })
     }
-    updateAnimations();
-    window.addEventListener('resize', updateAnimations);
+    updateAnimations()
+    window.addEventListener('resize', updateAnimations)
 
     return () => {
-      window.removeEventListener('resize', updateAnimations);
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
+      window.removeEventListener('resize', updateAnimations)
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
+    }
+  }, [])
 
   return (
     <div className="mb-80 text-center">
-      <h2 className="text-center text-4xl mb-20">Contact</h2>
-      <div className="flex flex-wrap justify-center items-center gap-8">
+      <h2 className="mb-20 text-center text-4xl">Contact</h2>
+      <div className="flex flex-wrap items-center justify-center gap-8">
         {contacts.map((contact, index) => (
           <ContactCard
             key={index}
@@ -83,7 +83,7 @@ const Contact: React.FC = () => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

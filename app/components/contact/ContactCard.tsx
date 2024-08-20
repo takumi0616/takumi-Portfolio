@@ -1,10 +1,10 @@
-import React, { FC } from 'react';
+import React, { FC } from 'react'
 
 export type ContactCardProps = {
-  Icon: React.ElementType;
-  contactName: string;
-  link: string;
-};
+  Icon: React.ElementType
+  contactName: string
+  link: string
+}
 
 const ContactCard: FC<ContactCardProps> = ({ Icon, contactName, link }) => {
   return (
@@ -18,7 +18,7 @@ const ContactCard: FC<ContactCardProps> = ({ Icon, contactName, link }) => {
       <Icon className="text-6xl" />
       <span className="mt-2">{contactName}</span>
     </a>
-  );
-};
+  )
+}
 
-export default ContactCard;
+export default ContactCard

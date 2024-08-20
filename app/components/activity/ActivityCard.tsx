@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react'
 
 interface ActivityItemProps {
-  date: string;
-  event: string;
+  date: string
+  event: string
 }
 
 const ActivityItem: React.FC<ActivityItemProps> = ({ date, event }) => {
-  const formattedDate = date.replace(/-/g, '.');
+  const formattedDate = date.replace(/-/g, '.')
 
   return (
     <div className="flex py-2">
@@ -16,7 +16,7 @@ const ActivityItem: React.FC<ActivityItemProps> = ({ date, event }) => {
         <span>{event}</span>
       </h3>
     </div>
-  );
-};
+  )
+}
 
-export default ActivityItem;
+export default ActivityItem

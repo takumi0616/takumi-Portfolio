@@ -1,40 +1,79 @@
 {
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
   "extends": [
     "eslint:recommended",
-    "next/core-web-vitals",
+    "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier"
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:prettier/recommended",
+    "prettier",
+    "next",
+    "next/core-web-vitals"
   ],
-  "rules": {
-    "@typescript-eslint/no-unused-vars": [
-      "warn",
-      {
-        "argsIgnorePattern": "^_",
-        "caughtErrorsIgnorePattern": "^_",
-        "destructuredArrayIgnorePattern": "^_",
-        "varsIgnorePattern": "^_"
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "import",
+    "jsx-a11y",
+    "tailwindcss"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".json"]
+      },
+      "typescript": {
+        "config": "tsconfig.json",
+        "alwaysTryTypes": true
       }
+    },
+    "react": {
+      "version": "17.0.0"
+    }
+  },
+  "ignorePatterns": ["/*.js"],
+  "rules": {
+    "import/no-unresolved": "off",
+    "prefer-const": "off",
+    "react/prop-types": ["off"],
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [
+      "error",
+      { "extensions": [".jsx", ".tsx"] }
     ],
-    "no-duplicate-imports": "error",
-    "curly": "error",
-    "eqeqeq": "error",
-    "no-nested-ternary": "error",
-    "no-param-reassign": "error",
-    "no-restricted-imports": ["error", { "patterns": ["../*"] }],
-    "no-return-assign": "error",
-    "no-return-await": "error",
-    "object-shorthand": "error",
-    "prefer-const": "error",
-    "yoda": "error",
-    "import/order": [
+    "import/order": ["error"],
+    "prettier/prettier": [
       "error",
       {
-        "alphabetize": { "order": "asc" },
-        "distinctGroup": false,
-        "pathGroups": [
-          { "pattern": "@/**", "group": "parent", "position": "before" }
-        ]
+        "trailingComma": "all",
+        "endOfLine": "lf",
+        "semi": false,
+        "singleQuote": true,
+        "printWidth": 80,
+        "tabWidth": 2
       }
-    ]
+    ],
+    "tailwindcss/classnames-order": "warn",
+    "tailwindcss/enforces-shorthand": "warn",
+    "tailwindcss/migration-from-tailwind-2": "warn",
+    "tailwindcss/no-custom-classname": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "@next/next/no-img-element": "off"
   }
 }
