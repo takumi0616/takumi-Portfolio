@@ -1,0 +1,54 @@
+name: build-check
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .github/workflows/test-and-build.yml
+      - .vscode/**
+      - app/**
+      - public/**
+      - .eslintrc.json
+      - .gitignore
+      - .prettierrc
+      - README.md
+      - next.config.js
+      - package.json
+      - package-lock.json
+      - postcss.config.js
+      - tailwind.config.ts
+      - tsconfig.json
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js version
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Run tests
+        run: npm run test --if-present
+
+      - name: Cache node modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-

@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
-import ActivityItem from './ActivityCard';
-import { MdArrowForwardIos } from 'react-icons/md';
-import { MdArrowBackIos } from 'react-icons/md';
+import React, { useState } from 'react'
+import { MdArrowForwardIos, MdArrowBackIos } from 'react-icons/md'
+import ActivityItem from './ActivityCard'
 
 const activities = [
+  { date: '2024-09-12', event: 'EasyChair for KES2024_IS11_登壇' },
+  { date: '2024-09-07', event: '技育博2024_vol5_参加' },
+  { date: '2024-08-10', event: '技育CAMP マンスリーハッカソンvol12 出場' },
+  { date: '2024-07-23', event: '松尾研金融市場取引と機械学習講座_受講決定' },
+  { date: '2024-07-18', event: '技術科学イノベーション専攻_合格' },
   { date: '2024-04-23', event: 'GCI 2024 summer受講開始' },
   { date: '2024-04-23', event: 'EasyChair for KES2024_IS11_投稿' },
   { date: '2024-04-16', event: 'GCI 2024 summer受講決定' },
@@ -30,31 +34,31 @@ const activities = [
   { date: '2023-04-01', event: '長岡技術科学大学_3年_入学' },
   { date: '2018-03-22', event: '新居浜工業高等専門学校_5年_卒業' },
   { date: '2018-04-01', event: '新居浜工業高等専門学校_1年_入学' },
-] satisfies Record<'date' | 'event', string>[];
+] satisfies Record<'date' | 'event', string>[]
 
 const Activity: React.FC = () => {
-  const [pageIndex, setPageIndex] = useState(0);
-  const itemsPerPage = 4;
-  const maxPageIndex = Math.ceil(activities.length / itemsPerPage) - 1;
+  const [pageIndex, setPageIndex] = useState(0)
+  const itemsPerPage = 6
+  const maxPageIndex = Math.ceil(activities.length / itemsPerPage) - 1
 
   const nextPage = () => {
-    console.log('Next page button clicked');
+    console.log('Next page button clicked')
     if (pageIndex < maxPageIndex) {
-      setPageIndex((prevIndex) => prevIndex + 1);
+      setPageIndex((prevIndex) => prevIndex + 1)
     }
-  };
+  }
 
   const prevPage = () => {
-    console.log('Prev page button clicked');
+    console.log('Prev page button clicked')
     if (pageIndex > 0) {
-      setPageIndex((prevIndex) => prevIndex - 1);
+      setPageIndex((prevIndex) => prevIndex - 1)
     }
-  };
+  }
 
   const displayedActivities = activities.slice(
     pageIndex * itemsPerPage,
-    (pageIndex + 1) * itemsPerPage
-  );
+    (pageIndex + 1) * itemsPerPage,
+  )
 
   return (
     <div className="mb-60">
@@ -62,7 +66,7 @@ const Activity: React.FC = () => {
         <h2 className="text-center text-4xl">Activity</h2>
       </div>
       <div className="flex items-center justify-center">
-        <div className="px-4 py-4">
+        <div className="p-4">
           {pageIndex > 0 ? (
             <button
               onClick={prevPage}
@@ -72,7 +76,7 @@ const Activity: React.FC = () => {
               <MdArrowBackIos />
             </button>
           ) : (
-            <div className="w-4 h-10"></div>
+            <div className="h-10 w-4"></div>
           )}
         </div>
 
@@ -86,7 +90,7 @@ const Activity: React.FC = () => {
           ))}
         </div>
 
-        <div className="px-4 py-4">
+        <div className="p-4">
           {pageIndex < maxPageIndex ? (
             <button
               onClick={nextPage}
@@ -96,12 +100,12 @@ const Activity: React.FC = () => {
               <MdArrowForwardIos />
             </button>
           ) : (
-            <div className="w-4 h-10"></div>
+            <div className="h-10 w-4"></div>
           )}
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Activity;
+export default Activity

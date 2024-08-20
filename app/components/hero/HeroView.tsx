@@ -1,48 +1,46 @@
-import React, { useEffect, useRef, useState } from 'react';
-import MainCube from './HeroCube';
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
+import React, { useEffect, useRef, useState } from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import MainCube from './HeroCube'
 
 export default function MainView() {
-  const threeJsRef = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
-  const [canvasSize, setCanvasSize] = useState({ width: 0, height: 0 });
-  const [mainContainerHeight, setMainContainerHeight] = useState(0);
+  const threeJsRef = useRef<HTMLDivElement>(null)
+  const contentRef = useRef<HTMLDivElement>(null)
+  const [canvasSize, setCanvasSize] = useState({ width: 0, height: 0 })
+  const [mainContainerHeight, setMainContainerHeight] = useState(0)
 
   const handleResize = (width: number, height: number) => {
-    setCanvasSize({ width, height });
-    updatePadding(height);
-  };
+    setCanvasSize({ width, height })
+    updatePadding(height)
+  }
 
   const updatePadding = (canvasHeight: number) => {
-    const windowHeight = window.innerHeight;
-    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight
+    const windowWidth = window.innerWidth
 
-    let paddingTop = 45;
+    let paddingTop = 45
     if (windowHeight <= windowWidth) {
-      paddingTop = Math.max(0, (windowHeight - canvasHeight) / 2);
+      paddingTop = Math.max(0, (windowHeight - canvasHeight) / 2)
     }
 
     if (threeJsRef.current) {
-      threeJsRef.current.style.paddingTop = `${paddingTop}px`;
+      threeJsRef.current.style.paddingTop = `${paddingTop}px`
     }
-  };
+  }
 
   const updateMainContainerHeight = () => {
     if (contentRef.current) {
-      setMainContainerHeight(contentRef.current.clientHeight);
+      setMainContainerHeight(contentRef.current.clientHeight)
     }
-  };
+  }
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger)
 
     function updateAnimations() {
-      const sections = gsap.utils.toArray(
-        '.content section:not(.no-animation)'
-      );
+      const sections = gsap.utils.toArray('.content section:not(.no-animation)')
       sections.forEach((section) => {
-        const el = section as Element;
+        const el = section as Element
         gsap.fromTo(
           el,
           { opacity: 0 },
@@ -56,40 +54,40 @@ export default function MainView() {
               toggleActions: 'play none none none',
               invalidateOnRefresh: true,
             },
-          }
-        );
-      });
+          },
+        )
+      })
     }
 
-    updateAnimations();
-    window.addEventListener('resize', updateAnimations);
-    window.addEventListener('resize', updateMainContainerHeight);
+    updateAnimations()
+    window.addEventListener('resize', updateAnimations)
+    window.addEventListener('resize', updateMainContainerHeight)
 
-    updateMainContainerHeight();
+    updateMainContainerHeight()
 
     return () => {
-      window.removeEventListener('resize', updateAnimations);
-      window.removeEventListener('resize', updateMainContainerHeight);
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
+      window.removeEventListener('resize', updateAnimations)
+      window.removeEventListener('resize', updateMainContainerHeight)
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
+    }
+  }, [])
 
   return (
     <div>
-      <div className="flex relative items-start max-w-full portrait:flex-col-reverse">
+      <div className="relative flex max-w-full items-start portrait:flex-col-reverse">
         <div
-          className="w-1/2 portrait:mr-0 portrait:w-full portrait:mt-[-200px]"
+          className="w-1/2 portrait:mr-0 portrait:mt-[-200px] portrait:w-full"
           ref={contentRef}
         >
           <div className="content ml-[10vw] mr-[5vw] portrait:mt-0">
-            <section className="no-animation opacity-100 mt-[45vh] mb-[55vh] portrait:mt-0">
+            <section className="no-animation mb-[55vh] mt-[45vh] opacity-100 portrait:mt-0">
               <h1 className="text-5xl">髙 須 賀 匠</h1>
             </section>
 
-            <div className=" mt-[45vh] mb-[55vh]">
+            <div className=" mb-[55vh] mt-[45vh]">
               <section className="opacity-0">
                 <h2 className="text-5xl">髙 須 賀 匠</h2>
-                <p className="leading-normal text-base my-4">
+                <p className="my-4 text-base leading-normal">
                   フロントエンジニア/データエンジニア/データサイエンティスト
                   <br />
                   長岡技術科学大学 工学部 情報経営システム工学課程 4年 在学
@@ -99,9 +97,9 @@ export default function MainView() {
               </section>
             </div>
 
-            <div className=" mt-[45vh] mb-[55vh]">
+            <div className=" mb-[55vh] mt-[45vh]">
               <section className="opacity-0">
-                <p className="leading-normal text-base my-4">
+                <p className="my-4 text-base leading-normal">
                   大学の学祭の実行委員である情報局「NUTMEG」に所属し、
                   <br />
                   学祭をWebアプリでDXしています。
@@ -118,7 +116,7 @@ export default function MainView() {
         </div>
 
         <div
-          className="sticky top-0 right-0"
+          className="sticky right-0 top-0"
           style={{ height: `${mainContainerHeight / 2.2}px` }}
         >
           <div
@@ -131,5 +129,5 @@ export default function MainView() {
         </div>
       </div>
     </div>
-  );
+  )
 }

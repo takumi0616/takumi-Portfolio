@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
-import SkillCard from './SkillCard';
+import React, { useEffect } from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import {
   SiJavascript,
   SiTypescript,
@@ -13,16 +12,18 @@ import {
   SiGithub,
   SiFigma,
   SiGit,
-} from 'react-icons/si';
+  SiPrisma,
+} from 'react-icons/si'
+import SkillCard from './SkillCard'
 
 export default function Skills() {
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger)
 
     function updateAnimations() {
       const skillSets = gsap.utils.toArray<Element>(
-        '.skillset-front, .skillsets'
-      );
+        '.skillset-front, .skillsets',
+      )
       skillSets.forEach((set) => {
         gsap.fromTo(
           set,
@@ -38,29 +39,29 @@ export default function Skills() {
               toggleActions: 'play none none none',
               invalidateOnRefresh: true,
             },
-          }
-        );
-      });
+          },
+        )
+      })
     }
-    updateAnimations();
-    window.addEventListener('resize', updateAnimations);
+    updateAnimations()
+    window.addEventListener('resize', updateAnimations)
 
     return () => {
-      window.removeEventListener('resize', updateAnimations);
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
+      window.removeEventListener('resize', updateAnimations)
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
+    }
+  }, [])
 
   return (
     <div className="mb-60">
-      <h2 className="text-center text-4xl mb-20">Skills</h2>
+      <h2 className="mb-20 text-center text-4xl">Skills</h2>
 
-      <div className="skillset-front w-3/5 mx-auto portrait:w-4/5">
-        <div className="front w-3/5 mx-auto mb-10">
+      <div className="skillset-front mx-auto w-3/5 portrait:w-4/5">
+        <div className="front mx-auto mb-10 w-3/5">
           <div className="mb-8 flex items-center">
-            <div className="flex-grow border-t border-black mt-2"></div>
-            <h3 className="text-center text-3xl mx-4">frontend</h3>
-            <div className="flex-grow border-t border-black mt-2"></div>
+            <div className="mt-2 grow border-t border-black"></div>
+            <h3 className="mx-4 text-center text-3xl">frontend</h3>
+            <div className="mt-2 grow border-t border-black"></div>
           </div>
           <div className="flex flex-wrap justify-center">
             <SkillCard Icon={SiJavascript} skillName="JavaScript" />
@@ -72,23 +73,24 @@ export default function Skills() {
         </div>
 
         <div className="skillsets flex justify-center portrait:flex-col">
-          <div className="back w-1/3 mx-auto portrait:mb-12 portrait:w-3/5">
+          <div className="back mx-auto w-1/3 portrait:mb-12 portrait:w-3/5">
             <div className="mb-8 flex items-center">
-              <div className="flex-grow border-t border-black mt-2"></div>
-              <h3 className="text-center text-3xl mx-4">backend</h3>
-              <div className="flex-grow border-t border-black mt-2"></div>
+              <div className="mt-2 grow border-t border-black"></div>
+              <h3 className="mx-4 text-center text-3xl">backend</h3>
+              <div className="mt-2 grow border-t border-black"></div>
             </div>
             <div className="flex flex-wrap justify-center">
               <SkillCard Icon={SiRubyonrails} skillName="Rails" />
               <SkillCard Icon={SiPython} skillName="Python" />
+              <SkillCard Icon={SiPrisma} skillName="Prisma" />
             </div>
           </div>
 
-          <div className="tools w-2/5 mx-auto  portrait:w-3/5">
+          <div className="tools mx-auto w-2/5  portrait:w-3/5">
             <div className="mb-8 flex items-center">
-              <div className="flex-grow border-t border-black mt-2"></div>
-              <h3 className="text-center text-3xl mx-4">tools</h3>
-              <div className="flex-grow border-t border-black mt-2"></div>
+              <div className="mt-2 grow border-t border-black"></div>
+              <h3 className="mx-4 text-center text-3xl">tools</h3>
+              <div className="mt-2 grow border-t border-black"></div>
             </div>
             <div className="flex flex-wrap justify-center">
               <SkillCard Icon={SiGithub} skillName="Github" />
@@ -99,5 +101,5 @@ export default function Skills() {
         </div>
       </div>
     </div>
-  );
+  )
 }
