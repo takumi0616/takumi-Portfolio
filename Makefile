@@ -1,10 +1,13 @@
 # Makefile
 
 # PHONYターゲットの定義
-.PHONY: develop lint lint-fix format build dev
+.PHONY: develop install lint lint-fix format build dev
 
 # developターゲット
-develop: lint lint-fix format build dev
+develop: install lint lint-fix format build dev
+
+install:
+	npm install
 
 # lintターゲット
 lint:
