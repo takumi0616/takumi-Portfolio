@@ -28,7 +28,6 @@ export default function Home({ params }: { params: { lang: string } }) {
     setIsModalOpen(true)
   }
 
-  // i18nによる翻訳データの取得
   const { t } = useTranslation(params.lang)
 
   useEffect(() => {
@@ -67,7 +66,7 @@ export default function Home({ params }: { params: { lang: string } }) {
                 <Skills />
               </div>
               <div id="activity">
-                <Activity />
+                <Activity lang={params.lang} />
               </div>
               <div id="contributions" className="">
                 <Contributions />

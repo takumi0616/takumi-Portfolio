@@ -4,7 +4,7 @@ import { dir } from 'i18next'
 import '@/app/[lang]/globals.css'
 import React from 'react'
 import { GoogleAnalytics } from '@/app/components/thirdparty/GoogleAnalytics'
-import { LanguageProvider } from '@/i18n/client' // LanguageProviderをインポート
+import { LanguageProvider } from '@/i18n/client'
 
 const zenKurenaido = Zen_Kurenaido({
   subsets: ['latin'],
@@ -33,7 +33,6 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>
       <body className={'font-zenKurenaido'}>
-        {/* LanguageProviderでアプリ全体をラップ */}
         <LanguageProvider initialLanguage={lang}>{children}</LanguageProvider>
       </body>
     </html>
