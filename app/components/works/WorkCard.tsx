@@ -20,7 +20,6 @@ const WorkCard: React.FC<WorkCardProps> = ({
   onOpenModal,
 }) => {
   const handleImageClick = () => {
-    // onOpenModalに渡すオブジェクトからonOpenModalを除く
     onOpenModal({ image, title, description, myPart, gitHubUrl })
   }
 

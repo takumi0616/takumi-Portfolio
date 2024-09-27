@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { IoIosMenu } from 'react-icons/io'
+import { useRouter } from 'next/navigation'
+import { useLanguage } from '@/i18n/client'
 
 const menuItems = [
   { id: 'works', label: 'Works' },
@@ -11,6 +13,8 @@ const menuItems = [
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const { language, setLanguage } = useLanguage()
+  const router = useRouter()
 
   const toggleMenu = () => setIsOpen(!isOpen)
 
@@ -60,6 +64,11 @@ const Header = () => {
     window.location.reload()
   }
 
+  const handleLanguageChange = (newLanguage: string) => {
+    setLanguage(newLanguage)
+    router.push(`/${newLanguage}`)
+  }
+
   return (
     <header className="fixed inset-x-0 top-0 z-50 flex items-center justify-between bg-transparent p-6">
       <button
@@ -68,17 +77,30 @@ const Header = () => {
       >
         Takasuka Takumi
       </button>
-      <IoIosMenu
-        className="mr-8 cursor-pointer text-5xl portrait:mr-0"
-        onClick={toggleMenu}
-        tabIndex={0}
-        role="button"
-        onKeyPress={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            toggleMenu()
-          }
-        }}
-      />
+
+      <div className="flex items-center">
+        <select
+          value={language}
+          onChange={(e) => handleLanguageChange(e.target.value)}
+          className="mr-4 cursor-pointer rounded border border-gray-300 p-2"
+          aria-label="言語切り替え"
+        >
+          <option value="ja">日本語</option>
+          <option value="en">English</option>
+        </select>
+        <IoIosMenu
+          className="mr-8 cursor-pointer text-5xl portrait:mr-0"
+          onClick={toggleMenu}
+          tabIndex={0}
+          role="button"
+          onKeyPress={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              toggleMenu()
+            }
+          }}
+        />
+      </div>
+
       <nav
         className={`menu-container absolute right-[36px] top-full mt-2 select-none rounded-lg bg-white p-5 shadow-md transition-opacity duration-500 ${
           isOpen ? 'opacity-100' : 'invisible opacity-0'

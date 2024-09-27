@@ -1,21 +1,22 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-import Loader from '@/components/layouts/Loader'
-import Footer from '@/components/layouts/Footer'
-import Header from '@/components/layouts/Header'
-import MainView from '@/components/hero/HeroView'
-import BackAnimation from '@/components/layouts/BackAnimation'
-import Works from '@/components/works/Works'
-import WorkModal from '@/components/works/WorkModal'
-import { WorkCardProps } from '@/components/works/WorkCard'
-import Skills from '@/components/skills/Skills'
-import Activity from '@/components/activity/Activity'
-import Contributions from '@/components/contributions/Contributions'
-import Contact from '@/components/contact/Contact'
-import Publications from '@/components/publications/Publications'
+import Loader from '@/app/components/layouts/Loader'
+import Footer from '@/app/components/layouts/Footer'
+import Header from '@/app/components/layouts/Header'
+import MainView from '@/app/components/hero/HeroView'
+import BackAnimation from '@/app/components/layouts/BackAnimation'
+import Works from '@/app/components/works/Works'
+import WorkModal from '@/app/components/works/WorkModal'
+import { WorkCardProps } from '@/app/components/works/WorkCard'
+import Skills from '@/app/components/skills/Skills'
+import Activity from '@/app/components/activity/Activity'
+import Contributions from '@/app/components/contributions/Contributions'
+import Contact from '@/app/components/contact/Contact'
+import Publications from '@/app/components/publications/Publications'
+import { useLanguage, useTranslation } from '@/i18n/client'
 
-export default function Home() {
+export default function Home({ params }: { params: { lang: string } }) {
   const [isLoading, setIsLoading] = useState(true)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [selectedWork, setSelectedWork] = useState<
@@ -26,6 +27,9 @@ export default function Home() {
     setSelectedWork(work)
     setIsModalOpen(true)
   }
+
+  // i18nによる翻訳データの取得
+  const { t } = useTranslation(params.lang)
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -46,6 +50,8 @@ export default function Home() {
         <Header />
         <div className="grow">
           <MainView />
+          {/* 翻訳されたテキストの表示 */}
+          <h1 className="text-center text-3xl font-bold">{t('app_name')}</h1>
           <div className="mt-[-400px]">
             <div className="sticky top-0 size-full">
               <BackAnimation />

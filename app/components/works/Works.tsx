@@ -17,7 +17,7 @@ const worksData: Omit<WorkCardProps, 'onOpenModal'>[] = [
     gitHubUrl: 'https://github.com/takumi0616/gpt-logprobs',
   },
   {
-    image: 'NS.avif',
+    image: 'NS.png',
     title: 'NUTMEG-Seeds',
     description:
       '私が所属している団体「NUTMEG」内での技術の知見を共有しているWebアプリです。NUTMEGのイメージカラーであるオレンジをテーマカラーにしており、細部までデザインを凝っています。',
@@ -25,7 +25,7 @@ const worksData: Omit<WorkCardProps, 'onOpenModal'>[] = [
     gitHubUrl: 'https://github.com/NUTFes/NUTMEG-Seeds',
   },
   {
-    image: 'GM2.avif',
+    image: 'GM2.png',
     title: 'Group-manager-2',
     description:
       '長岡技術科学大学の学祭に登録する際にこのWebアプリを使います。PDF出力や統計データの表示など機能面に優れています。黒を基調としており、スタイリッシュなデザインです。',
@@ -33,7 +33,7 @@ const worksData: Omit<WorkCardProps, 'onOpenModal'>[] = [
     gitHubUrl: 'https://github.com/NUTFes/group-manager-2',
   },
   {
-    image: 'SMF.avif',
+    image: 'SMF.png',
     title: 'Slack-message-finder',
     description:
       'Slackのログをリアルタイムに取得して保存し、Slackライクなデザインのページで表示するWebアプリです。チャンネルの上下表示や、特定のユーザーの1週間の活動を知る機能があります。',
@@ -41,7 +41,7 @@ const worksData: Omit<WorkCardProps, 'onOpenModal'>[] = [
     gitHubUrl: 'https://github.com/TMLlaboratory/slack-message-finder',
   },
   {
-    image: 'MMA.avif',
+    image: 'MMA.png',
     title: 'Menter-management-app',
     description:
       'メンター制度をサポートするWebアプリです。メンターとメンティーを紐づけて、メンティーの学習記録を確認することができます。管理者が管理するシンプルなWebアプリです。',
@@ -49,7 +49,7 @@ const worksData: Omit<WorkCardProps, 'onOpenModal'>[] = [
     gitHubUrl: 'https://github.com/takumi0616/Mentor-management-app',
   },
   {
-    image: 'CAI.avif',
+    image: 'CAI.png',
     title: 'Communication-AI',
     description:
       '生成AIと会話できるWebアプリです。会話部分は単純なシステムですが、デザインやアクセシビリティに配慮しており、あらゆるユーザーが使うことを想定した機能や設計を考えています。',
