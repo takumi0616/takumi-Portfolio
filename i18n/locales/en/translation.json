@@ -1,6 +1,5 @@
 {
   "activity": {
-    "title": "Activity",
     "items": [
       {
         "date": "2024-09-12",
@@ -122,6 +121,13 @@
         "image": "GM2.png"
       },
       {
+        "title": "Communication-AI",
+        "description": "A web application that allows conversations with AI. Although the conversation system is simple, the design and accessibility are carefully considered, aiming to be used by a wide range of users.",
+        "myPart": "Frontend, Design",
+        "gitHubUrl": "https://github.com/takumi0616/communication-ai",
+        "image": "CAI.png"
+      },
+      {
         "title": "Slack-message-finder",
         "description": "A web application that retrieves and saves Slack logs in real-time, displaying them on a Slack-like page. Features include the ability to view channel activity and track the weekly activities of specific users.",
         "myPart": "Frontend, Backend",
@@ -134,15 +140,26 @@
         "myPart": "Frontend, Backend",
         "gitHubUrl": "https://github.com/takumi0616/Mentor-management-app",
         "image": "MMA.png"
-      },
-      {
-        "title": "Communication-AI",
-        "description": "A web application that allows conversations with AI. Although the conversation system is simple, the design and accessibility are carefully considered, aiming to be used by a wide range of users.",
-        "myPart": "Frontend, Design",
-        "gitHubUrl": "https://github.com/takumi0616/communication-ai",
-        "image": "CAI.png"
       }
     ],
     "my_part_label": "My Role"
+  },
+  "publications": {
+    "data": [
+      {
+        "image": "public1.png",
+        "title": "Recognition Performance Validation of Weather Map Images by ChatGPT",
+        "authors_label": "Co-authors",
+        "authors": "Yuki H. Takano, Shotaro Watanabe, Gendo Kumoi",
+        "abstract": "Weather map recognition is a complex image recognition task that requires two cognitive processes: the interpretation of symbols and future predictions. Recent advancements in multimodal AI have shown the potential to solve such complex tasks. This study uses ChatGPT, a type of multimodal AI, to validate the recognition performance of weather map images and proposes prompt engineering for more accurate recognition. Weather map recognition is a problem that is also featured in the Common University Entrance Test. If weather maps can be recognized, automatic grading and question generation become possible, leading to learning support. Furthermore, it is expected that weather commentary text can be automatically generated from weather maps. Therefore, weather map image recognition is an important task, but it requires not only recognizing time-series changes in local weather data but also recognizing information on large-scale weather patterns such as pressure configurations and making future predictions. In this study, we use ChatGPT4-Vision, a multimodal AI, to validate the recognition performance of weather map images. We investigate whether it can answer questions about weather maps from university entrance exams and generate weather commentary text from weather map images. By conducting multiple experiments with varying tasks and information in the prompts, and evaluating the accuracy of the generated commentaries, we propose and validate improvements in reading performance through prompt engineering."
+      },
+      {
+        "image": "public2.png",
+        "title": "Verification of weather comment generation from weather map images using ChatGPT",
+        "authors_label": "Co-authors",
+        "authors": "Yuki H. Takano, Shotaro Watanabe, Gendo Kumoi",
+        "abstract": "Weather forecasts (weather comments) are created by meteorologists interpreting visualized information and converting it into language. Previous studies on automatic generation of weather comments have two challenges: including information on large-scale atmospheric fields and generating natural sentences. In this study, we use ChatGPT4-Vision, a multimodal AI, to automatically generate weather comments from surface weather map images. By conducting experiments that vary the tasks specified in the prompts and the amount of information provided, and verifying the accuracy of the output comments, we explore the applicability of multimodal AI to weather comment generation."
+      }
+    ]
   }
 }

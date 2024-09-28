@@ -64,7 +64,8 @@ const Header = () => {
     window.location.reload()
   }
 
-  const handleLanguageChange = (newLanguage: string) => {
+  const handleLanguageToggle = () => {
+    const newLanguage = language === 'ja' ? 'en' : 'ja'
     setLanguage(newLanguage)
     router.push(`/${newLanguage}`)
   }
@@ -75,19 +76,30 @@ const Header = () => {
         className="ml-8 cursor-pointer text-lg tracking-wider lg:text-3xl portrait:ml-0"
         onClick={reloadPage}
       >
-        Takasuka Takumi
+        Portfolio
       </button>
 
       <div className="flex items-center">
-        <select
-          value={language}
-          onChange={(e) => handleLanguageChange(e.target.value)}
-          className="mr-4 cursor-pointer rounded border border-gray-300 p-2"
-          aria-label="言語切り替え"
-        >
-          <option value="ja">Japanese</option>
-          <option value="en">English</option>
-        </select>
+        <div className="flex items-center mr-6">
+          <img src="/japan.png" alt="Japanese" className="w-8 h-8" />
+          <label className="relative inline-flex items-center mx-3 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={language === 'en'}
+              onChange={handleLanguageToggle}
+              className="sr-only"
+            />
+            <div className="w-14 h-7 bg-gray-300 rounded-full">
+              <div
+                className={`absolute top-0.5 left-0.5 w-6 h-6 rounded-full transition-transform duration-300 ${
+                  language === 'en' ? 'translate-x-7 bg-black' : 'bg-black'
+                }`}
+              ></div>
+            </div>
+          </label>
+          <img src="/us.png" alt="English" className="w-8 h-8" />
+        </div>
+
         <IoIosMenu
           className="mr-8 cursor-pointer text-5xl portrait:mr-0"
           onClick={toggleMenu}

@@ -58,7 +58,7 @@ export default function Home({ params }: { params: { lang: string } }) {
                 <Works lang={params.lang} onOpenModal={openModal} />
               </div>
               <div id="publications">
-                <Publications />
+                <Publications lang={params.lang} />
               </div>
               <div id="skills">
                 <Skills />
