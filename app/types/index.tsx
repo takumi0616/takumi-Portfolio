@@ -19,7 +19,7 @@ export interface MainCubeProps {
 }
 
 export interface BackProps {
-  object: any
+  object?: Record<string, unknown>
 }
 
 export interface PublicationCardProps {

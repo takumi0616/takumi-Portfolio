@@ -40,7 +40,7 @@ make rebuild
 <p>4. 文法チェック・修正</p>
 
 ```
-make check
+make format
 ```
 
 <h2>🍰 Contribution Guidelines:</h2>

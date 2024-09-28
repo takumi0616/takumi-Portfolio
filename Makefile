@@ -15,8 +15,8 @@ rebuild:
 	npm run build
 	npm run dev
 
-.PHONY: check
-check:
+.PHONY: format
+format:
 	npm run lint
 	npm run lint:fix
 	npm run format
