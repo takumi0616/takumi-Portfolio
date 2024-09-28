@@ -1,6 +1,4 @@
 {
-  "app_name": "Takumi's Portfolio",
-  "welcome": "Welcome!",
   "activity": {
     "title": "Activity",
     "items": [
@@ -90,5 +88,14 @@
         "event": "Niihama National College of Technology Admission"
       }
     ]
+  },
+  "hero": {
+    "title": "Takumi Takasuka",
+    "description1": "Frontend Engineer / Data Engineer / Data Scientist",
+    "description2": "4th year student at Nagaoka University of Technology",
+    "description3": "Affiliated with the Machine Learning Theory Lab",
+    "extra_info1": "I belong to the information bureau 'NUTMEG', the organizing committee for the university festival, and I am working to DX the festival through web applications.",
+    "extra_info2": "Leveraging that experience, I have also participated in various hackathons and LT meetings of other organizations.",
+    "extra_info3": "Additionally, in the Machine Learning Theory Lab, I work with meteorological data and solve tasks related to generating weather forecast comments."
   }
 }

@@ -85,7 +85,7 @@ const Header = () => {
           className="mr-4 cursor-pointer rounded border border-gray-300 p-2"
           aria-label="言語切り替え"
         >
-          <option value="ja">日本語</option>
+          <option value="ja">Japanese</option>
           <option value="en">English</option>
         </select>
         <IoIosMenu

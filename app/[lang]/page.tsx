@@ -14,7 +14,7 @@ import Activity from '@/app/components/activity/Activity'
 import Contributions from '@/app/components/contributions/Contributions'
 import Contact from '@/app/components/contact/Contact'
 import Publications from '@/app/components/publications/Publications'
-import { useLanguage, useTranslation } from '@/i18n/client'
+import { useTranslation } from '@/i18n/client'
 
 export default function Home({ params }: { params: { lang: string } }) {
   const [isLoading, setIsLoading] = useState(true)
@@ -48,9 +48,7 @@ export default function Home({ params }: { params: { lang: string } }) {
       >
         <Header />
         <div className="grow">
-          <MainView />
-          {/* 翻訳されたテキストの表示 */}
-          <h1 className="text-center text-3xl font-bold">{t('app_name')}</h1>
+          <MainView lang={params.lang} />
           <div className="mt-[-400px]">
             <div className="sticky top-0 size-full">
               <BackAnimation />
