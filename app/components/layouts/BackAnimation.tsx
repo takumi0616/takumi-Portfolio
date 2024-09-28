@@ -2,12 +2,11 @@ import React, { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { BackProps } from '@/app/types'
 
 gsap.registerPlugin(ScrollTrigger)
 
-type Props = object
-
-const BackAnimation: React.FC<Props> = () => {
+const BackAnimation: React.FC<BackProps> = () => {
   const containerRef = useRef<HTMLDivElement>(null)
   const MAX_PARTICLE_COUNT = 200
   const PARTICLE_COUNT = 70

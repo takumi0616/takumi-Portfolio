@@ -1,10 +1,5 @@
 import React, { FC } from 'react'
-
-export type ContactCardProps = {
-  Icon: React.ElementType
-  contactName: string
-  link: string
-}
+import { ContactCardProps } from '@/app/types'
 
 const ContactCard: FC<ContactCardProps> = ({ Icon, contactName, link }) => {
   return (

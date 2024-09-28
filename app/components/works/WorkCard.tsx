@@ -1,15 +1,8 @@
+import { t } from 'i18next'
 import React from 'react'
 import { FaExternalLinkAlt } from 'react-icons/fa'
 import { IoLogoGithub } from 'react-icons/io'
-
-export type WorkCardProps = {
-  image: string
-  title: string
-  description: string
-  myPart: string
-  gitHubUrl: string
-  onOpenModal: (work: Omit<WorkCardProps, 'onOpenModal'>) => void
-}
+import { WorkCardProps } from '@/app/types'
 
 const WorkCard: React.FC<WorkCardProps> = ({
   image,
@@ -20,7 +13,6 @@ const WorkCard: React.FC<WorkCardProps> = ({
   onOpenModal,
 }) => {
   const handleImageClick = () => {
-    // onOpenModalに渡すオブジェクトからonOpenModalを除く
     onOpenModal({ image, title, description, myPart, gitHubUrl })
   }
 
@@ -42,7 +34,9 @@ const WorkCard: React.FC<WorkCardProps> = ({
         <div className="mb-4 ml-auto flex w-[45%] flex-col justify-between space-y-4 portrait:mx-auto portrait:w-[95%]">
           <h3 className="text-3xl">{title}</h3>
           <p>{description}</p>
-          <p>担当箇所：{myPart}</p>
+          <p>
+            {t('works.my_part_label')}：{myPart}
+          </p>
           <a
             href={gitHubUrl}
             target="_blank"

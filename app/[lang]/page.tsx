@@ -1,21 +1,22 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-import Loader from '@/components/layouts/Loader'
-import Footer from '@/components/layouts/Footer'
-import Header from '@/components/layouts/Header'
-import MainView from '@/components/hero/HeroView'
-import BackAnimation from '@/components/layouts/BackAnimation'
-import Works from '@/components/works/Works'
-import WorkModal from '@/components/works/WorkModal'
-import { WorkCardProps } from '@/components/works/WorkCard'
-import Skills from '@/components/skills/Skills'
-import Activity from '@/components/activity/Activity'
-import Contributions from '@/components/contributions/Contributions'
-import Contact from '@/components/contact/Contact'
-import Publications from '@/components/publications/Publications'
+import Loader from '@/app/components/layouts/Loader'
+import Footer from '@/app/components/layouts/Footer'
+import Header from '@/app/components/layouts/Header'
+import MainView from '@/app/components/hero/HeroView'
+import BackAnimation from '@/app/components/layouts/BackAnimation'
+import Works from '@/app/components/works/Works'
+import WorkModal from '@/app/components/works/WorkModal'
+import { WorkCardProps } from '@/app/types'
+import Skills from '@/app/components/skills/Skills'
+import Activity from '@/app/components/activity/Activity'
+import Contributions from '@/app/components/contributions/Contributions'
+import Contact from '@/app/components/contact/Contact'
+import Publications from '@/app/components/publications/Publications'
+import { useTranslation } from '@/i18n/client'
 
-export default function Home() {
+export default function Home({ params }: { params: { lang: string } }) {
   const [isLoading, setIsLoading] = useState(true)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [selectedWork, setSelectedWork] = useState<
@@ -26,6 +27,8 @@ export default function Home() {
     setSelectedWork(work)
     setIsModalOpen(true)
   }
+
+  const { t } = useTranslation(params.lang)
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -45,23 +48,23 @@ export default function Home() {
       >
         <Header />
         <div className="grow">
-          <MainView />
+          <MainView lang={params.lang} />
           <div className="mt-[-400px]">
             <div className="sticky top-0 size-full">
-              <BackAnimation />
+              <BackAnimation object={undefined} />
             </div>
             <div className="relative size-full overflow-hidden">
               <div id="works">
-                <Works onOpenModal={openModal} />
+                <Works lang={params.lang} onOpenModal={openModal} />
               </div>
               <div id="publications">
-                <Publications />
+                <Publications lang={params.lang} />
               </div>
               <div id="skills">
                 <Skills />
               </div>
               <div id="activity">
-                <Activity />
+                <Activity lang={params.lang} />
               </div>
               <div id="contributions" className="">
                 <Contributions />

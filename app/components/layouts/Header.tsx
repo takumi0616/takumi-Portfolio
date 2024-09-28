@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { IoIosMenu } from 'react-icons/io'
+import { useRouter } from 'next/navigation'
+import { useLanguage } from '@/i18n/client'
 
 const menuItems = [
   { id: 'works', label: 'Works' },
@@ -11,6 +13,8 @@ const menuItems = [
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const { language, setLanguage } = useLanguage()
+  const router = useRouter()
 
   const toggleMenu = () => setIsOpen(!isOpen)
 
@@ -60,25 +64,59 @@ const Header = () => {
     window.location.reload()
   }
 
+  const handleLanguageToggle = () => {
+    const newLanguage = language === 'ja' ? 'en' : 'ja'
+    setLanguage(newLanguage)
+    router.push(`/${newLanguage}`)
+  }
+
   return (
     <header className="fixed inset-x-0 top-0 z-50 flex items-center justify-between bg-transparent p-6">
       <button
         className="ml-8 cursor-pointer text-lg tracking-wider lg:text-3xl portrait:ml-0"
         onClick={reloadPage}
       >
-        Takasuka Takumi
+        Portfolio
       </button>
-      <IoIosMenu
-        className="mr-8 cursor-pointer text-5xl portrait:mr-0"
-        onClick={toggleMenu}
-        tabIndex={0}
-        role="button"
-        onKeyPress={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            toggleMenu()
-          }
-        }}
-      />
+
+      <div className="flex items-center">
+        <div className="mr-6 flex items-center">
+          <img src="/japan.png" alt="Japanese" className="size-8" />
+          <label
+            htmlFor="language-toggle"
+            className="relative mx-3 inline-flex cursor-pointer items-center"
+          >
+            <input
+              id="language-toggle"
+              type="checkbox"
+              checked={language === 'en'}
+              onChange={handleLanguageToggle}
+              className="sr-only"
+            />
+            <div className="h-7 w-14 rounded-full bg-gray-300">
+              <div
+                className={`absolute left-0.5 top-0.5 size-6 rounded-full transition-transform duration-300 ${
+                  language === 'en' ? 'translate-x-7 bg-black' : 'bg-black'
+                }`}
+              ></div>
+            </div>
+          </label>
+          <img src="/us.png" alt="English" className="size-8" />
+        </div>
+
+        <IoIosMenu
+          className="mr-8 cursor-pointer text-5xl portrait:mr-0"
+          onClick={toggleMenu}
+          tabIndex={0}
+          role="button"
+          onKeyPress={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              toggleMenu()
+            }
+          }}
+        />
+      </div>
+
       <nav
         className={`menu-container absolute right-[36px] top-full mt-2 select-none rounded-lg bg-white p-5 shadow-md transition-opacity duration-500 ${
           isOpen ? 'opacity-100' : 'invisible opacity-0'

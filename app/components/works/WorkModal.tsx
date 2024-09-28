@@ -1,12 +1,7 @@
 import React, { useEffect } from 'react'
 import { CiCircleRemove } from 'react-icons/ci'
 import { gsap } from 'gsap'
-
-type WorkModalProps = {
-  title: string
-  image: string
-  onClose: () => void
-}
+import { WorkModalProps } from '@/app/types'
 
 const WorkModal: React.FC<WorkModalProps> = ({ title, image, onClose }) => {
   useEffect(() => {

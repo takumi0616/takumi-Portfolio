@@ -1,0 +1,170 @@
+{
+  "activity": {
+    "items": [
+      { "date": "2024-09-19", "event": "GCI 2024 summer completion" },
+      {
+        "date": "2024-09-12",
+        "event": "EasyChair for KES2024_IS11 Presentation"
+      },
+      { "date": "2024-09-07", "event": "GIKIHaku2024_vol5 Participation" },
+      {
+        "date": "2024-09-04",
+        "event": "Large-scale language model 2024 Course start"
+      },
+      {
+        "date": "2024-08-10",
+        "event": "GIKIHaku CAMP Monthly Hackathon vol12 Participation"
+      },
+      {
+        "date": "2024-07-23",
+        "event": "Matsuo Lab Financial Market and Machine Learning Course Enrollment"
+      },
+      {
+        "date": "2024-07-18",
+        "event": "Graduate School of Science and Technology Innovation Acceptance"
+      },
+      { "date": "2024-04-23", "event": "GCI 2024 summer Enrollment Start" },
+      {
+        "date": "2024-04-23",
+        "event": "EasyChair for KES2024_IS11 Submission"
+      },
+      { "date": "2024-04-16", "event": "GCI 2024 summer Enrollment Confirmed" },
+      {
+        "date": "2024-04-01",
+        "event": "Nagaoka University of Technology 4th Year Admission"
+      },
+      {
+        "date": "2024-03-22",
+        "event": "2024 Nagaoka Student Award for Extracurricular Activities"
+      },
+      {
+        "date": "2024-03-17",
+        "event": "LinkX Japan Inc. Long-term Internship Start"
+      },
+      { "date": "2024-03-16", "event": "GIKIHaku 2024 Participation" },
+      {
+        "date": "2024-03-13",
+        "event": "Japan Meteorological Society Journal 'Tenki' Short Report Submission"
+      },
+      {
+        "date": "2024-03-13",
+        "event": "LinkX Japan Inc. Long-term Internship Interview"
+      },
+      { "date": "2024-03-02", "event": "GIKIHaku2024_vol1 Participation" },
+      { "date": "2024-02-21", "event": "CTA_Abema Tower Company Visit" },
+      {
+        "date": "2024-02-20",
+        "event": "Money Dragon Final Presentation 1.9M Yen Prize"
+      },
+      { "date": "2024-02-15", "event": "Portfolio Completion (CTA Project)" },
+      { "date": "2024-02-15", "event": "CA Tech Accel Final Presentation" },
+      {
+        "date": "2024-02-02",
+        "event": "GIKIHaku CAMP Monthly Hackathon vol14 Participation"
+      },
+      { "date": "2024-01-30", "event": "Money Dragon 1st Round Passed" },
+      { "date": "2024-01-27", "event": "Money Dragon Participation" },
+      {
+        "date": "2023-12-06",
+        "event": "StyleArts Hosted LT Meeting Participation"
+      },
+      { "date": "2023-11-16", "event": "CA Tech Accel Participation" },
+      { "date": "2023-10-28", "event": "JPhacks2023 Participation" },
+      {
+        "date": "2023-10-14",
+        "event": "GIKIHaku CAMP Monthly Hackathon vol10 Participation"
+      },
+      {
+        "date": "2023-09-23",
+        "event": "GIKIHaku Finalist 'CARTA HOLDINGS Award'"
+      },
+      { "date": "2023-08-12", "event": "GIKIHaku Preliminary Round" },
+      {
+        "date": "2023-04-01",
+        "event": "Nagaoka University of Technology 3rd Year Admission"
+      },
+      {
+        "date": "2018-03-22",
+        "event": "Niihama National College of Technology Graduation"
+      },
+      {
+        "date": "2018-04-01",
+        "event": "Niihama National College of Technology Admission"
+      }
+    ]
+  },
+  "hero": {
+    "title": "Takumi Takasuka",
+    "description1": "Frontend Engineer / Data Engineer / Data Scientist",
+    "description2": "4th year student at Nagaoka University of Technology",
+    "description3": "Affiliated with the Machine Learning Theory Lab",
+    "extra_info1": "I belong to the information bureau 'NUTMEG', the organizing committee for the university festival, and I am working to DX the festival through web applications.",
+    "extra_info2": "Leveraging that experience, I have also participated in various hackathons and LT meetings of other organizations.",
+    "extra_info3": "Additionally, in the Machine Learning Theory Lab, I work with meteorological data and solve tasks related to generating weather forecast comments."
+  },
+  "works": {
+    "data": [
+      {
+        "title": "GPT-logprobs",
+        "description": "A web application that provides indicators and educational content for prompt creation, designed for those who lack confidence in the output of AI generation. Users can freely set parameters and improve the quality of prompts while reviewing the results.",
+        "myPart": "Frontend, Backend, Design, PM",
+        "gitHubUrl": "https://github.com/takumi0616/gpt-logprobs",
+        "image": "gpt-logprobs.png"
+      },
+      {
+        "title": "NUTMEG-Seeds",
+        "description": "A web application that shares technical knowledge within the organization 'NUTMEG' to which I belong. The theme color is orange, which is NUTMEG's image color, and the design is elaborate down to the smallest detail.",
+        "myPart": "Frontend, PM",
+        "gitHubUrl": "https://github.com/NUTFes/NUTMEG-Seeds",
+        "image": "NS.png"
+      },
+      {
+        "title": "Group-manager-2",
+        "description": "This web application is used when registering for the university festival at Nagaoka University of Technology. It excels in functionality such as PDF output and statistical data display, featuring a stylish black-based design.",
+        "myPart": "Frontend, Backend",
+        "gitHubUrl": "https://github.com/NUTFes/group-manager-2",
+        "image": "GM2.png"
+      },
+      {
+        "title": "Communication-AI",
+        "description": "A web application that allows conversations with AI. Although the conversation system is simple, the design and accessibility are carefully considered, aiming to be used by a wide range of users.",
+        "myPart": "Frontend, Design",
+        "gitHubUrl": "https://github.com/takumi0616/communication-ai",
+        "image": "CAI.png"
+      },
+      {
+        "title": "Slack-message-finder",
+        "description": "A web application that retrieves and saves Slack logs in real-time, displaying them on a Slack-like page. Features include the ability to view channel activity and track the weekly activities of specific users.",
+        "myPart": "Frontend, Backend",
+        "gitHubUrl": "https://github.com/TMLlaboratory/slack-message-finder",
+        "image": "SMF.png"
+      },
+      {
+        "title": "Menter-management-app",
+        "description": "A web application that supports the mentor system. It links mentors and mentees and allows the viewing of mentee learning records. It is a simple web app managed by administrators.",
+        "myPart": "Frontend, Backend",
+        "gitHubUrl": "https://github.com/takumi0616/Mentor-management-app",
+        "image": "MMA.png"
+      }
+    ],
+    "my_part_label": "My Role"
+  },
+  "publications": {
+    "data": [
+      {
+        "image": "public1.png",
+        "title": "Recognition Performance Validation of Weather Map Images by ChatGPT",
+        "authors_label": "Co-authors",
+        "authors": "Yuki H. Takano, Shotaro Watanabe, Gendo Kumoi",
+        "abstract": "Weather map recognition is a complex image recognition task that requires two cognitive processes: the interpretation of symbols and future predictions. Recent advancements in multimodal AI have shown the potential to solve such complex tasks. This study uses ChatGPT, a type of multimodal AI, to validate the recognition performance of weather map images and proposes prompt engineering for more accurate recognition. Weather map recognition is a problem that is also featured in the Common University Entrance Test. If weather maps can be recognized, automatic grading and question generation become possible, leading to learning support. Furthermore, it is expected that weather commentary text can be automatically generated from weather maps. Therefore, weather map image recognition is an important task, but it requires not only recognizing time-series changes in local weather data but also recognizing information on large-scale weather patterns such as pressure configurations and making future predictions. In this study, we use ChatGPT4-Vision, a multimodal AI, to validate the recognition performance of weather map images. We investigate whether it can answer questions about weather maps from university entrance exams and generate weather commentary text from weather map images. By conducting multiple experiments with varying tasks and information in the prompts, and evaluating the accuracy of the generated commentaries, we propose and validate improvements in reading performance through prompt engineering."
+      },
+      {
+        "image": "public2.png",
+        "title": "Verification of weather comment generation from weather map images using ChatGPT",
+        "authors_label": "Co-authors",
+        "authors": "Yuki H. Takano, Shotaro Watanabe, Gendo Kumoi",
+        "abstract": "Weather forecasts (weather comments) are created by meteorologists interpreting visualized information and converting it into language. Previous studies on automatic generation of weather comments have two challenges: including information on large-scale atmospheric fields and generating natural sentences. In this study, we use ChatGPT4-Vision, a multimodal AI, to automatically generate weather comments from surface weather map images. By conducting experiments that vary the tasks specified in the prompts and the amount of information provided, and verifying the accuracy of the output comments, we explore the applicability of multimodal AI to weather comment generation."
+      }
+    ]
+  }
+}

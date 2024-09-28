@@ -2,12 +2,14 @@ import React, { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import MainCube from './HeroCube'
+import { useTranslation } from '@/i18n/client'
 
-export default function MainView() {
+export default function MainView({ lang }: { lang: string }) {
   const threeJsRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
   const [canvasSize, setCanvasSize] = useState({ width: 0, height: 0 })
   const [mainContainerHeight, setMainContainerHeight] = useState(0)
+  const { t } = useTranslation(lang)
 
   const handleResize = (width: number, height: number) => {
     setCanvasSize({ width, height })
@@ -81,34 +83,30 @@ export default function MainView() {
         >
           <div className="content ml-[10vw] mr-[5vw] portrait:mt-0">
             <section className="no-animation mb-[55vh] mt-[45vh] opacity-100 portrait:mt-0">
-              <h1 className="text-5xl">髙 須 賀 匠</h1>
+              <h1 className="text-5xl">{t('hero.title')}</h1>
             </section>
 
-            <div className=" mb-[55vh] mt-[45vh]">
+            <div className="mb-[55vh] mt-[45vh]">
               <section className="opacity-0">
-                <h2 className="text-5xl">髙 須 賀 匠</h2>
+                <h2 className="text-5xl">{t('hero.title')}</h2>
                 <p className="my-4 text-base leading-normal">
-                  フロントエンジニア/データエンジニア/データサイエンティスト
+                  {t('hero.description1')}
                   <br />
-                  長岡技術科学大学 工学部 情報経営システム工学課程 4年 在学
+                  {t('hero.description2')}
                   <br />
-                  機械学習理論研究室所属
+                  {t('hero.description3')}
                 </p>
               </section>
             </div>
 
-            <div className=" mb-[55vh] mt-[45vh]">
+            <div className="mb-[55vh] mt-[45vh]">
               <section className="opacity-0">
                 <p className="my-4 text-base leading-normal">
-                  大学の学祭の実行委員である情報局「NUTMEG」に所属し、
+                  {t('hero.extra_info1')}
                   <br />
-                  学祭をWebアプリでDXしています。
+                  {t('hero.extra_info2')}
                   <br />
-                  それらの経験を活かして、様々なハッカソンや他団体のLT会にも参加しています。
-                  <br />
-                  また、機械学習理論研究室では気象データを扱い、
-                  <br />
-                  気象予報コメントを生成するタスクの解決を行っています。
+                  {t('hero.extra_info3')}
                 </p>
               </section>
             </div>

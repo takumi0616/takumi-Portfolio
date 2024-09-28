@@ -1,30 +1,22 @@
-# Makefile
-
-# PHONYターゲットの定義
-.PHONY: develop install lint lint-fix format build dev
-
-# developターゲット
-develop: install lint lint-fix format build dev
-
-install:
-	npm install
-
-# lintターゲット
-lint:
-	npm run lint
-
-# lint:fixターゲット
-lint-fix:
-	npm run lint:fix
-
-# formatターゲット
-format:
-	npm run format
-
-# buildターゲット
-build:
-	npm run build
-
-# devターゲット
-dev:
+.PHONY: run
+run:
 	npm run dev
+
+.PHONY: build
+build:
+	npm run install
+	npm run build
+	npm run dev
+
+.PHONY: rebuild
+rebuild:
+	rm -rf node_modules
+	npm install
+	npm run build
+	npm run dev
+
+.PHONY: format
+format:
+	npm run lint
+	npm run lint:fix
+	npm run format

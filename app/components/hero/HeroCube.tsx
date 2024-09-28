@@ -2,13 +2,9 @@ import React, { useEffect, useRef, useState } from 'react'
 import * as THREE from 'three'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { MainCubeProps } from '@/app/types'
 
 gsap.registerPlugin(ScrollTrigger)
-
-type MainCubeProps = {
-  className?: string
-  onResize: (width: number, height: number) => void
-}
 
 const MainCube: React.FC<MainCubeProps> = (props) => {
   const containerRef = useRef<HTMLDivElement>(null)
