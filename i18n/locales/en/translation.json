@@ -97,5 +97,52 @@
     "extra_info1": "I belong to the information bureau 'NUTMEG', the organizing committee for the university festival, and I am working to DX the festival through web applications.",
     "extra_info2": "Leveraging that experience, I have also participated in various hackathons and LT meetings of other organizations.",
     "extra_info3": "Additionally, in the Machine Learning Theory Lab, I work with meteorological data and solve tasks related to generating weather forecast comments."
+  },
+  "works": {
+    "data": [
+      {
+        "title": "GPT-logprobs",
+        "description": "A web application that provides indicators and educational content for prompt creation, designed for those who lack confidence in the output of AI generation. Users can freely set parameters and improve the quality of prompts while reviewing the results.",
+        "myPart": "Frontend, Backend, Design, PM",
+        "gitHubUrl": "https://github.com/takumi0616/gpt-logprobs",
+        "image": "gpt-logprobs.png"
+      },
+      {
+        "title": "NUTMEG-Seeds",
+        "description": "A web application that shares technical knowledge within the organization 'NUTMEG' to which I belong. The theme color is orange, which is NUTMEG's image color, and the design is elaborate down to the smallest detail.",
+        "myPart": "Frontend, PM",
+        "gitHubUrl": "https://github.com/NUTFes/NUTMEG-Seeds",
+        "image": "NS.png"
+      },
+      {
+        "title": "Group-manager-2",
+        "description": "This web application is used when registering for the university festival at Nagaoka University of Technology. It excels in functionality such as PDF output and statistical data display, featuring a stylish black-based design.",
+        "myPart": "Frontend, Backend",
+        "gitHubUrl": "https://github.com/NUTFes/group-manager-2",
+        "image": "GM2.png"
+      },
+      {
+        "title": "Slack-message-finder",
+        "description": "A web application that retrieves and saves Slack logs in real-time, displaying them on a Slack-like page. Features include the ability to view channel activity and track the weekly activities of specific users.",
+        "myPart": "Frontend, Backend",
+        "gitHubUrl": "https://github.com/TMLlaboratory/slack-message-finder",
+        "image": "SMF.png"
+      },
+      {
+        "title": "Menter-management-app",
+        "description": "A web application that supports the mentor system. It links mentors and mentees and allows the viewing of mentee learning records. It is a simple web app managed by administrators.",
+        "myPart": "Frontend, Backend",
+        "gitHubUrl": "https://github.com/takumi0616/Mentor-management-app",
+        "image": "MMA.png"
+      },
+      {
+        "title": "Communication-AI",
+        "description": "A web application that allows conversations with AI. Although the conversation system is simple, the design and accessibility are carefully considered, aiming to be used by a wide range of users.",
+        "myPart": "Frontend, Design",
+        "gitHubUrl": "https://github.com/takumi0616/communication-ai",
+        "image": "CAI.png"
+      }
+    ],
+    "my_part_label": "My Role"
   }
 }

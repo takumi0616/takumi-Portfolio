@@ -9,8 +9,7 @@ export default function MainView({ lang }: { lang: string }) {
   const contentRef = useRef<HTMLDivElement>(null)
   const [canvasSize, setCanvasSize] = useState({ width: 0, height: 0 })
   const [mainContainerHeight, setMainContainerHeight] = useState(0)
-
-  const { t } = useTranslation(lang) // 言語に応じて翻訳データを取得
+  const { t } = useTranslation(lang)
 
   const handleResize = (width: number, height: number) => {
     setCanvasSize({ width, height })

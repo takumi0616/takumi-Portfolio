@@ -55,7 +55,7 @@ export default function Home({ params }: { params: { lang: string } }) {
             </div>
             <div className="relative size-full overflow-hidden">
               <div id="works">
-                <Works onOpenModal={openModal} />
+                <Works lang={params.lang} onOpenModal={openModal} />
               </div>
               <div id="publications">
                 <Publications />

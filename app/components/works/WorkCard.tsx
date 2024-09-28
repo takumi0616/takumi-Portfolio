@@ -1,3 +1,4 @@
+import { t } from 'i18next'
 import React from 'react'
 import { FaExternalLinkAlt } from 'react-icons/fa'
 import { IoLogoGithub } from 'react-icons/io'
@@ -41,7 +42,9 @@ const WorkCard: React.FC<WorkCardProps> = ({
         <div className="mb-4 ml-auto flex w-[45%] flex-col justify-between space-y-4 portrait:mx-auto portrait:w-[95%]">
           <h3 className="text-3xl">{title}</h3>
           <p>{description}</p>
-          <p>担当箇所：{myPart}</p>
+          <p>
+            {t('works.my_part_label')}：{myPart}
+          </p>
           <a
             href={gitHubUrl}
             target="_blank"
