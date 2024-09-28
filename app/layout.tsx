@@ -1,5 +1,3 @@
-// app/layout.tsx
-
 import { Metadata } from 'next'
 import { Zen_Kurenaido } from 'next/font/google'
 import '@/app/[lang]/globals.css'

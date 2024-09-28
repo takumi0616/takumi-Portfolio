@@ -2,10 +2,7 @@ import React, { useState } from 'react'
 import { MdArrowForwardIos, MdArrowBackIos } from 'react-icons/md'
 import ActivityItem from './ActivityCard'
 import { useTranslation } from '@/i18n/client'
-
-interface ActivityProps {
-  lang: string
-}
+import { ActivityProps } from '@/app/types'
 
 const Activity: React.FC<ActivityProps> = ({ lang }) => {
   const [pageIndex, setPageIndex] = useState(0)

@@ -1,9 +1,5 @@
 import React from 'react'
-
-interface ActivityItemProps {
-  date: string
-  event: string
-}
+import { ActivityItemProps } from '@/app/types'
 
 const ActivityItem: React.FC<ActivityItemProps> = ({ date, event }) => {
   const formattedDate = date.replace(/-/g, '.')

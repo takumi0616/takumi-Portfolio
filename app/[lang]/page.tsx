@@ -8,7 +8,7 @@ import MainView from '@/app/components/hero/HeroView'
 import BackAnimation from '@/app/components/layouts/BackAnimation'
 import Works from '@/app/components/works/Works'
 import WorkModal from '@/app/components/works/WorkModal'
-import { WorkCardProps } from '@/app/components/works/WorkCard'
+import { WorkCardProps } from '@/app/types'
 import Skills from '@/app/components/skills/Skills'
 import Activity from '@/app/components/activity/Activity'
 import Contributions from '@/app/components/contributions/Contributions'
@@ -51,7 +51,7 @@ export default function Home({ params }: { params: { lang: string } }) {
           <MainView lang={params.lang} />
           <div className="mt-[-400px]">
             <div className="sticky top-0 size-full">
-              <BackAnimation />
+              <BackAnimation object={undefined} />
             </div>
             <div className="relative size-full overflow-hidden">
               <div id="works">

@@ -1,12 +1,5 @@
 import React from 'react'
-
-export type PublicationCardProps = {
-  image: string
-  title: string
-  authors_label: string
-  authors: string
-  abstract: string
-}
+import { PublicationCardProps } from '@/app/types'
 
 const PublicationCard: React.FC<PublicationCardProps> = ({
   image,

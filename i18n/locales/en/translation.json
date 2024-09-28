@@ -1,11 +1,16 @@
 {
   "activity": {
     "items": [
+      { "date": "2024-09-19", "event": "GCI 2024 summer completion" },
       {
         "date": "2024-09-12",
         "event": "EasyChair for KES2024_IS11 Presentation"
       },
       { "date": "2024-09-07", "event": "GIKIHaku2024_vol5 Participation" },
+      {
+        "date": "2024-09-04",
+        "event": "Large-scale language model 2024 Course start"
+      },
       {
         "date": "2024-08-10",
         "event": "GIKIHaku CAMP Monthly Hackathon vol12 Participation"

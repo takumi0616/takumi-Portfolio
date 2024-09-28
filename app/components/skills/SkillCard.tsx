@@ -1,9 +1,5 @@
 import React, { FC } from 'react'
-
-type SkillCardProps = {
-  Icon: React.ElementType
-  skillName: string
-}
+import { SkillCardProps } from '@/app/types'
 
 const SkillCard: FC<SkillCardProps> = ({ Icon, skillName }) => {
   return (

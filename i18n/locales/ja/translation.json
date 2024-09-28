@@ -1,8 +1,10 @@
 {
   "activity": {
     "items": [
+      { "date": "2024-09-19", "event": "GCI 2024 summer 修了" },
       { "date": "2024-09-12", "event": "EasyChair for KES2024_IS11 登壇" },
       { "date": "2024-09-07", "event": "技育博2024_vol5 参加" },
+      { "date": "2024-09-04", "event": "大規模言語モデル2024 受講開始" },
       {
         "date": "2024-08-10",
         "event": "技育CAMP マンスリーハッカソンvol12 出場"

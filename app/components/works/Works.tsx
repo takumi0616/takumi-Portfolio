@@ -1,13 +1,9 @@
 import React, { useEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import WorkCard, { WorkCardProps } from './WorkCard'
+import WorkCard from './WorkCard'
 import { useTranslation } from '@/i18n/client'
-
-type WorksProps = {
-  lang: string
-  onOpenModal: (work: Omit<WorkCardProps, 'onOpenModal'>) => void
-}
+import { WorkCardProps, WorksProps } from '@/app/types'
 
 export default function Works({ lang, onOpenModal }: WorksProps) {
   const { t } = useTranslation(lang)

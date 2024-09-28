@@ -1,5 +1,3 @@
-import React from 'react'
-import { dir } from 'i18next'
 import { LanguageProvider } from '@/i18n/client'
 
 export default function LangLayout({

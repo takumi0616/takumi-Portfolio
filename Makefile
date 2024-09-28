@@ -1,21 +1,22 @@
-.PHONY: develop install lint lint-fix format build dev
-
-develop: install lint lint-fix format build dev
-
-install:
-	npm install
-
-lint:
-	npm run lint
-
-lint-fix:
-	npm run lint:fix
-
-format:
-	npm run format
-
-build:
-	npm run build
-
-dev:
+.PHONY: run
+run:
 	npm run dev
+
+.PHONY: build
+build:
+	npm run install
+	npm run build
+	npm run dev
+
+.PHONY: rebuild
+rebuild:
+	rm -rf node_modules
+	npm install
+	npm run build
+	npm run dev
+
+.PHONY: check
+check:
+	npm run lint
+	npm run lint:fix
+	npm run format

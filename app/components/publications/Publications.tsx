@@ -1,12 +1,9 @@
 import React, { useEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import PublicationCard, { PublicationCardProps } from './PublicationCard'
+import PublicationCard from './PublicationCard'
 import { useTranslation } from '@/i18n/client'
-
-type PublicationsProps = {
-  lang: string
-}
+import { PublicationCardProps, PublicationsProps } from '@/app/types'
 
 export default function Publications({ lang }: PublicationsProps) {
   const { t } = useTranslation(lang)

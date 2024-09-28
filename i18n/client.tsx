@@ -7,7 +7,7 @@ import React, {
   useState,
   ReactNode,
 } from 'react'
-import i18next from 'i18next'
+import * as i18next from 'i18next'
 import {
   initReactI18next,
   useTranslation as useTranslationOrigin,

@@ -2,15 +2,7 @@ import { t } from 'i18next'
 import React from 'react'
 import { FaExternalLinkAlt } from 'react-icons/fa'
 import { IoLogoGithub } from 'react-icons/io'
-
-export type WorkCardProps = {
-  image: string
-  title: string
-  description: string
-  myPart: string
-  gitHubUrl: string
-  onOpenModal: (work: Omit<WorkCardProps, 'onOpenModal'>) => void
-}
+import { WorkCardProps } from '@/app/types'
 
 const WorkCard: React.FC<WorkCardProps> = ({
   image,
