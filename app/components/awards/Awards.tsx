@@ -17,14 +17,26 @@ const Awards: React.FC<AwardsProps> = ({ lang }) => {
         <h2 className="text-center text-4xl">Awards</h2>
       </div>
       <div className="flex justify-center">
-        <div className="news mx-4 w-1/3 portrait:w-4/5">
-          {awards.map((award, index) => (
-            <AwardsItem
-              key={`${award.date}-${award.event}-${index}`}
-              date={award.date}
-              event={award.event}
-            />
-          ))}
+        <div className="w-[90%] max-w-[800px]">
+          {/* スクロールスナップ対応のコンテナ */}
+          <div
+            className="flex w-full overflow-x-auto scroll-smooth whitespace-nowrap pb-8"
+            style={{ scrollSnapType: 'x mandatory' }}
+          >
+            {awards.map((award, index) => (
+              <div
+                key={`${award.date}-${award.event}-${index}`}
+                className="inline-block w-[40%] min-w-[250px] whitespace-normal px-2"
+                style={{ scrollSnapAlign: 'center' }}
+              >
+                <AwardsItem
+                  date={award.date}
+                  event={award.event}
+                  index={index}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

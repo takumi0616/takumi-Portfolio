@@ -66,4 +66,5 @@ export interface AwardsProps {
 export interface AwardsItemProps {
   date: string
   event: string
+  index: number
 }
