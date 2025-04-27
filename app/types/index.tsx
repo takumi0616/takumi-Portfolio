@@ -58,3 +58,12 @@ export interface WorksProps {
   lang: string
   onOpenModal: (work: Omit<WorkCardProps, 'onOpenModal'>) => void
 }
+
+export interface AwardsProps {
+  lang: string
+}
+
+export interface AwardsItemProps {
+  date: string
+  event: string
+}

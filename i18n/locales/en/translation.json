@@ -1,7 +1,10 @@
 {
   "activity": {
     "items": [
-      { "date": "2024-09-19", "event": "GCI 2024 summer completion" },
+      {
+        "date": "2024-10-04",
+        "event": "WEATHERMAP　Co., Ltd. - Practical training begins"
+      },
       {
         "date": "2024-09-12",
         "event": "EasyChair for KES2024_IS11 Presentation"
@@ -30,14 +33,6 @@
       },
       { "date": "2024-04-16", "event": "GCI 2024 summer Enrollment Confirmed" },
       {
-        "date": "2024-04-01",
-        "event": "Nagaoka University of Technology 4th Year Admission"
-      },
-      {
-        "date": "2024-03-22",
-        "event": "2024 Nagaoka Student Award for Extracurricular Activities"
-      },
-      {
         "date": "2024-03-17",
         "event": "LinkX Japan Inc. Long-term Internship Start"
       },
@@ -52,10 +47,6 @@
       },
       { "date": "2024-03-02", "event": "GIKIHaku2024_vol1 Participation" },
       { "date": "2024-02-21", "event": "CTA_Abema Tower Company Visit" },
-      {
-        "date": "2024-02-20",
-        "event": "Money Dragon Final Presentation 1.9M Yen Prize"
-      },
       { "date": "2024-02-15", "event": "Portfolio Completion (CTA Project)" },
       { "date": "2024-02-15", "event": "CA Tech Accel Final Presentation" },
       {
@@ -74,10 +65,6 @@
         "date": "2023-10-14",
         "event": "GIKIHaku CAMP Monthly Hackathon vol10 Participation"
       },
-      {
-        "date": "2023-09-23",
-        "event": "GIKIHaku Finalist 'CARTA HOLDINGS Award'"
-      },
       { "date": "2023-08-12", "event": "GIKIHaku Preliminary Round" },
       {
         "date": "2023-04-01",
@@ -90,6 +77,23 @@
       {
         "date": "2018-04-01",
         "event": "Niihama National College of Technology Admission"
+      }
+    ]
+  },
+  "awards": {
+    "items": [
+      { "date": "2024-09-19", "event": "GCI 2024 summer completion" },
+      {
+        "date": "2024-03-22",
+        "event": "2024 Nagaoka Student Award for Extracurricular Activities"
+      },
+      {
+        "date": "2024-02-20",
+        "event": "Money Dragon Final Presentation 1.9M Yen Prize"
+      },
+      {
+        "date": "2023-09-23",
+        "event": "GIKIHaku Finalist 'CARTA HOLDINGS Award'"
       }
     ]
   },

@@ -14,6 +14,7 @@ import Activity from '@/app/components/activity/Activity'
 import Contributions from '@/app/components/contributions/Contributions'
 import Contact from '@/app/components/contact/Contact'
 import Publications from '@/app/components/publications/Publications'
+import Awards from '@/app/components/awards/Awards'
 import { useTranslation } from '@/i18n/client'
 
 export default function Home({ params }: { params: { lang: string } }) {
@@ -59,6 +60,9 @@ export default function Home({ params }: { params: { lang: string } }) {
               </div>
               <div id="publications">
                 <Publications lang={params.lang} />
+              </div>
+              <div id="awards">
+                <Awards lang={params.lang} />
               </div>
               <div id="skills">
                 <Skills />
