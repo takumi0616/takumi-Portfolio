@@ -17,9 +17,9 @@ const WorkCard: React.FC<WorkCardProps> = ({
   }
 
   return (
-    <div className="w-[70vw] items-center justify-center overflow-hidden portrait:w-[90vw]">
-      <div className="flex portrait:flex-col">
-        <div className="mr-16 portrait:flex portrait:w-full portrait:justify-center">
+    <div className="w-[70vw] max-w-[1200px] mx-auto items-center justify-center overflow-hidden portrait:w-[90vw]">
+      <div className="flex gap-8 lg:gap-12 xl:gap-16 justify-between portrait:flex-col">
+        <div className="flex-shrink-0 portrait:flex portrait:w-full portrait:justify-center">
           <button onClick={handleImageClick} className="m-3 cursor-pointer">
             <img
               src={image}
@@ -31,7 +31,7 @@ const WorkCard: React.FC<WorkCardProps> = ({
             />
           </button>
         </div>
-        <div className="mb-4 ml-auto flex w-[45%] flex-col justify-between space-y-4 portrait:mx-auto portrait:w-[95%]">
+        <div className="mb-4 flex w-[45%] max-w-[500px] flex-col justify-between space-y-4 portrait:mx-auto portrait:w-[95%]">
           <h3 className="text-3xl">{title}</h3>
           <p>{description}</p>
           <p>
