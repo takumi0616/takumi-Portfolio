@@ -24,7 +24,7 @@ const AwardsItem: React.FC<AwardsItemProps> = ({
       {/* 白/灰を基調にしたカード（固定高さ） */}
       <div className="flex size-full flex-col rounded-2xl bg-white/20 p-4 shadow-sm backdrop-blur-md transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-md">
         {/* 画像（固定高さ・カードサイズに影響しない） */}
-        <div className="relative h-48 w-full overflow-hidden rounded-xl border border-gray-200 bg-gray-100">
+        <div className="relative h-48 w-full overflow-hidden rounded-xl bg-transparent">
           {image ? (
             <img
               src={image}
