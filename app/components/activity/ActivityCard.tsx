@@ -11,7 +11,7 @@ const ActivityItem: React.FC<ActivityItemProps> = ({ date, event }) => {
           <time className="mr-4">{formattedDate}</time>
           <span>|</span>
         </span>
-        <span className="block sm:inline break-words">{event}</span>
+        <span className="block break-words sm:inline">{event}</span>
       </h3>
     </div>
   )

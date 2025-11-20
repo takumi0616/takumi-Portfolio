@@ -24,7 +24,10 @@ const Activity: React.FC<ActivityProps> = ({ lang }) => {
           <div className="max-h-[420px] overflow-y-auto overscroll-auto scroll-smooth">
             <ul className="space-y-2">
               {activities.map((activity, index) => (
-                <li key={`${activity.date}-${activity.event}-${index}`} className="py-2">
+                <li
+                  key={`${activity.date}-${activity.event}-${index}`}
+                  className="py-2"
+                >
                   <ActivityItem date={activity.date} event={activity.event} />
                 </li>
               ))}
