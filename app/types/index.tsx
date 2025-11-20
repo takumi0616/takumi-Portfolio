@@ -28,6 +28,7 @@ export interface PublicationCardProps {
   authors_label: string
   authors: string
   abstract: string
+  url?: string
 }
 
 export interface PublicationsProps {
