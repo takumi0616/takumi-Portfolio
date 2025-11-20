@@ -1,12 +1,9 @@
-import React, { useState } from 'react'
-import { MdArrowForwardIos, MdArrowBackIos } from 'react-icons/md'
+import React from 'react'
 import ActivityItem from './ActivityCard'
 import { useTranslation } from '@/i18n/client'
 import { ActivityProps } from '@/app/types'
 
 const Activity: React.FC<ActivityProps> = ({ lang }) => {
-  const [pageIndex, setPageIndex] = useState(0)
-  const itemsPerPage = 6
   const { t } = useTranslation(lang)
 
   const activities = t('activity.items', { returnObjects: true }) as {
@@ -14,70 +11,28 @@ const Activity: React.FC<ActivityProps> = ({ lang }) => {
     event: string
   }[]
 
-  const maxPageIndex = Math.ceil(activities.length / itemsPerPage) - 1
-
-  const nextPage = () => {
-    if (pageIndex < maxPageIndex) {
-      setPageIndex((prevIndex) => prevIndex + 1)
-    }
-  }
-
-  const prevPage = () => {
-    if (pageIndex > 0) {
-      setPageIndex((prevIndex) => prevIndex - 1)
-    }
-  }
-
-  const displayedActivities = activities.slice(
-    pageIndex * itemsPerPage,
-    (pageIndex + 1) * itemsPerPage,
-  )
-
   return (
-    <div className="mb-60">
+    <section className="mb-60">
       <div className="mb-20">
         <h2 className="text-center text-4xl">Activity</h2>
       </div>
-      <div className="flex items-center justify-center">
-        <div className="p-4">
-          {pageIndex > 0 ? (
-            <button
-              onClick={prevPage}
-              className="flex items-center"
-              aria-label="前のページへ"
-            >
-              <MdArrowBackIos />
-            </button>
-          ) : (
-            <div className="h-10 w-4"></div>
-          )}
-        </div>
 
-        <div className="news mx-4 w-1/3 portrait:w-4/5">
-          {displayedActivities.map((activity, index) => (
-            <ActivityItem
-              key={`${activity.date}-${activity.event}-${index}`}
-              date={activity.date}
-              event={activity.event}
-            />
-          ))}
-        </div>
-
-        <div className="p-4">
-          {pageIndex < maxPageIndex ? (
-            <button
-              onClick={nextPage}
-              className="flex items-center"
-              aria-label="次のページへ"
-            >
-              <MdArrowForwardIos />
-            </button>
-          ) : (
-            <div className="h-10 w-4"></div>
-          )}
+      <div className="mx-auto w-[90%] max-w-3xl">
+        {/* 縦スクロールでスムーズに次の要素が見えるコンテナ */}
+        <div className="bg-transparent p-0">
+          {/* 5件前後が見える高さを確保し、内部だけをスクロール */}
+          <div className="max-h-[420px] overflow-y-auto overscroll-auto scroll-smooth">
+            <ul className="space-y-2">
+              {activities.map((activity, index) => (
+                <li key={`${activity.date}-${activity.event}-${index}`} className="py-2">
+                  <ActivityItem date={activity.date} event={activity.event} />
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
