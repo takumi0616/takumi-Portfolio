@@ -9,37 +9,45 @@ const Awards: React.FC<AwardsProps> = ({ lang }) => {
   const awards = t('awards.items', { returnObjects: true }) as {
     date: string
     event: string
+    image?: string
   }[]
 
   return (
-    <div className="mb-60">
-      <div className="mb-20">
-        <h2 className="text-center text-4xl">Awards</h2>
-      </div>
-      <div className="flex justify-center">
-        <div className="w-[90%] max-w-[800px]">
-          {/* スクロールスナップ対応のコンテナ */}
-          <div
-            className="flex w-full overflow-x-auto scroll-smooth whitespace-nowrap pb-8"
-            style={{ scrollSnapType: 'x mandatory' }}
-          >
+    <section className="mb-60">
+      <h2 className="mb-20 text-center text-4xl">Awards</h2>
+
+      <div className="mx-auto w-[92%] max-w-5xl">
+        {/* モバイル: 縦一列 */}
+        <div className="md:hidden">
+          <div className="grid grid-cols-1 gap-4">
             {awards.map((award, index) => (
-              <div
-                key={`${award.date}-${award.event}-${index}`}
-                className="inline-block w-[40%] min-w-[250px] whitespace-normal px-2"
-                style={{ scrollSnapAlign: 'center' }}
-              >
+              <div key={`${award.date}-${award.event}-${index}`}>
                 <AwardsItem
                   date={award.date}
                   event={award.event}
                   index={index}
+                  image={award.image}
                 />
               </div>
             ))}
           </div>
         </div>
+
+        {/* デスクトップ: グリッド表示 */}
+        <div className="hidden grid-cols-2 gap-6 md:grid lg:grid-cols-2">
+          {awards.map((award, index) => (
+            <div key={`${award.date}-${award.event}-${index}`}>
+              <AwardsItem
+                date={award.date}
+                event={award.event}
+                index={index}
+                image={award.image}
+              />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   )
 }
 

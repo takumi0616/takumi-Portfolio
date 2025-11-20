@@ -82,18 +82,25 @@
   },
   "awards": {
     "items": [
-      { "date": "2024-09-19", "event": "GCI 2024 summer completion" },
+      {
+        "date": "2024-09-19",
+        "event": "GCI 2024 summer completion",
+        "image": "/NS.png"
+      },
       {
         "date": "2024-03-22",
-        "event": "2024 Nagaoka Student Award for Extracurricular Activities"
+        "event": "2024 Nagaoka Student Award for Extracurricular Activities",
+        "image": "/GM2.png"
       },
       {
         "date": "2024-02-20",
-        "event": "Money Dragon Final Presentation 1.9M Yen Prize"
+        "event": "Money Dragon Final Presentation 1.9M Yen Prize",
+        "image": "/CAI.png"
       },
       {
         "date": "2023-09-23",
-        "event": "GIKIHaku Finalist 'CARTA HOLDINGS Award'"
+        "event": "GIKIHaku Finalist 'CARTA HOLDINGS Award'",
+        "image": "/SMF.png"
       }
     ]
   },
