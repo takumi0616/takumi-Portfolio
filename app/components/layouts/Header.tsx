@@ -5,6 +5,7 @@ import { useLanguage } from '@/i18n/client'
 
 const menuItems = [
   { id: 'works', label: 'Works' },
+  { id: 'awards', label: 'Awards' },
   { id: 'skills', label: 'Skills' },
   { id: 'activity', label: 'Activity' },
   { id: 'contributions', label: 'Contributions' },

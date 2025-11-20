@@ -14,6 +14,12 @@ const zenKurenaido = Zen_Kurenaido({
 export const metadata: Metadata = {
   title: "Takumi's Portfolio",
   description: '髙須賀匠のポートフォリオサイト',
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.png', type: 'image/png' },
+    ],
+  },
 }
 
 export default function RootLayout({
@@ -26,7 +32,6 @@ export default function RootLayout({
       <head>
         <GoogleAnalytics />
         <meta name="theme-color" content="#c9d6df" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>
       <body className={'font-zenKurenaido'}>{children}</body>
     </html>

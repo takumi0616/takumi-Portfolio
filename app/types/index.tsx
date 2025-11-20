@@ -28,6 +28,7 @@ export interface PublicationCardProps {
   authors_label: string
   authors: string
   abstract: string
+  url?: string
 }
 
 export interface PublicationsProps {
@@ -57,4 +58,15 @@ export interface WorkModalProps {
 export interface WorksProps {
   lang: string
   onOpenModal: (work: Omit<WorkCardProps, 'onOpenModal'>) => void
+}
+
+export interface AwardsProps {
+  lang: string
+}
+
+export interface AwardsItemProps {
+  date: string
+  event: string
+  index: number
+  image?: string
 }
