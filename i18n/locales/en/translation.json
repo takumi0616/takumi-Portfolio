@@ -3,121 +3,145 @@
     "items": [
       {
         "date": "2025-11-25",
-        "event": "Presentation at the 48th Symposium on Information Theory and its Applications (SITA 2025)"
+        "event": "48th Symposium on Information Theory and Its Applications (SITA2025) - Presentation"
       },
       {
         "date": "2025-11-10",
-        "event": "Presentation at STI-gigaku 2025"
+        "event": "STI-Gigaku 2025 - Presentation"
       },
       {
         "date": "2025-09-26",
-        "event": "Completed the NEDO - K-NIC Potential Entrepreneur Follow-up Program"
-      },
-      {
-        "date": "2025-05-14",
-        "event": "Presentation at the 2025 Spring Meeting of the Meteorological Society of Japan"
+        "event": "NEDO K-NIC Potential Entrepreneur Follow-up Program - Completed"
       },
       {
         "date": "2025-05-15",
-        "event": "Started the NEDO - K-NIC Potential Entrepreneur Follow-up Program"
+        "event": "NEDO K-NIC Potential Entrepreneur Follow-up Program - Started"
       },
       {
-        "date": "2025-02-26",
-        "event": "Participated in the NEDO - NEP Pioneer Course"
+        "date": "2025-05-14",
+        "event": "Meteorological Society of Japan 2025 Spring Conference - Presentation"
       },
       {
-        "date": "2025-02-21",
-        "event": "Started part-time position at WEATHERMAP Co., Ltd."
-      },
-      {
-        "date": "2025-02-14",
-        "event": "Completed practical training at WEATHERMAP Co., Ltd."
+        "date": "2025-03-14",
+        "event": "IPSJ National Convention 2025 - Presentation"
       },
       {
         "date": "2025-02-28",
-        "event": "Completed long-term internship at LinkX Japan Inc."
+        "event": "LinkX Japan Inc. Long-term Internship - Completed"
+      },
+      {
+        "date": "2025-02-26",
+        "event": "NEDO NEP Pioneer Course - Participated"
+      },
+      {
+        "date": "2025-02-21",
+        "event": "Weathermap Inc. - Part-time Job Started"
+      },
+      {
+        "date": "2025-02-14",
+        "event": "Weathermap Inc. - Practical Training Completed"
+      },
+      {
+        "date": "2025-01-30",
+        "event": "Large Language Models 2024 - Completed"
       },
       {
         "date": "2024-10-04",
-        "event": "Presentation at the 2024 Autumn Meeting of the Meteorological Society of Japan"
+        "event": "Meteorological Society of Japan 2024 Autumn Conference - Presentation"
       },
       {
         "date": "2024-10-04",
-        "event": "Started practical training at WEATHERMAP Co., Ltd."
+        "event": "Weathermap Inc. - Practical Training Started"
       },
-      { "date": "2023-09-23", "event": "Competed in the GIKIHaku 2023 Finals" },
+      { "date": "2023-09-23", "event": "Geek Ten 2023 Finals - Participated" },
+      {
+        "date": "2024-09-19",
+        "event": "GCI 2024 Summer - Completed"
+      },
       {
         "date": "2024-09-12",
-        "event": "Presentation at KES 2024 IS11 (via EasyChair)"
+        "event": "EasyChair for KES2024 IS11 - Presented"
       },
-      { "date": "2024-09-07", "event": "Competed in GIKIHaku 2024 vol.5" },
+      { "date": "2024-09-07", "event": "Geek Expo 2024 Vol.5 - Participated" },
       {
         "date": "2024-09-04",
-        "event": "Enrolled in the Large-Scale Language Models 2024 course"
+        "event": "Large Language Models 2024 - Enrolled"
       },
       {
         "date": "2024-08-10",
-        "event": "Competed in GIKIHaku CAMP 2024 Monthly Hackathon vol.12"
+        "event": "Geek CAMP 2024 Monthly Hackathon Vol.12 - Participated"
       },
       {
         "date": "2024-07-18",
-        "event": "Accepted into the Graduate Program in Science and Technology Innovation"
+        "event": "Science and Technology Innovation Program - Accepted"
       },
       {
         "date": "2024-04-23",
-        "event": "Submitted to KES 2024 IS11 via EasyChair"
+        "event": "EasyChair for KES2024 IS11 - Paper Submitted"
       },
-      { "date": "2024-04-21", "event": "Enrolled in GCI 2024 Summer" },
+      { "date": "2024-04-21", "event": "GCI 2024 Summer - Enrolled" },
+      {
+        "date": "2024-03-22",
+        "event": "FY2023 Student Award for Extracurricular Activities - Received"
+      },
       {
         "date": "2024-03-17",
-        "event": "Started a long-term internship at LinkX Japan Inc."
+        "event": "LinkX Japan Inc. Long-term Internship - Started"
       },
-      {
-        "date": "2024-03-16",
-        "event": "Participated in GIKIHaku Festival 2024"
-      },
+      { "date": "2024-03-16", "event": "Geek Festival 2024 - Participated" },
       {
         "date": "2024-03-13",
-        "event": "Submitted a short report to \"Tenki,\" the Journal of the Meteorological Society of Japan"
+        "event": "Meteorological Society of Japan Journal \"Tenki\" - Short Report Submitted"
       },
-      { "date": "2024-03-02", "event": "Competed in GIKIHaku 2024 vol.1" },
+      { "date": "2024-03-02", "event": "Geek Expo 2024 Vol.1 - Participated" },
+      {
+        "date": "2024-02-20",
+        "event": "Money Dragon Final Presentation - Received 190,000 JPY Funding"
+      },
       {
         "date": "2024-02-15",
-        "event": "Completed this portfolio – CTA deliverable"
+        "event": "This Portfolio Creation - CTA Project"
       },
       {
         "date": "2024-02-02",
-        "event": "Competed in GIKIHaku CAMP 2024 Monthly Hackathon vol.14"
+        "event": "Geek CAMP 2024 Monthly Hackathon Vol.14 - Participated"
       },
       {
         "date": "2024-01-27",
-        "event": "Participated in \"Money Dragon in Nagaoka\""
+        "event": "Money Dragon in Nagaoka - Participated"
       },
       {
         "date": "2023-12-06",
-        "event": "Participated in a Lightning Talk event hosted by StyleArts"
+        "event": "StyleArts Lightning Talk Session - Participated"
       },
-      { "date": "2023-11-16", "event": "Participated in CA Tech Accel" },
-      { "date": "2023-10-28", "event": "Competed in JPHacks 2023" },
+      {
+        "date": "2023-11-16",
+        "event": "CyberAgent Inc. CA Tech Accel - Participated"
+      },
+      { "date": "2023-10-28", "event": "JPhacks 2023 - Participated" },
       {
         "date": "2023-10-14",
-        "event": "Competed in GIKIHaku CAMP 2023 Monthly Hackathon vol.10"
+        "event": "Geek CAMP 2023 Monthly Hackathon Vol.10 - Participated"
+      },
+      {
+        "date": "2023-09-23",
+        "event": "Geek Ten 2023 Finals - CARTA HOLDINGS Award Received"
       },
       {
         "date": "2023-08-12",
-        "event": "Competed in the GIKIHaku 2023 Qualifiers"
+        "event": "Geek Ten 2023 Preliminary - Participated"
       },
       {
         "date": "2023-04-01",
-        "event": "Entered the 3rd year at Nagaoka University of Technology"
+        "event": "Nagaoka University of Technology - 3rd Year Admission"
       },
       {
         "date": "2018-03-22",
-        "event": "Graduated from Niihama National College of Technology (5th year)"
+        "event": "Niihama National College of Technology - 5th Year Graduation"
       },
       {
         "date": "2018-04-01",
-        "event": "Entered Niihama National College of Technology (1st year)"
+        "event": "Niihama National College of Technology - 1st Year Admission"
       }
     ]
   },
@@ -125,81 +149,81 @@
     "items": [
       {
         "date": "2025-01-30",
-        "event": "Completed Large-Scale Language Models 2024",
+        "event": "Large Language Models 2024 - Completed",
         "image": "/llm.avif"
       },
       {
         "date": "2024-09-19",
-        "event": "Completed GCI 2024 Summer",
+        "event": "GCI 2024 Summer - Completed",
         "image": "/gci.avif"
       },
       {
         "date": "2024-03-22",
-        "event": "Received the 2023 Student Award for Extracurricular Activities",
+        "event": "FY2023 Student Award for Extracurricular Activities - Received",
         "image": "/GLhH-IZaIAACSMM.avif"
       },
       {
         "date": "2024-02-20",
-        "event": "Money Dragon Final Presentation – Awarded 190,000 JPY in support funds",
+        "event": "Money Dragon Final Presentation - Funding Received",
         "image": "/nagaoka.avif"
       },
       {
         "date": "2023-09-23",
-        "event": "Advanced to the GIKIHaku Finals – CARTA HOLDINGS Award",
+        "event": "Geek Ten 2023 Finals - CARTA HOLDINGS Award Received",
         "image": "/carta_1.avif"
       }
     ]
   },
   "hero": {
     "title": "Takumi Takasuka",
-    "description1": "Frontend Engineer / Data Engineer / Data Scientist",
-    "description2": "1st-year student, Graduate Program in Science and Technology Innovation, Nagaoka University of Technology",
-    "description3": "Member of the Machine Learning Theory Laboratory",
-    "extra_info1": "I belong to the information bureau \"NUTMEG,\" the organizing committee for the university festival, working to DX the festival through web applications.",
-    "extra_info2": "Leveraging these experiences, I also participate in various hackathons and LT events hosted by other organizations.",
-    "extra_info3": "In the Machine Learning Theory Laboratory, I work with meteorological data to tackle the task of generating weather forecast comments."
+    "description1": "Front-end Engineer / Data Engineer / Data Scientist",
+    "description2": "1st Year Master's Student, Science and Technology Innovation Program, Nagaoka University of Technology",
+    "description3": "Member of Machine Learning Theory Laboratory",
+    "extra_info1": "I belong to \"NUTMEG,\" the IT department of the university festival committee, where we digitally transform the festival using web applications.",
+    "extra_info2": "Leveraging these experiences, I participate in various hackathons and lightning talk sessions hosted by other organizations.",
+    "extra_info3": "In the Machine Learning Theory Laboratory, I work with meteorological data and focus on generating weather forecast commentary."
   },
   "works": {
     "data": [
       {
-        "title": "AI Research Institute Official Website",
-        "description": "This is the official website of the AI Research Institute operated by LinkX Japan Inc. To enhance corporate credibility, the design is simple yet refined.",
-        "myPart": "Frontend, Backend, Design",
+        "title": "AI Research Institute Website",
+        "description": "This is the official website for AI Research Institute operated by LinkX Japan Inc. A simple yet sophisticated design is adopted to enhance corporate credibility.",
+        "myPart": "Front-end, Back-end, Design",
         "gitHubUrl": "https://www.ai-souken.com/",
         "image": "aisouken.png"
       },
       {
         "title": "NUTMEG-Seeds",
-        "description": "A web app for sharing technical knowledge within the group \"NUTMEG,\" of which I am a member. The theme color is orange, NUTMEG’s image color, and attention to detail is applied throughout the design.",
-        "myPart": "Frontend, PM",
+        "description": "A web application for sharing technical knowledge within \"NUTMEG,\" the organization I belong to. The theme color is orange, NUTMEG's brand color, with meticulous attention to design details.",
+        "myPart": "Front-end, PM",
         "gitHubUrl": "https://github.com/NUTFes/NUTMEG-Seeds",
         "image": "NS.png"
       },
       {
         "title": "Group-manager-2",
-        "description": "A web application used for registering at the university festival of Nagaoka University of Technology. It excels in functionality such as PDF export and statistical data display, featuring a stylish black-based design.",
-        "myPart": "Frontend, Backend",
+        "description": "This web application is used when registering for the Nagaoka University of Technology festival. It features excellent functionality including PDF export and statistical data display. The design is stylish with a black-based color scheme.",
+        "myPart": "Front-end, Back-end",
         "gitHubUrl": "https://github.com/NUTFes/group-manager-2",
         "image": "GM2.png"
       },
       {
         "title": "Communication-AI",
-        "description": "A web application that enables conversation with generative AI. Although the conversation feature is simple, the design and accessibility are carefully considered so that it can be used by a wide range of users.",
-        "myPart": "Frontend, Design",
+        "description": "A web application that allows conversation with generative AI. While the conversation system is simple, it emphasizes design and accessibility, with features and architecture designed for all types of users.",
+        "myPart": "Front-end, Design",
         "gitHubUrl": "https://github.com/takumi0616/communication-ai",
         "image": "CAI.png"
       },
       {
         "title": "Slack-message-finder",
-        "description": "A web application that retrieves and saves Slack logs in real time, displaying them on a Slack-like page. Features include channel-wise up/down display and weekly activity tracking for specific users.",
-        "myPart": "Frontend, Backend",
+        "description": "A web application that retrieves and stores Slack logs in real-time, displaying them on a Slack-like designed page. It features channel hierarchy display and the ability to track a specific user's weekly activity.",
+        "myPart": "Front-end, Back-end",
         "gitHubUrl": "https://github.com/TMLlaboratory/slack-message-finder",
         "image": "SMF.png"
       },
       {
         "title": "Mentor-management-app",
-        "description": "A web application that supports a mentor system. It links mentors and mentees and allows mentors to review mentees’ learning records. It is a simple app managed by administrators.",
-        "myPart": "Frontend, Backend",
+        "description": "A web application that supports mentoring systems. It links mentors with mentees and allows tracking of mentee learning records. A simple web application managed by administrators.",
+        "myPart": "Front-end, Back-end",
         "gitHubUrl": "https://github.com/takumi0616/Mentor-management-app",
         "image": "MMA.png"
       }
@@ -210,18 +234,18 @@
     "data": [
       {
         "image": "public1.avif",
-        "title": "Validation of Weather Map Image Recognition Performance by ChatGPT",
+        "title": "Verification of Weather Map Image Recognition Performance Using ChatGPT",
         "authors_label": "Co-authors",
-        "authors": "Yuki H. Takano, Shotaro Watanabe, Gendo Kumoi",
-        "abstract": "Weather map recognition is a complex image recognition task that requires two cognitive processes: interpreting meteorological symbols and making future predictions. Recent advances in multimodal AI suggest that such complex tasks can be addressed. In this study, we use ChatGPT, a type of multimodal AI, to evaluate the recognition performance on weather map images and propose prompt engineering techniques to achieve more accurate recognition. Weather map recognition is also featured in the Common University Entrance Test. If weather maps can be recognized, automatic grading and question generation become possible, contributing to learning support. Furthermore, it is expected that weather commentary text can be automatically generated from weather maps. Therefore, weather map image recognition is an important challenge that requires not only understanding local time-series changes in meteorological data but also recognizing information about large-scale atmospheric patterns such as pressure distributions and making future predictions. In this study, we use ChatGPT4-Vision, a multimodal AI, to verify the recognition performance on weather map images. We investigate whether it can answer questions about weather maps from university entrance exams and generate weather commentary text from weather map images. By conducting multiple experiments with varying tasks and information in prompts, and evaluating the quality of generated explanations, we propose and verify improvements in reading performance via prompt engineering.",
+        "authors": "Yuki Takano, Shotaro Watanabe, Gendo Kumoi",
+        "abstract": "Weather map recognition is a complex image recognition task that requires two cognitive processes: symbol interpretation and future prediction. Recent advances in multimodal AI have shown the potential to solve such complex tasks. In this study, we verify the recognition performance of weather map images using ChatGPT, a type of multimodal AI, and propose prompt engineering for more accurate recognition. Weather map recognition is a problem that also appears in university entrance examinations. If weather maps can be recognized, automatic grading and question generation become possible, leading to learning support. Furthermore, automatic generation of weather commentary from weather maps can be expected. Therefore, weather map image recognition is an important challenge, but it requires not only recognizing time-series changes in local meteorological data but also recognizing information about large-scale weather patterns such as pressure distributions and future predictions. In this study, we verify the recognition performance of weather map images using ChatGPT4-Vision, a multimodal AI. We investigate whether it can answer questions about weather maps from university entrance exams and whether it can generate weather commentary from weather map images. By conducting multiple experiments with varying tasks and information in the prompts and evaluating the accuracy of the generated commentary, we propose and verify improvements in reading performance through prompt engineering.",
         "url": "https://www.sciencedirect.com/science/article/pii/S1877050924023871"
       },
       {
         "image": "public2.avif",
         "title": "Verification of Weather Comment Generation from Weather Map Images Using ChatGPT",
         "authors_label": "Co-authors",
-        "authors": "Yuki H. Takano, Shotaro Watanabe, Gendo Kumoi",
-        "abstract": "Weather forecasts (weather comments) are created by meteorologists interpreting visualized information and expressing it in natural language. Existing studies on the automatic generation of weather comments face two challenges: incorporating information about large-scale atmospheric fields and generating natural text. In this study, we use ChatGPT4-Vision, a multimodal AI, to automatically generate weather comments from surface weather map images. We conduct experiments that vary the tasks specified in prompts and the amount of information provided, and then verify the accuracy of the outputs to explore the applicability of multimodal AI to weather comment generation. The results show that structuring prompts and clarifying instructions, as well as instructing step-by-step execution, are effective. Furthermore, few-shot learning demonstrates that ChatGPT4-Vision can understand and generalize new concepts and patterns. We expect that these findings will contribute to realizing personalized weather forecasts for each individual."
+        "authors": "Yuki Takano, Shotaro Watanabe, Gendo Kumoi",
+        "abstract": "Weather forecast text (weather comments) is created by meteorologists interpreting visualized information and verbalizing it. Previous research on automatic weather comment generation has two challenges: incorporating large-scale meteorological field information and generating natural sentences. In this study, we perform automatic generation of weather comments from surface weather map images using ChatGPT4-Vision, a multimodal AI. By conducting experiments that vary the tasks indicated in the prompts and the amount of information provided, and verifying the accuracy of the output comments, we explore the applicability of multimodal AI to weather comment generation. The experimental results showed that structuring prompts to clarify instructions and instructing step-by-step execution were effective. Additionally, few-shot learning demonstrated that ChatGPT4-Vision can understand and generalize new concepts and patterns. The results of this research are expected to contribute to the realization of personalized weather forecasts for each individual."
       }
     ]
   }
