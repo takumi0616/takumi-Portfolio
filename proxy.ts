@@ -14,7 +14,8 @@ export const config = {
   ],
 }
 
-export function middleware(request: NextRequest) {
+// Next.js 16 で middleware は proxy に名称変更された（言語ネゴシエーション用）。
+export default function proxy(request: NextRequest) {
   const headers = {
     'accept-language': request.headers.get('accept-language') ?? '',
   }
@@ -30,11 +31,24 @@ export function middleware(request: NextRequest) {
         new URL(`/${preferredLanguage}${pathname}`, request.url),
       )
     } else {
+      // 既定言語へリライトする際、ルートレイアウトが <html lang> を解決できるよう
+      // 現在のロケールをリクエストヘッダーで引き渡す。
+      const requestHeaders = new Headers(request.headers)
+      requestHeaders.set('x-locale', defaultLanguage)
       return NextResponse.rewrite(
         new URL(`/${defaultLanguage}${pathname}`, request.url),
+        { request: { headers: requestHeaders } },
       )
     }
   }
 
-  return NextResponse.next()
+  // パスからロケールを判定し、ルートレイアウトへ引き渡す。
+  const currentLocale =
+    availableLanguages.find(
+      (lang) => pathname === `/${lang}` || pathname.startsWith(`/${lang}/`),
+    ) ?? defaultLanguage
+  const requestHeaders = new Headers(request.headers)
+  requestHeaders.set('x-locale', currentLocale)
+
+  return NextResponse.next({ request: { headers: requestHeaders } })
 }

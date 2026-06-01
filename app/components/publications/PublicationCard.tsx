@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import { FaExternalLinkAlt } from 'react-icons/fa'
 import { PublicationCardProps } from '@/app/types'
 
@@ -16,13 +17,13 @@ const PublicationCard: React.FC<PublicationCardProps> = ({
         <h3 className="mb-6 text-3xl">{title}</h3>
 
         <div className="mb-6 overflow-hidden rounded-lg">
-          <img
+          <Image
             src={image}
             alt={title}
-            className="w-full object-cover shadow-custom"
-            loading="lazy"
-            width="500"
-            height="285"
+            className="h-auto w-full object-cover shadow-custom"
+            width={500}
+            height={285}
+            sizes="(max-width: 768px) 90vw, 588px"
           />
         </div>
 

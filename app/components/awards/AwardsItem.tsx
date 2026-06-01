@@ -1,4 +1,5 @@
 import React, { CSSProperties } from 'react'
+import Image from 'next/image'
 import { AwardsItemProps } from '@/app/types'
 
 const clamp3: CSSProperties = {
@@ -26,11 +27,12 @@ const AwardsItem: React.FC<AwardsItemProps> = ({
         {/* 画像（固定高さ・カードサイズに影響しない） */}
         <div className="relative h-48 w-full overflow-hidden rounded-xl bg-transparent">
           {image ? (
-            <img
+            <Image
               src={image}
               alt={event}
-              className="size-full object-contain object-center"
-              loading="lazy"
+              fill
+              className="object-contain object-center"
+              sizes="(max-width: 768px) 50vw, 320px"
             />
           ) : (
             <div className="flex size-full items-center justify-center text-xs text-gray-400">

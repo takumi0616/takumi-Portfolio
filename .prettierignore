@@ -1,0 +1,7 @@
+# 自動生成・依存・ビルド成果物はフォーマット対象外
+next-env.d.ts
+.next/
+out/
+build/
+node_modules/
+package-lock.json

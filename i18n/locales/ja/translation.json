@@ -2,6 +2,26 @@
   "activity": {
     "items": [
       {
+        "date": "2026-04-01",
+        "event": "NEDO - NEP 開拓コース　採択"
+      },
+      {
+        "date": "2026-02-08",
+        "event": "ベトナム海外リサーチインターンシップ（株式会社ソリマチ）　終了"
+      },
+      {
+        "date": "2026-02-03",
+        "event": "ベトナム海外リサーチインターンシップ　最終成果発表"
+      },
+      {
+        "date": "2026-01-23",
+        "event": "ベトナム海外リサーチインターンシップ　セミナー発表"
+      },
+      {
+        "date": "2026-01-04",
+        "event": "ベトナム海外リサーチインターンシップ（株式会社ソリマチ）　開始"
+      },
+      {
         "date": "2025-11-25",
         "event": "第48回情報理論とその応用シンポジウム_SITA2025　発表"
       },
@@ -112,6 +132,11 @@
   "awards": {
     "items": [
       {
+        "date": "2026-04-01",
+        "event": "NEDO - NEP 開拓コース　採択",
+        "image": "/nep.avif"
+      },
+      {
         "date": "2025-01-30",
         "event": "大規模言語モデル_2024　修了",
         "image": "/llm.avif"
@@ -154,42 +179,42 @@
         "description": "株式会社LinkX Japan様が運営するAI総合研究所の公式ホームページです。企業の信頼性を高めるために、シンプルかつ洗練されたデザインを採用しています。",
         "myPart": "フロント、バック、デザイン",
         "gitHubUrl": "https://www.ai-souken.com/",
-        "image": "aisouken.png"
+        "image": "/aisouken.png"
       },
       {
         "title": "NUTMEG-Seeds",
         "description": "私が所属している団体「NUTMEG」内での技術の知見を共有しているWebアプリです。NUTMEGのイメージカラーであるオレンジをテーマカラーにしており、細部までデザインを凝っています。",
         "myPart": "フロント、PM",
         "gitHubUrl": "https://github.com/NUTFes/NUTMEG-Seeds",
-        "image": "NS.png"
+        "image": "/NS.png"
       },
       {
         "title": "Group-manager-2",
         "description": "長岡技術科学大学の学祭に登録する際にこのWebアプリを使います。PDF出力や統計データの表示など機能面に優れています。黒を基調としており、スタイリッシュなデザインです。",
         "myPart": "フロント、バック",
         "gitHubUrl": "https://github.com/NUTFes/group-manager-2",
-        "image": "GM2.png"
+        "image": "/GM2.png"
       },
       {
         "title": "Communication-AI",
         "description": "生成AIと会話できるWebアプリです。会話部分は単純なシステムですが、デザインやアクセシビリティに配慮しており、あらゆるユーザーが使うことを想定した機能や設計を考えています。",
         "myPart": "フロント、デザイン",
         "gitHubUrl": "https://github.com/takumi0616/communication-ai",
-        "image": "CAI.png"
+        "image": "/CAI.png"
       },
       {
         "title": "Slack-message-finder",
         "description": "Slackのログをリアルタイムに取得して保存し、Slackライクなデザインのページで表示するWebアプリです。チャンネルの上下表示や、特定のユーザーの1週間の活動を知る機能があります。",
         "myPart": "フロント、バック",
         "gitHubUrl": "https://github.com/TMLlaboratory/slack-message-finder",
-        "image": "SMF.png"
+        "image": "/SMF.png"
       },
       {
         "title": "Menter-management-app",
         "description": "メンター制度をサポートするWebアプリです。メンターとメンティーを紐づけて、メンティーの学習記録を確認することができます。管理者が管理するシンプルなWebアプリです。",
         "myPart": "フロント、バック",
         "gitHubUrl": "https://github.com/takumi0616/Mentor-management-app",
-        "image": "MMA.png"
+        "image": "/MMA.png"
       }
     ],
     "my_part_label": "担当箇所"
@@ -197,7 +222,7 @@
   "publications": {
     "data": [
       {
-        "image": "public1.avif",
+        "image": "/public1.avif",
         "title": "ChatGPTによる天気図画像の認識性能検証",
         "authors_label": "共著者",
         "authors": "高野雄紀，渡邊正太郎，雲居玄道",
@@ -205,7 +230,7 @@
         "url": "https://www.sciencedirect.com/science/article/pii/S1877050924023871"
       },
       {
-        "image": "public2.avif",
+        "image": "/public2.avif",
         "title": "ChatGPTによる天気図画像からの天気コメント生成の検証",
         "authors_label": "共著者",
         "authors": "高野雄紀，渡邊正太郎，雲居玄道",

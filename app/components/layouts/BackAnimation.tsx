@@ -35,7 +35,8 @@ const BackAnimation: React.FC<BackProps> = () => {
     const scene = new THREE.Scene()
     const group = new THREE.Group()
     scene.add(group)
-    const segments = MAX_PARTICLE_COUNT * MAX_PARTICLE_COUNT
+    // 線分バッファは実際に使う粒子数（PARTICLE_COUNT）基準で確保し無駄を省く。
+    const segments = PARTICLE_COUNT * PARTICLE_COUNT
     const positions = new Float32Array(segments * 3)
     const colors = new Float32Array(segments * 3)
     const pMaterial = new THREE.PointsMaterial({
@@ -115,6 +116,8 @@ const BackAnimation: React.FC<BackProps> = () => {
 
     const animate = () => {
       requestAnimationFrame(animate)
+      // タブが非表示の間は描画・計算を行わずリソースを節約する。
+      if (typeof document !== 'undefined' && document.hidden) return
       let vertexpos = 0
       let colorpos = 0
       let numConnected = 0

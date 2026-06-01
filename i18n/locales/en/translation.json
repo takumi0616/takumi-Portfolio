@@ -2,6 +2,26 @@
   "activity": {
     "items": [
       {
+        "date": "2026-04-01",
+        "event": "NEDO NEP Pioneer Course - Selected"
+      },
+      {
+        "date": "2026-02-08",
+        "event": "Overseas Research Internship in Vietnam (Sorimachi Co., Ltd.) - Completed"
+      },
+      {
+        "date": "2026-02-03",
+        "event": "Overseas Research Internship in Vietnam - Final Presentation"
+      },
+      {
+        "date": "2026-01-23",
+        "event": "Overseas Research Internship in Vietnam - Seminar Presentation"
+      },
+      {
+        "date": "2026-01-04",
+        "event": "Overseas Research Internship in Vietnam (Sorimachi Co., Ltd.) - Started"
+      },
+      {
         "date": "2025-11-25",
         "event": "48th Symposium on Information Theory and Its Applications (SITA2025) - Presentation"
       },
@@ -148,6 +168,11 @@
   "awards": {
     "items": [
       {
+        "date": "2026-04-01",
+        "event": "NEDO NEP Pioneer Course - Selected",
+        "image": "/nep.avif"
+      },
+      {
         "date": "2025-01-30",
         "event": "Large Language Models 2024 - Completed",
         "image": "/llm.avif"
@@ -190,42 +215,42 @@
         "description": "This is the official website for AI Research Institute operated by LinkX Japan Inc. A simple yet sophisticated design is adopted to enhance corporate credibility.",
         "myPart": "Front-end, Back-end, Design",
         "gitHubUrl": "https://www.ai-souken.com/",
-        "image": "aisouken.png"
+        "image": "/aisouken.png"
       },
       {
         "title": "NUTMEG-Seeds",
         "description": "A web application for sharing technical knowledge within \"NUTMEG,\" the organization I belong to. The theme color is orange, NUTMEG's brand color, with meticulous attention to design details.",
         "myPart": "Front-end, PM",
         "gitHubUrl": "https://github.com/NUTFes/NUTMEG-Seeds",
-        "image": "NS.png"
+        "image": "/NS.png"
       },
       {
         "title": "Group-manager-2",
         "description": "This web application is used when registering for the Nagaoka University of Technology festival. It features excellent functionality including PDF export and statistical data display. The design is stylish with a black-based color scheme.",
         "myPart": "Front-end, Back-end",
         "gitHubUrl": "https://github.com/NUTFes/group-manager-2",
-        "image": "GM2.png"
+        "image": "/GM2.png"
       },
       {
         "title": "Communication-AI",
         "description": "A web application that allows conversation with generative AI. While the conversation system is simple, it emphasizes design and accessibility, with features and architecture designed for all types of users.",
         "myPart": "Front-end, Design",
         "gitHubUrl": "https://github.com/takumi0616/communication-ai",
-        "image": "CAI.png"
+        "image": "/CAI.png"
       },
       {
         "title": "Slack-message-finder",
         "description": "A web application that retrieves and stores Slack logs in real-time, displaying them on a Slack-like designed page. It features channel hierarchy display and the ability to track a specific user's weekly activity.",
         "myPart": "Front-end, Back-end",
         "gitHubUrl": "https://github.com/TMLlaboratory/slack-message-finder",
-        "image": "SMF.png"
+        "image": "/SMF.png"
       },
       {
         "title": "Mentor-management-app",
         "description": "A web application that supports mentoring systems. It links mentors with mentees and allows tracking of mentee learning records. A simple web application managed by administrators.",
         "myPart": "Front-end, Back-end",
         "gitHubUrl": "https://github.com/takumi0616/Mentor-management-app",
-        "image": "MMA.png"
+        "image": "/MMA.png"
       }
     ],
     "my_part_label": "My Role"
@@ -233,7 +258,7 @@
   "publications": {
     "data": [
       {
-        "image": "public1.avif",
+        "image": "/public1.avif",
         "title": "Verification of Weather Map Image Recognition Performance Using ChatGPT",
         "authors_label": "Co-authors",
         "authors": "Yuki Takano, Shotaro Watanabe, Gendo Kumoi",
@@ -241,7 +266,7 @@
         "url": "https://www.sciencedirect.com/science/article/pii/S1877050924023871"
       },
       {
-        "image": "public2.avif",
+        "image": "/public2.avif",
         "title": "Verification of Weather Comment Generation from Weather Map Images Using ChatGPT",
         "authors_label": "Co-authors",
         "authors": "Yuki Takano, Shotaro Watanabe, Gendo Kumoi",

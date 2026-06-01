@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { use, useEffect, useState } from 'react'
 import Loader from '@/app/components/layouts/Loader'
 import Footer from '@/app/components/layouts/Footer'
 import Header from '@/app/components/layouts/Header'
@@ -17,7 +17,13 @@ import Publications from '@/app/components/publications/Publications'
 import Awards from '@/app/components/awards/Awards'
 import { useTranslation } from '@/i18n/client'
 
-export default function Home({ params }: { params: { lang: string } }) {
+export default function Home({
+  params,
+}: {
+  params: Promise<{ lang: string }>
+}) {
+  // Next.js 15 以降、クライアントコンポーネントの params も Promise のため use() で解決する。
+  const { lang } = use(params)
   const [isLoading, setIsLoading] = useState(true)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [selectedWork, setSelectedWork] = useState<
@@ -29,14 +35,39 @@ export default function Home({ params }: { params: { lang: string } }) {
     setIsModalOpen(true)
   }
 
-  const { t } = useTranslation(params.lang)
+  const { t } = useTranslation(lang)
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false)
-    }, 4000)
+    // 固定 4 秒待つのではなく、実際の読み込み完了に合わせてローダーを閉じる。
+    // ローディングアニメーションが一瞬で消えないよう最小表示時間を確保し、
+    // 読み込みが遅い場合の保険として最大表示時間で上限を設ける。
+    const MIN_DISPLAY_MS = 1800
+    const MAX_DISPLAY_MS = 4000
+    const startedAt = performance.now()
+    let finished = false
 
-    return () => clearTimeout(timer)
+    const finish = () => {
+      if (finished) return
+      finished = true
+      const remaining = Math.max(
+        0,
+        MIN_DISPLAY_MS - (performance.now() - startedAt),
+      )
+      window.setTimeout(() => setIsLoading(false), remaining)
+    }
+
+    const maxTimer = window.setTimeout(finish, MAX_DISPLAY_MS)
+
+    if (document.readyState === 'complete') {
+      finish()
+    } else {
+      window.addEventListener('load', finish, { once: true })
+    }
+
+    return () => {
+      window.clearTimeout(maxTimer)
+      window.removeEventListener('load', finish)
+    }
   }, [])
 
   return (
@@ -49,26 +80,26 @@ export default function Home({ params }: { params: { lang: string } }) {
       >
         <Header />
         <div className="grow">
-          <MainView lang={params.lang} />
+          <MainView lang={lang} />
           <div className="mt-[-400px]">
             <div className="sticky top-0 size-full">
               <BackAnimation object={undefined} />
             </div>
             <div className="relative size-full overflow-hidden">
               <div id="works">
-                <Works lang={params.lang} onOpenModal={openModal} />
+                <Works lang={lang} onOpenModal={openModal} />
               </div>
               <div id="publications">
-                <Publications lang={params.lang} />
+                <Publications lang={lang} />
               </div>
               <div id="awards">
-                <Awards lang={params.lang} />
+                <Awards lang={lang} />
               </div>
               <div id="skills">
                 <Skills />
               </div>
               <div id="activity">
-                <Activity lang={params.lang} />
+                <Activity lang={lang} />
               </div>
               <div id="contributions" className="">
                 <Contributions />

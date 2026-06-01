@@ -1,5 +1,6 @@
 import { t } from 'i18next'
 import React from 'react'
+import Image from 'next/image'
 import { FaExternalLinkAlt } from 'react-icons/fa'
 import { IoLogoGithub } from 'react-icons/io'
 import { WorkCardProps } from '@/app/types'
@@ -21,13 +22,13 @@ const WorkCard: React.FC<WorkCardProps> = ({
       <div className="flex justify-between gap-8 lg:gap-12 xl:gap-16 portrait:flex-col">
         <div className="shrink-0 portrait:flex portrait:w-full portrait:justify-center">
           <button onClick={handleImageClick} className="m-3 cursor-pointer">
-            <img
+            <Image
               src={image}
               alt={title}
               className="rounded-lg object-cover shadow-custom portrait:h-auto portrait:w-full portrait:max-w-full"
-              loading="lazy"
-              width="500"
-              height="285"
+              width={500}
+              height={285}
+              sizes="(max-width: 768px) 90vw, 500px"
             />
           </button>
         </div>

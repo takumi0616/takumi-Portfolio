@@ -22,6 +22,7 @@ const MainCube: React.FC<MainCubeProps> = (props) => {
     const height = width
     setCanvasSize({ width, height })
     onResize(width, height)
+    return { width, height }
   }
 
   const MAX_PARTICLE_COUNT = 450
@@ -66,7 +67,9 @@ const MainCube: React.FC<MainCubeProps> = (props) => {
     group.rotation.y = Math.PI / 10
     group.rotation.x = Math.PI / 6
 
-    const segments = MAX_PARTICLE_COUNT * MAX_PARTICLE_COUNT
+    // 線分バッファは実際に使う粒子数（PARTICLE_COUNT）に基づくサイズで十分。
+    // MAX_PARTICLE_COUNT^2 だと数MB単位の無駄な確保になっていたため適正化する。
+    const segments = PARTICLE_COUNT * PARTICLE_COUNT
     const positions = new Float32Array(segments * 3)
     const colors = new Float32Array(segments * 3)
 
@@ -145,15 +148,19 @@ const MainCube: React.FC<MainCubeProps> = (props) => {
     container.appendChild(renderer.domElement)
 
     const onWindowResize = () => {
-      updateCanvasSize()
-      camera.aspect = canvasSize.width / canvasSize.height
+      // state（canvasSize）は更新が非同期で古い値を参照しうるため、
+      // 算出結果を直接使ってカメラ・レンダラーへ反映し NaN を防ぐ。
+      const { width, height } = updateCanvasSize()
+      camera.aspect = width / height
       camera.updateProjectionMatrix()
-      renderer.setSize(canvasSize.width, canvasSize.height)
+      renderer.setSize(width, height)
     }
     window.addEventListener('resize', onWindowResize, false)
 
     const animate = () => {
       requestAnimationFrame(animate)
+      // タブが非表示の間は描画・計算を行わずリソースを節約する。
+      if (typeof document !== 'undefined' && document.hidden) return
       if (
         containerRef.current &&
         (containerRef.current.clientWidth !== canvasSize.width ||

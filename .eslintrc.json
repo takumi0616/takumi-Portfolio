@@ -43,10 +43,10 @@
       }
     },
     "react": {
-      "version": "17.0.0"
+      "version": "detect"
     }
   },
-  "ignorePatterns": ["/*.js"],
+  "ignorePatterns": ["/*.js", "next-env.d.ts", ".next/", "node_modules/"],
   "rules": {
     "import/no-unresolved": "off",
     "prefer-const": "off",

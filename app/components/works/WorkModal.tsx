@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import Image from 'next/image'
 import { CiCircleRemove } from 'react-icons/ci'
 import { gsap } from 'gsap'
 import { WorkModalProps } from '@/app/types'
@@ -24,8 +25,9 @@ const WorkModal: React.FC<WorkModalProps> = ({ title, image, onClose }) => {
       onClick={handleOutsideClick}
       tabIndex={0}
       role="button"
-      onKeyPress={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
+      aria-label="モーダルを閉じる"
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Escape') {
           handleOutsideClick(e as unknown as React.MouseEvent<HTMLDivElement>)
         }
       }}
@@ -36,13 +38,13 @@ const WorkModal: React.FC<WorkModalProps> = ({ title, image, onClose }) => {
           onClick={onClose}
         />
         <h2 className="mb-4 text-2xl">{title}</h2>
-        <img
+        <Image
           src={image}
           alt={title}
           className="h-auto max-w-full rounded"
-          loading="lazy"
           width={815}
           height={465}
+          sizes="(max-width: 768px) 90vw, 815px"
         />
       </div>
     </div>
