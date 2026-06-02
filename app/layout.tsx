@@ -87,7 +87,8 @@ const personJsonLd = {
   alternateName: '髙須賀匠',
   url: SITE_URL,
   image: `${SITE_URL}/screenshot.png`,
-  jobTitle: 'Front-end Engineer / Data Engineer / Data Scientist',
+  jobTitle:
+    'All-Round Engineer / Data Scientist / Intelligent Information Science Researcher / Deep Tech Entrepreneur',
   sameAs: [
     'https://github.com/takumi0616',
     'https://zenn.dev/takumi0616',

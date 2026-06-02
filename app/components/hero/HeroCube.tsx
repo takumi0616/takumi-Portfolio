@@ -56,9 +56,10 @@ const MainCube: React.FC<MainCubeProps> = (props) => {
     const group = new THREE.Group()
     scene.add(group)
 
-    const helper = new THREE.BoxHelper(
-      new THREE.Mesh(new THREE.BoxGeometry(R, R, R)),
-    )
+    // BoxHelper は境界算出に渡したジオメトリを内部参照しないため、
+    // アンマウント時に破棄できるよう生成元を保持しておく。
+    const helperSourceGeometry = new THREE.BoxGeometry(R, R, R)
+    const helper = new THREE.BoxHelper(new THREE.Mesh(helperSourceGeometry))
     helper.material.color.setHex(0x000000)
     helper.material.blending = THREE.AdditiveBlending
     helper.material.transparent = true
@@ -157,8 +158,9 @@ const MainCube: React.FC<MainCubeProps> = (props) => {
     }
     window.addEventListener('resize', onWindowResize, false)
 
+    let animationFrameId = 0
     const animate = () => {
-      requestAnimationFrame(animate)
+      animationFrameId = requestAnimationFrame(animate)
       // タブが非表示の間は描画・計算を行わずリソースを節約する。
       if (typeof document !== 'undefined' && document.hidden) return
       if (
@@ -268,17 +270,21 @@ const MainCube: React.FC<MainCubeProps> = (props) => {
     })
 
     return () => {
-      scene.clear()
-      renderer.dispose()
+      cancelAnimationFrame(animationFrameId)
       window.removeEventListener('resize', onWindowResize, false)
-      container.removeChild(renderer.domElement)
+      if (renderer.domElement.parentNode === container) {
+        container.removeChild(renderer.domElement)
+      }
       scene.clear()
-      renderer.dispose()
       particles.dispose()
       linesMesh.geometry.dispose()
       linesMesh.material.dispose()
       pointCloud.geometry.dispose()
       pointCloud.material.dispose()
+      helper.geometry.dispose()
+      helper.material.dispose()
+      helperSourceGeometry.dispose()
+      renderer.dispose()
     }
   }, [])
 

@@ -15,6 +15,7 @@ import Contributions from '@/app/components/contributions/Contributions'
 import Contact from '@/app/components/contact/Contact'
 import Publications from '@/app/components/publications/Publications'
 import Awards from '@/app/components/awards/Awards'
+import Research from '@/app/components/research/Research'
 import { useTranslation } from '@/i18n/client'
 
 export default function Home({
@@ -86,6 +87,9 @@ export default function Home({
               <BackAnimation object={undefined} />
             </div>
             <div className="relative size-full overflow-hidden">
+              <div id="research">
+                <Research lang={lang} />
+              </div>
               <div id="works">
                 <Works lang={lang} onOpenModal={openModal} />
               </div>

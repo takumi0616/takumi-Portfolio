@@ -70,3 +70,25 @@ export interface AwardsItemProps {
   index: number
   image?: string
 }
+
+export interface ResearchProps {
+  lang: string
+}
+
+export interface ResearchTheme {
+  title: string
+  description: string
+}
+
+export interface ResearchItem {
+  title: string
+  authors: string
+  venue: string
+  year?: string
+  url?: string
+}
+
+export interface ResearchGroup {
+  category: string
+  items: ResearchItem[]
+}

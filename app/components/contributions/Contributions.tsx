@@ -11,19 +11,17 @@ const Contributions: React.FC = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
 
-    const loadImage = (url: string) => {
-      const img = new Image()
-      img.onload = () => {
-        setIsFallbackImage(false)
-      }
-      img.onerror = () => {
-        setImageUrl('/github.svg')
-        setIsFallbackImage(true)
-      }
-      img.src = url
+    // プリロードして読み込み可否を判定。アンマウント時はハンドラを解放し、
+    // 読み込み完了後の不要な state 更新（警告の原因）を防ぐ。
+    const img = new Image()
+    img.onload = () => {
+      setIsFallbackImage(false)
     }
-
-    loadImage(imageUrl)
+    img.onerror = () => {
+      setImageUrl('/github.svg')
+      setIsFallbackImage(true)
+    }
+    img.src = imageUrl
 
     function updateAnimations() {
       const contributionsImage = gsap.utils.toArray<Element>('.contributions')
@@ -50,6 +48,8 @@ const Contributions: React.FC = () => {
     window.addEventListener('resize', updateAnimations)
 
     return () => {
+      img.onload = null
+      img.onerror = null
       window.removeEventListener('resize', updateAnimations)
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
     }

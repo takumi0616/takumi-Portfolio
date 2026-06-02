@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation'
 import { useLanguage } from '@/i18n/client'
 
 const menuItems = [
+  { id: 'research', label: 'Research' },
   { id: 'works', label: 'Works' },
   { id: 'awards', label: 'Awards' },
   { id: 'skills', label: 'Skills' },
@@ -122,21 +123,16 @@ const Header = () => {
           <img src="/us.png" alt="" className="size-8" aria-hidden="true" />
         </div>
 
-        <IoIosMenu
-          className="mr-8 cursor-pointer text-5xl portrait:mr-0"
+        <button
+          type="button"
+          className="mr-8 flex cursor-pointer items-center bg-transparent p-0 text-5xl leading-none portrait:mr-0"
           onClick={toggleMenu}
-          tabIndex={0}
-          role="button"
           aria-label="メニューを開く"
           aria-expanded={isOpen}
           aria-haspopup="menu"
-          onKeyDown={(e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-              e.preventDefault()
-              toggleMenu()
-            }
-          }}
-        />
+        >
+          <IoIosMenu />
+        </button>
       </div>
 
       <nav

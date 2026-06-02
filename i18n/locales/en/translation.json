@@ -2,20 +2,16 @@
   "activity": {
     "items": [
       {
+        "date": "2026-06-01",
+        "event": "WNI Foundation 16th Weather Culture Award - Selected"
+      },
+      {
         "date": "2026-04-01",
         "event": "NEDO NEP Pioneer Course - Selected"
       },
       {
         "date": "2026-02-08",
         "event": "Overseas Research Internship in Vietnam (Sorimachi Co., Ltd.) - Completed"
-      },
-      {
-        "date": "2026-02-03",
-        "event": "Overseas Research Internship in Vietnam - Final Presentation"
-      },
-      {
-        "date": "2026-01-23",
-        "event": "Overseas Research Internship in Vietnam - Seminar Presentation"
       },
       {
         "date": "2026-01-04",
@@ -73,7 +69,6 @@
         "date": "2024-10-04",
         "event": "Weathermap Inc. - Practical Training Started"
       },
-      { "date": "2023-09-23", "event": "Geek Ten 2023 Finals - Participated" },
       {
         "date": "2024-09-19",
         "event": "GCI 2024 Summer - Completed"
@@ -156,7 +151,7 @@
         "event": "Nagaoka University of Technology - 3rd Year Admission"
       },
       {
-        "date": "2018-03-22",
+        "date": "2023-03-22",
         "event": "Niihama National College of Technology - 5th Year Graduation"
       },
       {
@@ -167,6 +162,11 @@
   },
   "awards": {
     "items": [
+      {
+        "date": "2026-06-01",
+        "event": "WNI Foundation 16th Weather Culture Award - Selected",
+        "image": "/bunka_16th.png"
+      },
       {
         "date": "2026-04-01",
         "event": "NEDO NEP Pioneer Course - Selected",
@@ -201,12 +201,122 @@
   },
   "hero": {
     "title": "Takumi Takasuka",
-    "description1": "Front-end Engineer / Data Engineer / Data Scientist",
-    "description2": "1st Year Master's Student, Science and Technology Innovation Program, Nagaoka University of Technology",
+    "description1": "All-Round Engineer / Data Scientist / Intelligent Information Science Researcher / Deep Tech Entrepreneur",
+    "description2": "2nd Year Master's Student, Science and Technology Innovation Program, Nagaoka University of Technology",
     "description3": "Member of Machine Learning Theory Laboratory",
-    "extra_info1": "I belong to \"NUTMEG,\" the IT department of the university festival committee, where we digitally transform the festival using web applications.",
-    "extra_info2": "Leveraging these experiences, I participate in various hackathons and lightning talk sessions hosted by other organizations.",
-    "extra_info3": "In the Machine Learning Theory Laboratory, I work with meteorological data and focus on generating weather forecast commentary."
+    "extra_info1": "In the Machine Learning Theory Laboratory, I research the automatic generation of highly factual weather commentary, using a decomposed architecture that modularizes the tacit knowledge of expert forecasters and feeds it to an LLM.",
+    "extra_info2": "To bring this research into society, I am building \"Personal Cast,\" an AI weather-forecaster service for individuals, and taking on the challenge of entrepreneurship. My goal is to deliver weather not as a \"forecast\" but as the \"next action\" to take.",
+    "extra_info3": "These efforts have been selected for programs such as the NEDO NEP Pioneer Course and the WNI Foundation's 16th Weather Culture Award. Drawing on the development skills gained through hackathons and lightning talks, I advance research, development, and commercialization as one."
+  },
+  "research": {
+    "overview_title": "Research Overview",
+    "overview": [
+      "Prioritizing the \"accuracy of information delivery\" over \"predictive precision,\" I conduct intelligent-information-science research aimed at establishing design principles for intermediate representations in domain-specific data-to-text (D2T) generation, using the automatic generation of nationwide weather commentary written by expert forecasters as the subject.",
+      "From meteorological data such as ERA5, three modules — (1) importance weighting of meteorological variables, (2) synoptic pattern classification via Self-Organizing Maps (SOM), and (3) frontal estimation via Swin-Unet — build an intermediate representation, limiting the LLM's role to \"verbalization\" to ensure factuality. Through diagnostic experiments that systematically manipulate the \"accuracy\" and \"temporal structure\" of this representation as independent variables, I clarify their functional relationship with generation quality."
+    ],
+    "themes_title": "Research Themes",
+    "themes": [
+      {
+        "title": "Domain-specific D2T / Automatic Weather Commentary Generation",
+        "description": "A decomposed architecture that generates highly factual weather commentary with an LLM via an intermediate representation built from experts' modularized tacit knowledge."
+      },
+      {
+        "title": "SOM Synoptic Classification / Swin-Unet Frontal Estimation",
+        "description": "Development of SOM-based synoptic pattern classification with integrated structural-similarity metrics, and Swin-Unet frontal estimation with a physical-continuity loss."
+      },
+      {
+        "title": "Cognitive Load Analysis of Generative-AI Use",
+        "description": "Empirical analysis of generative-AI utilization strategies in programming through non-invasive biometric cognitive-load measurement."
+      }
+    ],
+    "achievements_title": "Research Output",
+    "lab_label": "View Lab Page",
+    "lab_url": "https://lab.kumoi.net/en/members/takasuka/",
+    "groups": [
+      {
+        "category": "Journal Articles",
+        "items": [
+          {
+            "title": "ChatGPTによる天気図画像からの天気コメント生成の検証",
+            "authors": "Takumi Takasuka, Yuki H. Takano, Shotaro Watanabe, Gendo Kumoi",
+            "venue": "Tenki, Vol.72, No.12, pp.603-611",
+            "year": "2025",
+            "url": "https://doi.org/10.24761/tenki.72.12_603"
+          }
+        ]
+      },
+      {
+        "category": "International Conferences",
+        "items": [
+          {
+            "title": "Analysis of LLM Utilization Strategies Based on Cognitive Load During Programming",
+            "authors": "Wataru Kobayashi, Kouki Shiono, Naoki Baba, Kyohei Shibata, Naoto Tani, Takumi Takasuka, Keitaro Nakasai, Gendo Kumoi, Katsuko T. Nakahira",
+            "venue": "10th STI-Gigaku 2025",
+            "year": "2025"
+          },
+          {
+            "title": "Towards Measuring Cognitive Load during Software Engineering Tasks Using Nasal Skin Temperature: Development of a Detection System",
+            "authors": "Naoto Tani, Fukutaro Mori, Taichi Nakamura, Yusaku Kii, Takumi Takasuka, Shunsuke Moriya, Keitaro Nakasai, Yoshito Otake, Gendo Kumoi, Katsuko T. Nakahira",
+            "venue": "WIREDS 2024",
+            "year": "2024"
+          },
+          {
+            "title": "Measuring the cognitive load of programming using generative AI",
+            "authors": "Fukutaro Mori, Taichi Nakamura, Yusaku Kii, Naoto Tani, Takumi Takasuka, Shunsuke Moriya, Keitaro Nakasai, Gendo Kumoi, Katsuko T. Nakahira",
+            "venue": "9th STI-Gigaku 2024, STI-9-41",
+            "year": "2024"
+          },
+          {
+            "title": "Recognition Performance Validation of Weather Map Images by ChatGPT",
+            "authors": "Takumi Takasuka, Yuki H. Takano, Shotaro Watanabe, Gendo Kumoi",
+            "venue": "Procedia Computer Science, Vol.246, pp.3132-3141 (KES 2024)",
+            "year": "2024",
+            "url": "https://www.sciencedirect.com/science/article/pii/S1877050924023871"
+          }
+        ]
+      },
+      {
+        "category": "Domestic Presentations",
+        "items": [
+          {
+            "title": "認知負荷測定を用いたソフトウェア開発向けプロンプト設計戦略の分析",
+            "authors": "Kouki Shiono, Kyohei Shibata, Naoki Baba, Wataru Kobayashi, Naoto Tani, Takumi Takasuka, Keitaro Nakasai, Gendo Kumoi, Katsuko T. Nakahira",
+            "venue": "IPSJ 88th National Convention",
+            "year": "2026"
+          },
+          {
+            "title": "構造類似度指標の統合によるSOM気圧配置分類法の一考察 (Synoptic Pattern Classification via Integrated Structural Similarity Metrics in SOM)",
+            "authors": "Takumi Takasuka, Shotaro Watanabe, Yuki H. Takano, Gendo Kumoi",
+            "venue": "48th Symposium on Information Theory and its Applications (SITA2025)",
+            "year": "2025"
+          },
+          {
+            "title": "Swin-Unetを用いた前線自動記述システムの検証",
+            "authors": "Takumi Takasuka, Yuki H. Takano, Shotaro Watanabe, Gendo Kumoi",
+            "venue": "MSJ 2025 Spring Meeting",
+            "year": "2025"
+          },
+          {
+            "title": "自己組織化マップを用いた気圧配置のクラスタリングと1kmメッシュ天気データによる分析",
+            "authors": "Takumi Takasuka, Yuki H. Takano, Shotaro Watanabe, Gendo Kumoi",
+            "venue": "IPSJ 87th National Convention",
+            "year": "2025"
+          },
+          {
+            "title": "生成AIを活用したプログラミングにおける認知負荷の統合的分析",
+            "authors": "Taichi Nakamura, Fukutaro Mori, Yusaku Kii, Naoto Tani, Takumi Takasuka, Shunsuke Moriya, Keitaro Nakasai, Gendo Kumoi, Katsuko T. Nakahira",
+            "venue": "IPSJ 87th National Convention",
+            "year": "2025"
+          },
+          {
+            "title": "気象数値データに基づく天気コメント生成の検証",
+            "authors": "Takumi Takasuka, Yuki H. Takano, Shotaro Watanabe, Gendo Kumoi",
+            "venue": "MSJ 2024 Autumn Meeting",
+            "year": "2024"
+          }
+        ]
+      }
+    ]
   },
   "works": {
     "data": [

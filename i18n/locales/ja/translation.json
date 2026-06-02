@@ -2,20 +2,16 @@
   "activity": {
     "items": [
       {
+        "date": "2026-06-01",
+        "event": "WNI財団 第16回気象文化大賞　採択"
+      },
+      {
         "date": "2026-04-01",
         "event": "NEDO - NEP 開拓コース　採択"
       },
       {
         "date": "2026-02-08",
         "event": "ベトナム海外リサーチインターンシップ（株式会社ソリマチ）　終了"
-      },
-      {
-        "date": "2026-02-03",
-        "event": "ベトナム海外リサーチインターンシップ　最終成果発表"
-      },
-      {
-        "date": "2026-01-23",
-        "event": "ベトナム海外リサーチインターンシップ　セミナー発表"
       },
       {
         "date": "2026-01-04",
@@ -73,7 +69,6 @@
         "date": "2024-10-04",
         "event": "株式会社ウェザーマップ様　実務訓練開始"
       },
-      { "date": "2023-09-23", "event": "技育展2023 決勝　出場" },
       {
         "date": "2024-09-19",
         "event": "GCI_2024_summer　修了"
@@ -125,12 +120,17 @@
       },
       { "date": "2023-08-12", "event": "技育展2023_予選　出場" },
       { "date": "2023-04-01", "event": "長岡技術科学大学_3年　入学" },
-      { "date": "2018-03-22", "event": "新居浜工業高等専門学校_5年　卒業" },
+      { "date": "2023-03-22", "event": "新居浜工業高等専門学校_5年　卒業" },
       { "date": "2018-04-01", "event": "新居浜工業高等専門学校_1年　入学" }
     ]
   },
   "awards": {
     "items": [
+      {
+        "date": "2026-06-01",
+        "event": "WNI財団 第16回気象文化大賞　採択",
+        "image": "/bunka_16th.png"
+      },
       {
         "date": "2026-04-01",
         "event": "NEDO - NEP 開拓コース　採択",
@@ -165,12 +165,122 @@
   },
   "hero": {
     "title": "髙 須 賀 匠",
-    "description1": "フロントエンジニア/データエンジニア/データサイエンティスト",
-    "description2": "長岡技術科学大学 技術科学イノベーション専攻 1年 在学",
+    "description1": "オールラウンドエンジニア / データサイエンティスト / 知能情報学研究者 / ディープテック起業家",
+    "description2": "長岡技術科学大学 技術科学イノベーション専攻 2年 在学",
     "description3": "機械学習理論研究室所属",
-    "extra_info1": "大学の学祭の実行委員である情報局「NUTMEG」に所属し、学祭をWebアプリでDXしています。",
-    "extra_info2": "それらの経験を活かして、様々なハッカソンや他団体のLT会にも参加しています。",
-    "extra_info3": "また、機械学習理論研究室では気象データを扱い、気象予報コメントを生成するタスクの解決を行っています。"
+    "extra_info1": "機械学習理論研究室に所属し、専門家（気象予報士）の暗黙知をモジュール化してLLMに渡す分離型アーキテクチャにより、事実性の高い気象解説文を自動生成する研究に取り組んでいます。",
+    "extra_info2": "その研究成果を社会実装すべく、個人向けAI気象予報士サービス「パーソナルキャスト」を開発し、起業に挑戦しています。天気を「予報」としてではなく「次の行動」として届けることを目指しています。",
+    "extra_info3": "これらの活動はNEDO NEP開拓コースやWNI財団 第16回気象文化大賞などに採択いただいており、ハッカソンやLT会への登壇を通じて得た開発力も活かしながら、研究・開発・事業化を一体で進めています。"
+  },
+  "research": {
+    "overview_title": "研究概要",
+    "overview": [
+      "「予測の精度」よりも「情報伝達の正確性」を重視し、専門家（気象予報士）が作成する日本全域の気象解説文の自動生成を題材に、専門ドメインの data-to-text（D2T）生成における中間表現の設計原則の確立を目指す知能情報学研究に取り組んでいます。",
+      "気象数値データ（ERA5など）から、①気象変数への重要度付与、②自己組織化マップ（SOM）による気圧配置型分類、③Swin-Unetによる前線推定の3モジュールで中間表現を構成し、LLMの役割を「文章化」に限定することで事実性を担保します。中間表現の「精度」と「時間構造」を独立変数として系統的に操作する診断実験を通じ、生成品質との関数関係を解明します。"
+    ],
+    "themes_title": "研究テーマ",
+    "themes": [
+      {
+        "title": "専門ドメインD2T・気象解説文の自動生成",
+        "description": "専門家の暗黙知を3モジュール化した中間表現を介し、事実性の高い気象解説文をLLMで生成する分離型アーキテクチャの研究。"
+      },
+      {
+        "title": "SOM気圧配置分類 / Swin-Unet前線推定",
+        "description": "構造類似度指標を統合したSOM気圧配置分類と、物理連続性損失を組み込んだSwin-Unet前線推定の開発。"
+      },
+      {
+        "title": "生成AI活用時の認知負荷分析",
+        "description": "プログラミング時の生成AI活用戦略を、非侵襲な生体指標を用いた認知負荷測定により実証的に分析。"
+      }
+    ],
+    "achievements_title": "研究成果",
+    "lab_label": "研究室ページを見る",
+    "lab_url": "https://lab.kumoi.net/ja/members/takasuka/",
+    "groups": [
+      {
+        "category": "論文誌",
+        "items": [
+          {
+            "title": "ChatGPTによる天気図画像からの天気コメント生成の検証",
+            "authors": "髙須賀 匠, 高野 雄紀, 渡邊 正太郎, 雲居 玄道",
+            "venue": "天気, Vol.72, No.12, pp.603-611",
+            "year": "2025",
+            "url": "https://doi.org/10.24761/tenki.72.12_603"
+          }
+        ]
+      },
+      {
+        "category": "国際会議",
+        "items": [
+          {
+            "title": "Analysis of LLM Utilization Strategies Based on Cognitive Load During Programming",
+            "authors": "Wataru Kobayashi, Kouki Shiono, Naoki Baba, Kyohei Shibata, Naoto Tani, Takumi Takasuka, Keitaro Nakasai, Gendo Kumoi, Katsuko T. Nakahira",
+            "venue": "10th STI-Gigaku 2025",
+            "year": "2025"
+          },
+          {
+            "title": "Towards Measuring Cognitive Load during Software Engineering Tasks Using Nasal Skin Temperature: Development of a Detection System",
+            "authors": "Naoto Tani, Fukutaro Mori, Taichi Nakamura, Yusaku Kii, Takumi Takasuka, Shunsuke Moriya, Keitaro Nakasai, Yoshito Otake, Gendo Kumoi, Katsuko T. Nakahira",
+            "venue": "WIREDS 2024",
+            "year": "2024"
+          },
+          {
+            "title": "Measuring the cognitive load of programming using generative AI",
+            "authors": "Fukutaro Mori, Taichi Nakamura, Yusaku Kii, Naoto Tani, Takumi Takasuka, Shunsuke Moriya, Keitaro Nakasai, Gendo Kumoi, Katsuko T. Nakahira",
+            "venue": "9th STI-Gigaku 2024, STI-9-41",
+            "year": "2024"
+          },
+          {
+            "title": "Recognition Performance Validation of Weather Map Images by ChatGPT",
+            "authors": "Takumi Takasuka, Yuki H. Takano, Shotaro Watanabe, Gendo Kumoi",
+            "venue": "Procedia Computer Science, Vol.246, pp.3132-3141 (KES 2024)",
+            "year": "2024",
+            "url": "https://www.sciencedirect.com/science/article/pii/S1877050924023871"
+          }
+        ]
+      },
+      {
+        "category": "国内発表",
+        "items": [
+          {
+            "title": "認知負荷測定を用いたソフトウェア開発向けプロンプト設計戦略の分析",
+            "authors": "塩野 航希, 柴田 恭兵, 馬場 直揮, 小林 航, 谷 直生士, 髙須賀 匠, 中才 恵太朗, 雲居 玄道, 中平 勝子",
+            "venue": "情報処理学会 第88回全国大会",
+            "year": "2026"
+          },
+          {
+            "title": "構造類似度指標の統合によるSOM気圧配置分類法の一考察",
+            "authors": "髙須賀 匠, 渡邊 正太郎, 高野 雄紀, 雲居 玄道",
+            "venue": "第48回情報理論とその応用シンポジウム（SITA2025）",
+            "year": "2025"
+          },
+          {
+            "title": "Swin-Unetを用いた前線自動記述システムの検証",
+            "authors": "髙須賀 匠, 高野 雄紀, 渡邊 正太郎, 雲居 玄道",
+            "venue": "日本気象学会2025年度春季大会",
+            "year": "2025"
+          },
+          {
+            "title": "自己組織化マップを用いた気圧配置のクラスタリングと1kmメッシュ天気データによる分析",
+            "authors": "髙須賀 匠, 高野 雄紀, 渡邊 正太郎, 雲居 玄道",
+            "venue": "情報処理学会 第87回全国大会",
+            "year": "2025"
+          },
+          {
+            "title": "生成AIを活用したプログラミングにおける認知負荷の統合的分析",
+            "authors": "中村 太一, 森 福太朗, 紀伊 勇作, 谷 直生士, 髙須賀 匠, 森谷 隼介, 中才 恵太朗, 雲居 玄道, 中平 勝子",
+            "venue": "情報処理学会 第87回全国大会",
+            "year": "2025"
+          },
+          {
+            "title": "気象数値データに基づく天気コメント生成の検証",
+            "authors": "髙須賀 匠, 高野 雄紀, 渡邊 正太郎, 雲居 玄道",
+            "venue": "日本気象学会2024年度秋季大会",
+            "year": "2024"
+          }
+        ]
+      }
+    ]
   },
   "works": {
     "data": [
@@ -210,7 +320,7 @@
         "image": "/SMF.png"
       },
       {
-        "title": "Menter-management-app",
+        "title": "Mentor-management-app",
         "description": "メンター制度をサポートするWebアプリです。メンターとメンティーを紐づけて、メンティーの学習記録を確認することができます。管理者が管理するシンプルなWebアプリです。",
         "myPart": "フロント、バック",
         "gitHubUrl": "https://github.com/takumi0616/Mentor-management-app",
@@ -234,7 +344,7 @@
         "title": "ChatGPTによる天気図画像からの天気コメント生成の検証",
         "authors_label": "共著者",
         "authors": "高野雄紀，渡邊正太郎，雲居玄道",
-        "abstract": "天気予報のテキスト（天気コメント）は、気象予報士が画像化された情報を解釈し、言語化することで作成される。天気コメントの自動生成に関する従来研究には、大規模な気象場の情報を含めることと、自然な文章を生成することという2つの課題がある。本研究では、マルチモーダルAIであるChatGPT4-Visionを用いて、地上天気図画像から天気コメントの自動生成を行う。プロンプトで示すタスクや与える情報量を変化させる実験を行い、出力されたコメントの精度を検証することで、マルチモーダルAIの天気コメント生成への応用可能性を探る。-Visionを用いて、地上天気図画像から天気コメントの自動生成を行う。プロンプトで示すタスクや与える情報量を変化させる実験を行い、出力されたコメントの精度を検証することで、マルチモーダルAIの天気コメント生成への応用可能性を探る。実験の結果、プロンプトを構造化し指示を明確化することや、段階的に実行するよう指示することが有効であることがわかった。また、Few-shot learningにより、ChatGPT4-Visionが新しい概念やパターンを理解し、一般化できることが示された。本研究の成果は、国民一人ひとりにカスタマイズされた天気予報の実現に寄与すると期待される。"
+        "abstract": "天気予報のテキスト（天気コメント）は、気象予報士が画像化された情報を解釈し、言語化することで作成される。天気コメントの自動生成に関する従来研究には、大規模な気象場の情報を含めることと、自然な文章を生成することという2つの課題がある。本研究では、マルチモーダルAIであるChatGPT4-Visionを用いて、地上天気図画像から天気コメントの自動生成を行う。プロンプトで示すタスクや与える情報量を変化させる実験を行い、出力されたコメントの精度を検証することで、マルチモーダルAIの天気コメント生成への応用可能性を探る。実験の結果、プロンプトを構造化し指示を明確化することや、段階的に実行するよう指示することが有効であることがわかった。また、Few-shot learningにより、ChatGPT4-Visionが新しい概念やパターンを理解し、一般化できることが示された。本研究の成果は、国民一人ひとりにカスタマイズされた天気予報の実現に寄与すると期待される。"
       }
     ]
   }
