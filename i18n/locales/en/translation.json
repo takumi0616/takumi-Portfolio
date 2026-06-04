@@ -3,7 +3,7 @@
     "items": [
       {
         "date": "2026-06-01",
-        "event": "WNI Foundation 16th Weather Culture Award - Selected"
+        "event": "WNI Foundation 16th Weather Culture Award, Research Grant - Selected"
       },
       {
         "date": "2026-04-01",
@@ -164,7 +164,7 @@
     "items": [
       {
         "date": "2026-06-01",
-        "event": "WNI Foundation 16th Weather Culture Award - Selected",
+        "event": "WNI Foundation 16th Weather Culture Award, Research Grant - Selected",
         "image": "/bunka_16th.png"
       },
       {
@@ -288,19 +288,22 @@
             "title": "構造類似度指標の統合によるSOM気圧配置分類法の一考察 (Synoptic Pattern Classification via Integrated Structural Similarity Metrics in SOM)",
             "authors": "Takumi Takasuka, Shotaro Watanabe, Yuki H. Takano, Gendo Kumoi",
             "venue": "48th Symposium on Information Theory and its Applications (SITA2025)",
-            "year": "2025"
+            "year": "2025",
+            "pdf": "/download_file/構造類似度指標の統合によるSOM気圧配置分類法の一考察.pdf"
           },
           {
             "title": "Swin-Unetを用いた前線自動記述システムの検証",
             "authors": "Takumi Takasuka, Yuki H. Takano, Shotaro Watanabe, Gendo Kumoi",
             "venue": "MSJ 2025 Spring Meeting",
-            "year": "2025"
+            "year": "2025",
+            "pdf": "/download_file/Swin-Unetを用いた前線自動記述システムの検証.pdf"
           },
           {
             "title": "自己組織化マップを用いた気圧配置のクラスタリングと1kmメッシュ天気データによる分析",
             "authors": "Takumi Takasuka, Yuki H. Takano, Shotaro Watanabe, Gendo Kumoi",
             "venue": "IPSJ 87th National Convention",
-            "year": "2025"
+            "year": "2025",
+            "pdf": "/download_file/自己組織化マップを用いた気圧配置のクラスタリングと1kmメッシュ天気データによる分析.pdf"
           },
           {
             "title": "生成AIを活用したプログラミングにおける認知負荷の統合的分析",
@@ -312,7 +315,8 @@
             "title": "気象数値データに基づく天気コメント生成の検証",
             "authors": "Takumi Takasuka, Yuki H. Takano, Shotaro Watanabe, Gendo Kumoi",
             "venue": "MSJ 2024 Autumn Meeting",
-            "year": "2024"
+            "year": "2024",
+            "pdf": "/download_file/気象数値データに基づく天気コメント生成の検証.pdf"
           }
         ]
       }
@@ -380,7 +384,8 @@
         "title": "Verification of Weather Comment Generation from Weather Map Images Using ChatGPT",
         "authors_label": "Co-authors",
         "authors": "Yuki Takano, Shotaro Watanabe, Gendo Kumoi",
-        "abstract": "Weather forecast text (weather comments) is created by meteorologists interpreting visualized information and verbalizing it. Previous research on automatic weather comment generation has two challenges: incorporating large-scale meteorological field information and generating natural sentences. In this study, we perform automatic generation of weather comments from surface weather map images using ChatGPT4-Vision, a multimodal AI. By conducting experiments that vary the tasks indicated in the prompts and the amount of information provided, and verifying the accuracy of the output comments, we explore the applicability of multimodal AI to weather comment generation. The experimental results showed that structuring prompts to clarify instructions and instructing step-by-step execution were effective. Additionally, few-shot learning demonstrated that ChatGPT4-Vision can understand and generalize new concepts and patterns. The results of this research are expected to contribute to the realization of personalized weather forecasts for each individual."
+        "abstract": "Weather forecast text (weather comments) is created by meteorologists interpreting visualized information and verbalizing it. Previous research on automatic weather comment generation has two challenges: incorporating large-scale meteorological field information and generating natural sentences. In this study, we perform automatic generation of weather comments from surface weather map images using ChatGPT4-Vision, a multimodal AI. By conducting experiments that vary the tasks indicated in the prompts and the amount of information provided, and verifying the accuracy of the output comments, we explore the applicability of multimodal AI to weather comment generation. The experimental results showed that structuring prompts to clarify instructions and instructing step-by-step execution were effective. Additionally, few-shot learning demonstrated that ChatGPT4-Vision can understand and generalize new concepts and patterns. The results of this research are expected to contribute to the realization of personalized weather forecasts for each individual.",
+        "url": "https://doi.org/10.24761/tenki.72.12_603"
       }
     ]
   }

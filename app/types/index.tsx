@@ -86,6 +86,7 @@ export interface ResearchItem {
   venue: string
   year?: string
   url?: string
+  pdf?: string
 }
 
 export interface ResearchGroup {

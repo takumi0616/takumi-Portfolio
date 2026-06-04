@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { FaExternalLinkAlt } from 'react-icons/fa'
+import { FaExternalLinkAlt, FaDownload } from 'react-icons/fa'
 import { useTranslation } from '@/i18n/client'
 import { ResearchProps, ResearchGroup, ResearchTheme } from '@/app/types'
 
@@ -123,16 +123,30 @@ export default function Research({ lang }: ResearchProps) {
                         {item.venue}
                         {item.year ? `, ${item.year}` : ''}
                       </p>
-                      {item.url && (
-                        <a
-                          href={item.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="mt-2 inline-flex items-center gap-1 text-sm text-blue-600 hover:underline"
-                        >
-                          <FaExternalLinkAlt aria-hidden="true" />
-                          <span>Link</span>
-                        </a>
+                      {(item.url || item.pdf) && (
+                        <div className="mt-2 flex flex-wrap items-center gap-3">
+                          {item.url && (
+                            <a
+                              href={item.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1 text-sm text-blue-600 hover:underline"
+                            >
+                              <FaExternalLinkAlt aria-hidden="true" />
+                              <span>Link</span>
+                            </a>
+                          )}
+                          {item.pdf && (
+                            <a
+                              href={encodeURI(item.pdf)}
+                              download
+                              className="inline-flex items-center gap-1 text-sm text-blue-600 hover:underline"
+                            >
+                              <FaDownload aria-hidden="true" />
+                              <span>download</span>
+                            </a>
+                          )}
+                        </div>
                       )}
                     </li>
                   ))}
