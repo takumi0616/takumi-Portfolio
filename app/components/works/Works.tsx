@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import WorkCard from './WorkCard'
@@ -7,6 +7,7 @@ import { WorkCardProps, WorksProps } from '@/app/types'
 
 export default function Works({ lang, onOpenModal }: WorksProps) {
   const { t } = useTranslation(lang)
+  const scopeRef = useRef<HTMLDivElement>(null)
 
   const worksData = t('works.data', { returnObjects: true }) as Omit<
     WorkCardProps,
@@ -15,9 +16,15 @@ export default function Works({ lang, onOpenModal }: WorksProps) {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
+    const root = scopeRef.current
+    if (!root) return
 
-    function updateAnimations() {
-      const workCards = gsap.utils.toArray<Element>('.work-card')
+    // gsap.context でこのコンポーネント内に限定し、cleanup では自分の
+    // アニメ／ScrollTrigger だけを破棄する（resize は ScrollTrigger が自動 refresh）。
+    const ctx = gsap.context(() => {
+      const workCards = gsap.utils.toArray<Element>(
+        root.querySelectorAll('.work-card'),
+      )
       workCards.forEach((card) => {
         gsap.fromTo(
           card,
@@ -36,18 +43,13 @@ export default function Works({ lang, onOpenModal }: WorksProps) {
           },
         )
       })
-    }
-    updateAnimations()
-    window.addEventListener('resize', updateAnimations)
+    }, root)
 
-    return () => {
-      window.removeEventListener('resize', updateAnimations)
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
-    }
+    return () => ctx.revert()
   }, [])
 
   return (
-    <div className="mb-40">
+    <div className="mb-40" ref={scopeRef}>
       <h2 className="mb-20 text-center text-4xl">Works</h2>
 
       <div className="flex flex-col items-center justify-center">

@@ -74,93 +74,101 @@ const Header = () => {
   }
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 flex items-center justify-between bg-transparent p-6">
-      <button
-        className="ml-8 cursor-pointer text-lg tracking-wider lg:text-3xl portrait:ml-0"
-        onClick={scrollToTop}
-        aria-label="ページ上部へ戻る"
-      >
-        Portfolio
-      </button>
-
-      <div className="flex items-center">
-        <div
-          className="mr-6 flex items-center"
-          role="group"
-          aria-label="言語切り替え"
+    <header className="fixed inset-x-0 top-0 z-50 bg-transparent">
+      {/* 超ワイドでも操作系が端へ離れすぎないよう内側で中央寄せ・最大幅を設ける。 */}
+      <div className="relative mx-auto flex max-w-screen-2xl items-center justify-between p-6">
+        <button
+          className="ml-8 cursor-pointer text-lg tracking-wider lg:text-3xl portrait:ml-0"
+          onClick={scrollToTop}
+          aria-label="ページ上部へ戻る"
         >
-          <img src="/japan.png" alt="" className="size-8" aria-hidden="true" />
-          <label
-            htmlFor="language-toggle"
-            className="relative mx-3 inline-flex cursor-pointer items-center"
+          Portfolio
+        </button>
+
+        <div className="flex items-center">
+          <div
+            className="mr-6 flex items-center"
+            role="group"
+            aria-label="言語切り替え"
           >
-            <span className="sr-only">
-              {language === 'ja' ? '英語に切り替える' : 'Switch to Japanese'}
-            </span>
-            <input
-              id="language-toggle"
-              type="checkbox"
-              checked={language === 'en'}
-              onChange={handleLanguageToggle}
-              className="sr-only"
-              aria-label={
-                language === 'ja'
-                  ? '言語切り替え: 現在日本語'
-                  : 'Language toggle: Currently English'
-              }
-            />
-            <div
-              className="h-7 w-14 rounded-full bg-gray-300"
+            <img
+              src="/japan.png"
+              alt=""
+              className="size-8"
               aria-hidden="true"
+            />
+            <label
+              htmlFor="language-toggle"
+              className="relative mx-3 inline-flex cursor-pointer items-center"
             >
+              <span className="sr-only">
+                {language === 'ja' ? '英語に切り替える' : 'Switch to Japanese'}
+              </span>
+              <input
+                id="language-toggle"
+                type="checkbox"
+                checked={language === 'en'}
+                onChange={handleLanguageToggle}
+                className="sr-only"
+                aria-label={
+                  language === 'ja'
+                    ? '言語切り替え: 現在日本語'
+                    : 'Language toggle: Currently English'
+                }
+              />
               <div
-                className={`absolute left-0.5 top-0.5 size-6 rounded-full transition-transform duration-300 ${
-                  language === 'en' ? 'translate-x-7 bg-black' : 'bg-black'
-                }`}
-              ></div>
-            </div>
-          </label>
-          <img src="/us.png" alt="" className="size-8" aria-hidden="true" />
+                className="h-7 w-14 rounded-full bg-gray-300"
+                aria-hidden="true"
+              >
+                <div
+                  className={`absolute left-0.5 top-0.5 size-6 rounded-full transition-transform duration-300 ${
+                    language === 'en' ? 'translate-x-7 bg-black' : 'bg-black'
+                  }`}
+                ></div>
+              </div>
+            </label>
+            <img src="/us.png" alt="" className="size-8" aria-hidden="true" />
+          </div>
+
+          <button
+            type="button"
+            className="mr-8 flex cursor-pointer items-center bg-transparent p-0 text-5xl leading-none portrait:mr-0"
+            onClick={toggleMenu}
+            aria-label="メニューを開く"
+            aria-expanded={isOpen}
+            aria-haspopup="menu"
+          >
+            <IoIosMenu />
+          </button>
         </div>
 
-        <button
-          type="button"
-          className="mr-8 flex cursor-pointer items-center bg-transparent p-0 text-5xl leading-none portrait:mr-0"
-          onClick={toggleMenu}
-          aria-label="メニューを開く"
-          aria-expanded={isOpen}
-          aria-haspopup="menu"
+        <nav
+          className={`menu-container absolute right-[36px] top-full mt-2 select-none rounded-lg bg-white p-5 shadow-md transition-opacity duration-500 ${
+            isOpen ? 'opacity-100' : 'invisible opacity-0'
+          }`}
+          aria-label="ナビゲーションメニュー"
         >
-          <IoIosMenu />
-        </button>
+          <ul className="text-lg lg:text-2xl">
+            {menuItems.map(({ id, label }) => (
+              <li key={id} className="my-1 rounded-md hover:bg-gray-200">
+                <button
+                  className="w-full p-2 text-left"
+                  onClick={(e) => handleClick(e, id)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault()
+                      handleClick(e, id)
+                    }
+                  }}
+                  aria-label={`${label}セクションへ移動`}
+                >
+                  {label}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
-
-      <nav
-        className={`menu-container absolute right-[36px] top-full mt-2 select-none rounded-lg bg-white p-5 shadow-md transition-opacity duration-500 ${
-          isOpen ? 'opacity-100' : 'invisible opacity-0'
-        }`}
-        aria-label="ナビゲーションメニュー"
-      >
-        <ul className="text-lg lg:text-2xl">
-          {menuItems.map(({ id, label }) => (
-            <li key={id} className="my-1 rounded-md hover:bg-gray-200">
-              <button
-                className="w-full p-2 text-left"
-                onClick={(e) => handleClick(e, id)}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault()
-                    handleClick(e, id)
-                  }
-                }}
-                aria-label={`${label}セクションへ移動`}
-              >
-                {label}
-              </button>
-            </li>
-          ))}
-        </ul>
-      </nav>
     </header>
   )
 }

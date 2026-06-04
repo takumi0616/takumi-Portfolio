@@ -103,7 +103,8 @@ const BackAnimation: React.FC<BackProps> = () => {
     group.add(linesMesh)
 
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
-    renderer.setPixelRatio(window.devicePixelRatio)
+    // 高 DPR・全画面で巨大なバックバッファになるのを防ぐためクランプする。
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
     renderer.setSize(window.innerWidth, window.innerHeight)
     container.appendChild(renderer.domElement)
 
@@ -114,8 +115,9 @@ const BackAnimation: React.FC<BackProps> = () => {
     }
     window.addEventListener('resize', onWindowResize, false)
 
+    let animationFrameId = 0
     const animate = () => {
-      requestAnimationFrame(animate)
+      animationFrameId = requestAnimationFrame(animate)
       // タブが非表示の間は描画・計算を行わずリソースを節約する。
       if (typeof document !== 'undefined' && document.hidden) return
       let vertexpos = 0
@@ -203,8 +205,11 @@ const BackAnimation: React.FC<BackProps> = () => {
     animate()
 
     return () => {
+      cancelAnimationFrame(animationFrameId)
       window.removeEventListener('resize', onWindowResize, false)
-      container.removeChild(renderer.domElement)
+      if (renderer.domElement.parentNode === container) {
+        container.removeChild(renderer.domElement)
+      }
       scene.clear()
       renderer.dispose()
       particles.dispose()

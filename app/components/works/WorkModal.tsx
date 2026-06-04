@@ -63,7 +63,7 @@ const WorkModal: React.FC<WorkModalProps> = ({ title, image, onClose }) => {
       />
       <div
         ref={contentRef}
-        className="modal-content z-60 pointer-events-auto relative rounded-lg bg-white p-6"
+        className="modal-content z-60 pointer-events-auto relative max-h-[90vh] max-w-[90vw] overflow-auto rounded-lg bg-white p-6"
       >
         <button
           ref={closeButtonRef}

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { FaExternalLinkAlt, FaDownload } from 'react-icons/fa'
@@ -7,6 +7,7 @@ import { ResearchProps, ResearchGroup, ResearchTheme } from '@/app/types'
 
 export default function Research({ lang }: ResearchProps) {
   const { t } = useTranslation(lang)
+  const scopeRef = useRef<HTMLElement>(null)
 
   const overview = t('research.overview', { returnObjects: true }) as string[]
   const themes = t('research.themes', {
@@ -18,10 +19,13 @@ export default function Research({ lang }: ResearchProps) {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
+    const root = scopeRef.current
+    if (!root) return
 
-    function updateAnimations() {
-      // 他セクションと干渉しないよう Research 専用クラスでアニメーションを登録する。
-      const cards = gsap.utils.toArray<Element>('.research-item')
+    const ctx = gsap.context(() => {
+      const cards = gsap.utils.toArray<Element>(
+        root.querySelectorAll('.research-item'),
+      )
       cards.forEach((card) => {
         gsap.fromTo(
           card,
@@ -40,18 +44,13 @@ export default function Research({ lang }: ResearchProps) {
           },
         )
       })
-    }
-    updateAnimations()
-    window.addEventListener('resize', updateAnimations)
+    }, root)
 
-    return () => {
-      window.removeEventListener('resize', updateAnimations)
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
-    }
+    return () => ctx.revert()
   }, [])
 
   return (
-    <section className="mb-60">
+    <section className="mb-60" ref={scopeRef}>
       <h2 className="mb-20 text-center text-4xl">Research</h2>
 
       <div className="mx-auto flex w-[90vw] max-w-[840px] flex-col">

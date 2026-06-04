@@ -107,7 +107,13 @@ export default async function RootLayout({
   const lang = headersList.get('x-locale') ?? 'ja'
 
   return (
-    <html lang={lang} className={`${zenKurenaido.variable}`}>
+    // 一部のブラウザ拡張は hydration 前に <html> へ属性を注入する。
+    // その要素自身の属性差分のみ警告を抑制する（子要素の不整合は検出されたまま）。
+    <html
+      lang={lang}
+      className={`${zenKurenaido.variable}`}
+      suppressHydrationWarning
+    >
       <head>
         <GoogleAnalytics />
         <script

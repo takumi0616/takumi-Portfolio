@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import {
@@ -17,12 +17,16 @@ import {
 import SkillCard from './SkillCard'
 
 export default function Skills() {
+  const scopeRef = useRef<HTMLDivElement>(null)
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
+    const root = scopeRef.current
+    if (!root) return
 
-    function updateAnimations() {
+    const ctx = gsap.context(() => {
       const skillSets = gsap.utils.toArray<Element>(
-        '.skillset-front, .skillsets',
+        root.querySelectorAll('.skillset-front, .skillsets'),
       )
       skillSets.forEach((set) => {
         gsap.fromTo(
@@ -42,21 +46,16 @@ export default function Skills() {
           },
         )
       })
-    }
-    updateAnimations()
-    window.addEventListener('resize', updateAnimations)
+    }, root)
 
-    return () => {
-      window.removeEventListener('resize', updateAnimations)
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
-    }
+    return () => ctx.revert()
   }, [])
 
   return (
-    <div className="mb-60">
+    <div className="mb-60" ref={scopeRef}>
       <h2 className="mb-20 text-center text-4xl">Skills</h2>
 
-      <div className="skillset-front mx-auto w-3/5 portrait:w-4/5">
+      <div className="skillset-front mx-auto w-3/5 max-w-6xl portrait:w-4/5">
         <div className="front mx-auto mb-10 w-3/5">
           <div className="mb-8 flex items-center">
             <div className="mt-2 grow border-t border-black"></div>

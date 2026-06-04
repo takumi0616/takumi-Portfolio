@@ -7,6 +7,7 @@ import { useTranslation } from '@/i18n/client'
 export default function MainView({ lang }: { lang: string }) {
   const threeJsRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
+  const scopeRef = useRef<HTMLDivElement>(null)
   const [canvasSize, setCanvasSize] = useState({ width: 0, height: 0 })
   const [mainContainerHeight, setMainContainerHeight] = useState(0)
   const { t } = useTranslation(lang)
@@ -38,44 +39,45 @@ export default function MainView({ lang }: { lang: string }) {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
+    const root = scopeRef.current
 
-    function updateAnimations() {
-      const sections = gsap.utils.toArray('.content section:not(.no-animation)')
-      sections.forEach((section) => {
-        const el = section as Element
-        gsap.fromTo(
-          el,
-          { opacity: 0 },
-          {
-            opacity: 1,
-            duration: 0.5,
-            ease: 'power3.out',
-            scrollTrigger: {
-              trigger: el,
-              start: 'top center',
-              toggleActions: 'play none none none',
-              invalidateOnRefresh: true,
-            },
-          },
-        )
-      })
-    }
+    const ctx = root
+      ? gsap.context(() => {
+          const sections = gsap.utils.toArray<Element>(
+            root.querySelectorAll('.content section:not(.no-animation)'),
+          )
+          sections.forEach((el) => {
+            gsap.fromTo(
+              el,
+              { opacity: 0 },
+              {
+                opacity: 1,
+                duration: 0.5,
+                ease: 'power3.out',
+                scrollTrigger: {
+                  trigger: el,
+                  start: 'top center',
+                  toggleActions: 'play none none none',
+                  invalidateOnRefresh: true,
+                },
+              },
+            )
+          })
+        }, root)
+      : null
 
-    updateAnimations()
-    window.addEventListener('resize', updateAnimations)
+    // コンテナ高さの追従は ScrollTrigger とは独立した責務のため resize を維持する。
     window.addEventListener('resize', updateMainContainerHeight)
-
     updateMainContainerHeight()
 
     return () => {
-      window.removeEventListener('resize', updateAnimations)
       window.removeEventListener('resize', updateMainContainerHeight)
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
+      ctx?.revert()
     }
   }, [])
 
   return (
-    <div>
+    <div ref={scopeRef}>
       <div className="relative flex max-w-full items-start portrait:flex-col-reverse">
         <div
           className="w-1/2 portrait:mr-0 portrait:mt-[-200px] portrait:w-full"
@@ -117,11 +119,8 @@ export default function MainView({ lang }: { lang: string }) {
           className="sticky right-0 top-0"
           style={{ height: `${mainContainerHeight / 2.2}px` }}
         >
-          <div
-            className="stickyThreeJsPadding"
-            style={{ paddingTop: 'var(--stickyThreeJsPaddingTop)' }}
-            ref={threeJsRef}
-          >
+          {/* paddingTop は updatePadding() が実測値を直接設定する。 */}
+          <div ref={threeJsRef}>
             <MainCube onResize={handleResize} />
           </div>
         </div>

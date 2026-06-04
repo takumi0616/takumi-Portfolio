@@ -8,9 +8,8 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      screens: {
-        portrait: { raw: '(min-aspect-ratio: 1/1)' },
-      },
+      // `portrait:` は Tailwind 組み込みバリアント（@media (orientation: portrait)）を使用する。
+      // 以前ここにあった raw 定義は組み込みに上書きされ無効だったため削除した。
       fontFamily: {
         zenKurenaido: ['var(--font-zenKurenaido)'],
       },

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { MdOutlineEmail } from 'react-icons/md'
@@ -37,11 +37,15 @@ const contacts: ContactCardProps[] = [
 ]
 
 const Contact: React.FC = () => {
+  const scopeRef = useRef<HTMLDivElement>(null)
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
+    const root = scopeRef.current
+    if (!root) return
 
-    function updateAnimations() {
-      const cards = gsap.utils.toArray<Element>('.card')
+    const ctx = gsap.context(() => {
+      const cards = gsap.utils.toArray<Element>(root.querySelectorAll('.card'))
       cards.forEach((card) => {
         gsap.fromTo(
           card,
@@ -60,18 +64,13 @@ const Contact: React.FC = () => {
           },
         )
       })
-    }
-    updateAnimations()
-    window.addEventListener('resize', updateAnimations)
+    }, root)
 
-    return () => {
-      window.removeEventListener('resize', updateAnimations)
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
-    }
+    return () => ctx.revert()
   }, [])
 
   return (
-    <div className="mb-80 text-center">
+    <div className="mb-80 text-center" ref={scopeRef}>
       <h2 className="mb-20 text-center text-4xl">Contact</h2>
       <div className="flex flex-wrap items-center justify-center gap-8">
         {contacts.map((contact, index) => (

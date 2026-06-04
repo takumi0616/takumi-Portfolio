@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -7,6 +7,7 @@ const Contributions: React.FC = () => {
     'https://github-contributions-api.deno.dev/takumi0616.svg?no-total=true&scheme=bluegrey',
   )
   const [isFallbackImage, setIsFallbackImage] = useState(false)
+  const scopeRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
@@ -23,40 +24,42 @@ const Contributions: React.FC = () => {
     }
     img.src = imageUrl
 
-    function updateAnimations() {
-      const contributionsImage = gsap.utils.toArray<Element>('.contributions')
-      contributionsImage.forEach((image) => {
-        gsap.fromTo(
-          image,
-          { autoAlpha: 0, y: 50 },
-          {
-            duration: 1,
-            autoAlpha: 1,
-            y: 0,
-            ease: 'power3.out',
-            scrollTrigger: {
-              trigger: image,
-              start: 'top bottom',
-              toggleActions: 'play none none none',
-              invalidateOnRefresh: true,
-            },
-          },
-        )
-      })
-    }
-    updateAnimations()
-    window.addEventListener('resize', updateAnimations)
+    const root = scopeRef.current
+    const ctx = root
+      ? gsap.context(() => {
+          const items = gsap.utils.toArray<Element>(
+            root.querySelectorAll('.contributions'),
+          )
+          items.forEach((image) => {
+            gsap.fromTo(
+              image,
+              { autoAlpha: 0, y: 50 },
+              {
+                duration: 1,
+                autoAlpha: 1,
+                y: 0,
+                ease: 'power3.out',
+                scrollTrigger: {
+                  trigger: image,
+                  start: 'top bottom',
+                  toggleActions: 'play none none none',
+                  invalidateOnRefresh: true,
+                },
+              },
+            )
+          })
+        }, root)
+      : null
 
     return () => {
       img.onload = null
       img.onerror = null
-      window.removeEventListener('resize', updateAnimations)
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
+      ctx?.revert()
     }
   }, [])
 
   return (
-    <div className="mb-60 text-center">
+    <div className="mb-60 text-center" ref={scopeRef}>
       <h2 className="mb-20 text-center text-4xl">Contributions</h2>
       <div className="contributions ">
         <img

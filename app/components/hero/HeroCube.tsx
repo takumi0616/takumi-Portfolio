@@ -15,14 +15,13 @@ const MainCube: React.FC<MainCubeProps> = (props) => {
   const { onResize } = props
 
   const updateCanvasSize = () => {
-    const isLandscape = window.innerWidth < window.innerHeight
-    const width = isLandscape
-      ? window.innerWidth * 0.8
-      : window.innerWidth * 0.5
-    const height = width
-    setCanvasSize({ width, height })
-    onResize(width, height)
-    return { width, height }
+    const isPortrait = window.innerWidth < window.innerHeight
+    const base = isPortrait ? window.innerWidth * 0.8 : window.innerWidth * 0.5
+    // 縦はみ出しと超ワイドでの巨大化を防ぐためビューポート高さと上限でクランプする。
+    const size = Math.min(base, window.innerHeight * 0.9, 960)
+    setCanvasSize({ width: size, height: size })
+    onResize(size, size)
+    return { width: size, height: size }
   }
 
   const MAX_PARTICLE_COUNT = 450
@@ -42,14 +41,10 @@ const MainCube: React.FC<MainCubeProps> = (props) => {
   useEffect(() => {
     const container = containerRef.current
     if (!container) return
-    updateCanvasSize()
+    const initialSize = updateCanvasSize()
 
-    const camera = new THREE.PerspectiveCamera(
-      45,
-      window.innerWidth / window.innerHeight,
-      1,
-      4000,
-    )
+    // キャンバスは正方形のためカメラのアスペクト比は常に 1（歪み防止）。
+    const camera = new THREE.PerspectiveCamera(45, 1, 1, 4000)
     camera.position.z = 1300
 
     const scene = new THREE.Scene()
@@ -140,19 +135,17 @@ const MainCube: React.FC<MainCubeProps> = (props) => {
     group.add(linesMesh)
 
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
-    renderer.setPixelRatio(window.devicePixelRatio)
-
-    const canvasWidth = canvasSize.width
-    const canvasHeight = canvasSize.height
-    renderer.setSize(canvasWidth, canvasHeight)
+    // 高 DPR 環境（4K/Retina 等）で巨大なバックバッファになるのを防ぐ。
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+    // 初期サイズは stale な state ではなく算出値を使う（初回 0×0 を防止）。
+    renderer.setSize(initialSize.width, initialSize.height)
 
     container.appendChild(renderer.domElement)
 
     const onWindowResize = () => {
-      // state（canvasSize）は更新が非同期で古い値を参照しうるため、
-      // 算出結果を直接使ってカメラ・レンダラーへ反映し NaN を防ぐ。
+      // リサイズ／向き変更時のみ再計算（毎フレームの再計算・再レンダーは行わない）。
       const { width, height } = updateCanvasSize()
-      camera.aspect = width / height
+      camera.aspect = 1
       camera.updateProjectionMatrix()
       renderer.setSize(width, height)
     }
@@ -163,18 +156,6 @@ const MainCube: React.FC<MainCubeProps> = (props) => {
       animationFrameId = requestAnimationFrame(animate)
       // タブが非表示の間は描画・計算を行わずリソースを節約する。
       if (typeof document !== 'undefined' && document.hidden) return
-      if (
-        containerRef.current &&
-        (containerRef.current.clientWidth !== canvasSize.width ||
-          containerRef.current.clientHeight !== canvasSize.height)
-      ) {
-        const width = containerRef.current.clientWidth
-        const height = containerRef.current.clientHeight
-        setCanvasSize({ width, height })
-        renderer.setSize(width, height)
-        camera.aspect = width / height
-        camera.updateProjectionMatrix()
-      }
       group.rotation.y -= 0.001
       let vertexpos = 0
       let colorpos = 0
@@ -260,16 +241,21 @@ const MainCube: React.FC<MainCubeProps> = (props) => {
     }
     animate()
 
-    gsap.to(group.rotation, {
-      y: '+=20',
-      ease: 'none',
-      scrollTrigger: {
-        trigger: 'window',
-        scrub: true,
-      },
+    // スクロール連動の回転。gsap.context でまとめ、アンマウント時に
+    // この ScrollTrigger だけを安全に破棄する。
+    const ctx = gsap.context(() => {
+      gsap.to(group.rotation, {
+        y: '+=20',
+        ease: 'none',
+        scrollTrigger: {
+          trigger: 'window',
+          scrub: true,
+        },
+      })
     })
 
     return () => {
+      ctx.revert()
       cancelAnimationFrame(animationFrameId)
       window.removeEventListener('resize', onWindowResize, false)
       if (renderer.domElement.parentNode === container) {
