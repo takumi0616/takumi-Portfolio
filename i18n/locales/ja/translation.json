@@ -129,7 +129,7 @@
       {
         "date": "2026-06-01",
         "event": "WNI財団 第16回気象文化大賞　研究助成　採択",
-        "image": "/bunka_16th.png"
+        "image": "/bunka_16th.avif"
       },
       {
         "date": "2026-04-01",
@@ -293,42 +293,42 @@
         "description": "株式会社LinkX Japan様が運営するAI総合研究所の公式ホームページです。企業の信頼性を高めるために、シンプルかつ洗練されたデザインを採用しています。",
         "myPart": "フロント、バック、デザイン",
         "gitHubUrl": "https://www.ai-souken.com/",
-        "image": "/aisouken.png"
+        "image": "/aisouken.avif"
       },
       {
         "title": "NUTMEG-Seeds",
         "description": "私が所属している団体「NUTMEG」内での技術の知見を共有しているWebアプリです。NUTMEGのイメージカラーであるオレンジをテーマカラーにしており、細部までデザインを凝っています。",
         "myPart": "フロント、PM",
         "gitHubUrl": "https://github.com/NUTFes/NUTMEG-Seeds",
-        "image": "/NS.png"
+        "image": "/NS.avif"
       },
       {
         "title": "Group-manager-2",
         "description": "長岡技術科学大学の学祭に登録する際にこのWebアプリを使います。PDF出力や統計データの表示など機能面に優れています。黒を基調としており、スタイリッシュなデザインです。",
         "myPart": "フロント、バック",
         "gitHubUrl": "https://github.com/NUTFes/group-manager-2",
-        "image": "/GM2.png"
+        "image": "/GM2.avif"
       },
       {
         "title": "Communication-AI",
         "description": "生成AIと会話できるWebアプリです。会話部分は単純なシステムですが、デザインやアクセシビリティに配慮しており、あらゆるユーザーが使うことを想定した機能や設計を考えています。",
         "myPart": "フロント、デザイン",
         "gitHubUrl": "https://github.com/takumi0616/communication-ai",
-        "image": "/CAI.png"
+        "image": "/CAI.avif"
       },
       {
         "title": "Slack-message-finder",
         "description": "Slackのログをリアルタイムに取得して保存し、Slackライクなデザインのページで表示するWebアプリです。チャンネルの上下表示や、特定のユーザーの1週間の活動を知る機能があります。",
         "myPart": "フロント、バック",
         "gitHubUrl": "https://github.com/TMLlaboratory/slack-message-finder",
-        "image": "/SMF.png"
+        "image": "/SMF.avif"
       },
       {
         "title": "Mentor-management-app",
         "description": "メンター制度をサポートするWebアプリです。メンターとメンティーを紐づけて、メンティーの学習記録を確認することができます。管理者が管理するシンプルなWebアプリです。",
         "myPart": "フロント、バック",
         "gitHubUrl": "https://github.com/takumi0616/Mentor-management-app",
-        "image": "/MMA.png"
+        "image": "/MMA.avif"
       }
     ],
     "my_part_label": "担当箇所"

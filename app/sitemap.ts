@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://takumi-portfolio.vercel.app'
+  const baseUrl = 'https://portfolio.personalcast.net'
   const languages = ['ja', 'en']
   const lastModified = new Date()
 

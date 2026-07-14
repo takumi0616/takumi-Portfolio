@@ -1,0 +1,29 @@
+# takumi-Portfolio/deploy/portfolio.service
+# ── ポートフォリオ（Next.js）を常駐させる systemd テンプレート（自己完結・PersonalCast と独立）。
+#
+# 設置（要 sudo・一度だけ）:
+#   sudo cp deploy/portfolio.service /etc/systemd/system/portfolio.service
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now portfolio
+# 確認:  systemctl status portfolio   /   curl -I http://127.0.0.1:3000/ja
+# 停止:  sudo systemctl stop portfolio
+#
+# 注: 手動 nohup（deploy/run_portfolio.sh）で起動中なら先に停止すること（ポート二重起動防止）。
+[Unit]
+Description=takumi Portfolio (Next.js) server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=takumi0616
+WorkingDirectory=/home/takumi0616/takumi-Portfolio
+Environment=NODE_ENV=production
+Environment=PATH=/home/takumi0616/miniconda3/envs/portfolio/bin:/usr/local/bin:/usr/bin:/bin
+# Node は conda env "portfolio"（node 22）。要 `npm ci && npm run build` 済み。
+ExecStart=/home/takumi0616/miniconda3/envs/portfolio/bin/node /home/takumi0616/takumi-Portfolio/node_modules/.bin/next start -p 3000 -H 127.0.0.1
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

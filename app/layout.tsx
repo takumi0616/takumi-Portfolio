@@ -7,7 +7,7 @@ import '@/app/[lang]/globals.css'
 import React from 'react'
 import { GoogleAnalytics } from '@/app/components/thirdparty/GoogleAnalytics'
 
-const SITE_URL = 'https://takumi-portfolio.vercel.app'
+const SITE_URL = 'https://portfolio.personalcast.net'
 const SITE_NAME = "Takumi's Portfolio"
 const SITE_DESCRIPTION = '髙須賀匠のポートフォリオサイト'
 

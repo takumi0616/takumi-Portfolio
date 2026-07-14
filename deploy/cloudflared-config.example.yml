@@ -1,0 +1,16 @@
+# takumi-Portfolio/deploy/cloudflared-config.example.yml
+# ── ポートフォリオ専用 cloudflared 名前付きトンネルの設定 雛形（PersonalCast の共有設定とは独立）。
+#    通常は deploy/setup_tunnel.sh <DOMAIN> が config.yml を自動生成する。手動で作る場合の参考。
+#
+# <TUNNEL_UUID>     : `cloudflared tunnel create takumi-portfolio` で発行される UUID
+# <PORTFOLIO_DOMAIN>: 取得したドメイン（Cloudflare 管理ゾーンであること。例 takumi.dev / portfolio.example.com）
+tunnel: <TUNNEL_UUID>
+credentials-file: /home/takumi0616/takumi-Portfolio/deploy/<TUNNEL_UUID>.json
+ingress:
+  - hostname: <PORTFOLIO_DOMAIN>
+    service: http://localhost:3000
+    originRequest:
+      # Next.js が公開ドメインを認識し、middleware の redirect Location を正しく
+      # https://<PORTFOLIO_DOMAIN>/... にするため Host を公開名で渡す。
+      httpHostHeader: <PORTFOLIO_DOMAIN>
+  - service: http_status:404

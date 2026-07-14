@@ -36,3 +36,10 @@ yarn-error.log*
 next-env.d.ts
 
 .env
+
+# deploy（自己完結配信）: ランタイムのログと cloudflared 認証情報・生成 config は載せない。
+# スクリプト/テンプレート（*.sh / *.service / *.example.yml / README.md）は追跡する。
+/deploy/*.log
+/deploy/portfolio_latest.log
+/deploy/*.json
+/deploy/config.yml

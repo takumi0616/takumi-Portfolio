@@ -26,20 +26,13 @@ export default function proxy(request: NextRequest) {
   )
 
   if (pathnameIsMissingLocale) {
-    if (preferredLanguage !== defaultLanguage) {
-      return NextResponse.redirect(
-        new URL(`/${preferredLanguage}${pathname}`, request.url),
-      )
-    } else {
-      // 既定言語へリライトする際、ルートレイアウトが <html lang> を解決できるよう
-      // 現在のロケールをリクエストヘッダーで引き渡す。
-      const requestHeaders = new Headers(request.headers)
-      requestHeaders.set('x-locale', defaultLanguage)
-      return NextResponse.rewrite(
-        new URL(`/${defaultLanguage}${pathname}`, request.url),
-        { request: { headers: requestHeaders } },
-      )
-    }
+    // ロケール無しは希望言語（無ければ既定言語）付きパスへ **リダイレクト** する。
+    // rewrite はリバースプロキシ(cloudflared)経由だと x-forwarded-proto:https により
+    // https://localhost への外部fetch化→TLSエラー(500)になるため使わない。redirect は内部fetchが
+    // 無いので安全。Location の公開オリジンは cloudflared の httpHostHeader（公開ドメイン）で正しくなる。
+    return NextResponse.redirect(
+      new URL(`/${preferredLanguage}${pathname}${request.nextUrl.search}`, request.url),
+    )
   }
 
   // パスからロケールを判定し、ルートレイアウトへ引き渡す。
