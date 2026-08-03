@@ -3,14 +3,14 @@
 # ── ポートフォリオ（Next.js 本番サーバ）を常駐起動する自己完結ランチャ。
 #    PersonalCast とは独立。配信に必要なものはすべて takumi-Portfolio 内で完結する。
 #
-# 前提: `npm ci && npm run build` 済み（.next 生成済み）。Node は conda env "portfolio"（node 22）。
+# 前提: `npm ci && npm run build` 済み（.next 生成済み）。Node は同梱の node v22.21.1（node 22 系）。
 # 使い方:
 #   bash deploy/run_portfolio.sh                  # フォアグラウンド起動
 #   setsid nohup bash deploy/run_portfolio.sh >/dev/null 2>&1 </dev/null &   # 常駐（detached）
 #   PORT=3000 HOST=127.0.0.1 bash deploy/run_portfolio.sh                    # ポート/ホスト上書き
 set -o pipefail
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"   # = takumi-Portfolio
-NODE_BIN=/home/takumi0616/miniconda3/envs/portfolio/bin
+NODE_BIN="${NODE_BIN:-/home/takumi0616/node-v22.21.1-linux-x64/bin}"
 PORT="${PORT:-3000}"
 HOST="${HOST:-127.0.0.1}"
 LOG="$DIR/deploy/portfolio_$(date +%Y%m%dT%H%M%S).log"
