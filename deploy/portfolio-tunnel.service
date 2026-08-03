@@ -1,24 +1,23 @@
 # takumi-Portfolio/deploy/portfolio-tunnel.service
-# ── ポートフォリオ専用 cloudflared トンネルを常駐させる systemd テンプレート（PersonalCast と独立）。
+# ── ポートフォリオ専用 cloudflared トンネルを常駐させる systemd user unit（PersonalCast と独立）。
 #    deploy/setup_tunnel.sh <DOMAIN> で deploy/config.yml を生成してから設置すること。
 #
-# 設置（要 sudo・一度だけ）:
-#   sudo cp deploy/portfolio-tunnel.service /etc/systemd/system/portfolio-tunnel.service
-#   sudo systemctl daemon-reload
-#   sudo systemctl enable --now portfolio-tunnel
-# 確認:  systemctl status portfolio-tunnel
+# 設置（sudo 不要・一度だけ）:
+#   cp deploy/portfolio-tunnel.service ~/.config/systemd/user/portfolio-tunnel.service
+#   systemctl --user daemon-reload
+#   systemctl --user enable --now portfolio-tunnel
+# 確認:  systemctl --user status portfolio-tunnel
 [Unit]
 Description=takumi Portfolio cloudflared tunnel
-After=network-online.target portfolio.service
-Wants=network-online.target
+After=portfolio.service
+Wants=portfolio.service
 
 [Service]
 Type=simple
-User=takumi0616
 # cloudflared のパスは環境に合わせる（例: /home/takumi0616/bin/cloudflared）。
 ExecStart=/home/takumi0616/bin/cloudflared tunnel --config /home/takumi0616/takumi-Portfolio/deploy/config.yml run
 Restart=always
 RestartSec=5
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
