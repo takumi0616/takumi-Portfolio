@@ -2,6 +2,42 @@
   "activity": {
     "items": [
       {
+        "date": "2026-08-26",
+        "event": "Held a NEDO NEP Pioneer Course mentoring session and decided on the first target market"
+      },
+      {
+        "date": "2026-08-18",
+        "event": "Application accepted for the MLIT Civil Aviation Bureau DIPS 2.0 API (validation environment)"
+      },
+      {
+        "date": "2026-07-31",
+        "event": "Appointed student organizing committee member (lab tours) for the 11th STI-Gigaku 2026"
+      },
+      {
+        "date": "2026-07-23",
+        "event": "Received a reply from the Japan Meteorological Agency that the design under inquiry does not constitute forecasting operations"
+      },
+      {
+        "date": "2026-07-04",
+        "event": "Attended the NEDO NEP Pioneer Course retreat (Shonan) and pitched the business"
+      },
+      {
+        "date": "2026-07-01",
+        "event": "Research period began for the WNI Foundation 16th Weather Culture Award (through June 2027)"
+      },
+      {
+        "date": "2026-06-14",
+        "event": "Completed the first draft of a paper on the automatic frontal-description system (preparing for submission to an international journal)"
+      },
+      {
+        "date": "2026-06-06",
+        "event": "Second inquiry to the Japan Meteorological Agency on whether the service constitutes forecasting operations"
+      },
+      {
+        "date": "2026-06-03",
+        "event": "Applied for JSPS Research Fellowship for Young Scientists (DC1, FY2027)"
+      },
+      {
         "date": "2026-06-01",
         "event": "WNI Foundation 16th Weather Culture Award, Research Grant - Selected"
       },
@@ -77,7 +113,10 @@
         "date": "2024-09-12",
         "event": "EasyChair for KES2024 IS11 - Presented"
       },
-      { "date": "2024-09-07", "event": "Geek Expo 2024 Vol.5 - Participated" },
+      {
+        "date": "2024-09-07",
+        "event": "Geek Expo 2024 Vol.5 - Participated"
+      },
       {
         "date": "2024-09-04",
         "event": "Large Language Models 2024 - Enrolled"
@@ -94,7 +133,10 @@
         "date": "2024-04-23",
         "event": "EasyChair for KES2024 IS11 - Paper Submitted"
       },
-      { "date": "2024-04-21", "event": "GCI 2024 Summer - Enrolled" },
+      {
+        "date": "2024-04-21",
+        "event": "GCI 2024 Summer - Enrolled"
+      },
       {
         "date": "2024-03-22",
         "event": "FY2023 Student Award for Extracurricular Activities - Received"
@@ -103,12 +145,18 @@
         "date": "2024-03-17",
         "event": "LinkX Japan Inc. Long-term Internship - Started"
       },
-      { "date": "2024-03-16", "event": "Geek Festival 2024 - Participated" },
+      {
+        "date": "2024-03-16",
+        "event": "Geek Festival 2024 - Participated"
+      },
       {
         "date": "2024-03-13",
         "event": "Meteorological Society of Japan Journal \"Tenki\" - Short Report Submitted"
       },
-      { "date": "2024-03-02", "event": "Geek Expo 2024 Vol.1 - Participated" },
+      {
+        "date": "2024-03-02",
+        "event": "Geek Expo 2024 Vol.1 - Participated"
+      },
       {
         "date": "2024-02-20",
         "event": "Money Dragon Final Presentation - Received 190,000 JPY Funding"
@@ -133,7 +181,10 @@
         "date": "2023-11-16",
         "event": "CyberAgent Inc. CA Tech Accel - Participated"
       },
-      { "date": "2023-10-28", "event": "JPhacks 2023 - Participated" },
+      {
+        "date": "2023-10-28",
+        "event": "JPhacks 2023 - Participated"
+      },
       {
         "date": "2023-10-14",
         "event": "Geek CAMP 2023 Monthly Hackathon Vol.10 - Participated"
@@ -202,7 +253,7 @@
   "hero": {
     "title": "Takumi Takasuka",
     "description1": "All-Round Engineer / Data Scientist / Intelligent Information Science Researcher / Deep Tech Entrepreneur",
-    "description2": "2nd Year Master's Student, Science and Technology Innovation Program, Nagaoka University of Technology",
+    "description2": "2nd-Year Student, Integrated 5-Year Doctoral Program, Science and Technology Innovation Program, Nagaoka University of Technology",
     "description3": "Member of Machine Learning Theory Laboratory",
     "extra_info1": "In the Machine Learning Theory Laboratory, I research the automatic generation of highly factual weather commentary, using a decomposed architecture that modularizes the tacit knowledge of expert forecasters and feeds it to an LLM.",
     "extra_info2": "To bring this research into society, I am building \"Personal Cast,\" an AI weather-forecaster service for individuals, and taking on the challenge of entrepreneurship. My goal is to deliver weather not as a \"forecast\" but as the \"next action\" to take.",
@@ -324,6 +375,20 @@
   },
   "works": {
     "data": [
+      {
+        "title": "Integrated Server Monitoring Dashboard",
+        "description": "A self-built platform that monitors nine distributed home servers and fourteen public sites on a single screen. Beyond liveness, resources, and temperature, it tracks disk growth forecasts, TLS certificate expiry, and backup freshness. Public routes can be stopped and resumed from the screen, and any drift between intent and reality is reconciled automatically. It is designed to eliminate not just outages but outages that go unnoticed — the notification path itself is monitored. Implemented using only the Python standard library.",
+        "myPart": "Architecture, implementation, operations (solo project)",
+        "gitHubUrl": "https://status.personalcast.net",
+        "image": "/status-dashboard.avif"
+      },
+      {
+        "title": "PersonalCast",
+        "description": "A personal weather service that analyzes conditions with two models (ECMWF IFS and NOAA GFS) and overlays them on Google Calendar events and a 3D map to convey when, where, and what the sky will be like. A ten-stage pipeline progressively analyzes lows, fronts, and pressure patterns, and results reach the delivery layer only after every stage passes its contract check. Rather than using an LLM for text generation, it combines machine learning, physical computation, and rule-based determinism to keep the output factual. Built as a real-world application of my research.",
+        "myPart": "Architecture, backend, data pipeline, API, infrastructure",
+        "gitHubUrl": "https://app.personalcast.net",
+        "image": "/personalcast.avif"
+      },
       {
         "title": "AI Research Institute Website",
         "description": "This is the official website for AI Research Institute operated by LinkX Japan Inc. A simple yet sophisticated design is adopted to enhance corporate credibility.",
