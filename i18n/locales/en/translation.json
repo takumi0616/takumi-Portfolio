@@ -2,6 +2,30 @@
   "activity": {
     "items": [
       {
+        "date": "2026-10-02",
+        "event": "Submitted the manuscript for SITA2026 (49th Symposium on Information Theory and its Applications, Matsuyama, Ehime)"
+      },
+      {
+        "date": "2026-09-30",
+        "event": "Submitted an entry to the JCCA Student Prize Paper Competition, Theme 2 (Japan Civil Engineering Consultants Association)"
+      },
+      {
+        "date": "2026-09-30",
+        "event": "Submitted a business plan to the MITANI Business Contest 2026 (hosted by Mitani Sangyo)"
+      },
+      {
+        "date": "2026-09-28",
+        "event": "Gave a five-minute self-introduction talk at the Nagaoka NEP meeting (SN@P)"
+      },
+      {
+        "date": "2026-09-23",
+        "event": "Submitted a talk proposal to SITA2026 (49th Symposium on Information Theory and its Applications, Matsuyama, Ehime)"
+      },
+      {
+        "date": "2026-09-09",
+        "event": "Submitted an entry to the 15th Geo Activity Contest (Geospatial Information Authority of Japan), Student Category"
+      },
+      {
         "date": "2026-08-26",
         "event": "Held a NEDO NEP Pioneer Course mentoring session and decided on the first target market"
       },
@@ -248,7 +272,7 @@
     "description2": "2nd-Year Student, Integrated 5-Year Doctoral Program, Science and Technology Innovation Program, Nagaoka University of Technology",
     "description3": "Member of Machine Learning Theory Laboratory",
     "extra_info1": "In the Machine Learning Theory Laboratory, I research the automatic generation of highly factual weather commentary, using a decomposed architecture that modularizes the tacit knowledge of expert forecasters and feeds it to an LLM.",
-    "extra_info2": "To bring this research into society, I am building \"Personal Cast,\" an AI weather-forecaster service for individuals, and taking on the challenge of entrepreneurship. My goal is to deliver weather not as a \"forecast\" but as the \"next action\" to take.",
+    "extra_info2": "To bring this research into society, I am building \"PersonalCast,\" a simulation engine that works out on-site actions from the weather, and taking on the challenge of entrepreneurship. My goal is to deliver weather not as a \"forecast\" but as the \"next action\" to take.",
     "extra_info3": "These efforts have been selected for programs such as the NEDO NEP Pioneer Course and the WNI Foundation's 16th Weather Culture Award. Drawing on the development skills gained through hackathons and lightning talks, I advance research, development, and commercialization as one."
   },
   "research": {
@@ -322,6 +346,13 @@
         "category": "Domestic Presentations",
         "items": [
           {
+            "title": "ノイズを含む補助変数の下でのidentifiable VAEの識別可能性 (Identifiability of Identifiable VAEs under Noisy Auxiliary Variables)",
+            "authors": "Takumi Takasuka, Gendo Kumoi",
+            "venue": "49th Symposium on Information Theory and its Applications (SITA2026), Matsuyama, Ehime, Dec. 15-18, 2026 (to be presented)",
+            "year": "2026",
+            "pdf": "/download_file/ノイズを含む補助変数の下でのidentifiable_VAEの識別可能性.pdf"
+          },
+          {
             "title": "認知負荷測定を用いたソフトウェア開発向けプロンプト設計戦略の分析",
             "authors": "Kouki Shiono, Kyohei Shibata, Naoki Baba, Wataru Kobayashi, Naoto Tani, Takumi Takasuka, Keitaro Nakasai, Gendo Kumoi, Katsuko T. Nakahira",
             "venue": "IPSJ 88th National Convention",
@@ -369,17 +400,17 @@
     "data": [
       {
         "title": "Integrated Server Monitoring Dashboard",
-        "description": "A self-built platform that monitors nine distributed home servers and fourteen public sites on a single screen. Beyond liveness, resources, and temperature, it tracks disk growth forecasts, TLS certificate expiry, and backup freshness. Public routes can be stopped and resumed from the screen, and any drift between intent and reality is reconciled automatically. It is designed to eliminate not just outages but outages that go unnoticed — the notification path itself is monitored. Implemented using only the Python standard library.",
+        "description": "A self-built platform that monitors nine machines and seventeen sites on a single screen. Beyond liveness, resources, and temperature, it tracks disk growth forecasts, TLS certificate expiry, and backup freshness. Public routes can be stopped and resumed from the screen, and any drift between intent and reality is reconciled automatically. It is designed to eliminate not just outages but outages that go unnoticed — the notification path itself is monitored, and notifications are held during a network outage and sent afterwards. GPU job requests, site analytics, and the remaining usage limits of AI coding agents are shown on the same screen. Implemented using only the Python standard library.",
         "myPart": "Architecture, implementation, operations (solo project)",
         "gitHubUrl": "https://status.personalcast.net",
-        "image": "/status-dashboard.avif"
+        "image": "/status-dashboard-v2.avif"
       },
       {
         "title": "PersonalCast",
-        "description": "A personal weather service that analyzes conditions with two models (ECMWF IFS and NOAA GFS) and overlays them on Google Calendar events and a 3D map to convey when, where, and what the sky will be like. A ten-stage pipeline progressively analyzes lows, fronts, and pressure patterns, and results reach the delivery layer only after every stage passes its contract check. Rather than using an LLM for text generation, it combines machine learning, physical computation, and rule-based determinism to keep the output factual. Built as a real-world application of my research.",
+        "description": "A simulation engine for specialized outdoor work. Tell it when, where and what you will do, and it checks the values published by the Japan Meteorological Agency and others against terrain, buildings and the position of the sun by a fixed procedure, then shows the time windows that fit your conditions in 3D and in text. Its first fields are scheduling infrared inspections of building walls and itineraries for trips and tours. Weather checks and numbers are produced only by deterministic calculation and rules; generative AI is limited to turning words into calculation instructions and joining the phrases the calculation produced. The same forecast data always gives the same result, and every result can be traced back to its values, criteria and sources. It makes no forecasts of its own. Built as a real-world application of my research.",
         "myPart": "Architecture, backend, data pipeline, API, infrastructure",
         "gitHubUrl": "https://app.personalcast.net",
-        "image": "/personalcast.avif"
+        "image": "/personalcast-engine.avif"
       },
       {
         "title": "AI Research Institute Website",
