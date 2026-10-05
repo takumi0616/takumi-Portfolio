@@ -88,7 +88,7 @@ const personJsonLd = {
   url: SITE_URL,
   image: `${SITE_URL}/screenshot.png`,
   jobTitle:
-    'All-Round Engineer / Data Scientist / Intelligent Information Science Researcher / Deep Tech Entrepreneur',
+    'Full-Stack Engineer / Data Scientist / Intelligent Information Science Researcher / Deep Tech Entrepreneur',
   sameAs: [
     'https://github.com/takumi0616',
     'https://zenn.dev/takumi0616',

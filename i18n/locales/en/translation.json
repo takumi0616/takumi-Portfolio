@@ -268,7 +268,7 @@
   },
   "hero": {
     "title": "Takumi Takasuka",
-    "description1": "All-Round Engineer / Data Scientist / Intelligent Information Science Researcher / Deep Tech Entrepreneur",
+    "description1": "Full-Stack Engineer / Data Scientist / Intelligent Information Science Researcher / Deep Tech Entrepreneur",
     "description2": "2nd-Year Student, Integrated 5-Year Doctoral Program, Science and Technology Innovation Program, Nagaoka University of Technology",
     "description3": "Member of Machine Learning Theory Laboratory",
     "extra_info1": "In the Machine Learning Theory Laboratory, I research the automatic generation of highly factual weather commentary, using a decomposed architecture that modularizes the tacit knowledge of expert forecasters and feeds it to an LLM.",
