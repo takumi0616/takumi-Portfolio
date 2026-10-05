@@ -410,7 +410,7 @@
         "description": "A simulation engine for specialized outdoor work. Tell it when, where and what you will do, and it checks the values published by the Japan Meteorological Agency and others against terrain, buildings and the position of the sun by a fixed procedure, then shows the time windows that fit your conditions in 3D and in text. Its first fields are scheduling infrared inspections of building walls and itineraries for trips and tours. Weather checks and numbers are produced only by deterministic calculation and rules; generative AI is limited to turning words into calculation instructions and joining the phrases the calculation produced. The same forecast data always gives the same result, and every result can be traced back to its values, criteria and sources. It makes no forecasts of its own. Built as a real-world application of my research.",
         "myPart": "Architecture, backend, data pipeline, API, infrastructure",
         "gitHubUrl": "https://app.personalcast.net",
-        "image": "/personalcast-engine.avif"
+        "image": "/personalcast-screen-20261005.avif"
       },
       {
         "title": "AI Research Institute Website",
