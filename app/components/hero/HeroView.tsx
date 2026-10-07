@@ -116,11 +116,12 @@ export default function MainView({ lang }: { lang: string }) {
         </div>
 
         <div
-          className="sticky right-0 top-0"
+          className="sticky right-0 top-0 w-1/2 portrait:w-full"
           style={{ height: `${mainContainerHeight / 2.2}px` }}
         >
           {/* paddingTop は updatePadding() が実測値を直接設定する。 */}
-          <div ref={threeJsRef}>
+          {/* 立方体は、置き場所の中央に置く（超ワイドの画面でも左に寄らない）。 */}
+          <div ref={threeJsRef} className="flex justify-center">
             <MainCube onResize={handleResize} />
           </div>
         </div>
