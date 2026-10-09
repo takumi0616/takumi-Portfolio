@@ -31,7 +31,10 @@ export default function proxy(request: NextRequest) {
     // https://localhost への外部fetch化→TLSエラー(500)になるため使わない。redirect は内部fetchが
     // 無いので安全。Location の公開オリジンは cloudflared の httpHostHeader（公開ドメイン）で正しくなる。
     return NextResponse.redirect(
-      new URL(`/${preferredLanguage}${pathname}${request.nextUrl.search}`, request.url),
+      new URL(
+        `/${preferredLanguage}${pathname}${request.nextUrl.search}`,
+        request.url,
+      ),
     )
   }
 
