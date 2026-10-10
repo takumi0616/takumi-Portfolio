@@ -9,6 +9,8 @@
 
 <p id="description"></p>
 
+<p>デザインの決まり（色・角丸・影・部品）は <a href="docs/DESIGN.md">docs/DESIGN.md</a> にまとめています。</p>
+
 <h2>🚀 Deploy URL</h2>
 
 [https://takumi-portfolio.vercel.app/](https://takumi-portfolio.vercel.app/)
