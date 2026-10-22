@@ -2,6 +2,22 @@
   "activity": {
     "items": [
       {
+        "date": "2026-10-17",
+        "event": "技育展2026　書類審査 通過（作品「セキュアトリップ」・予選は10月31日）"
+      },
+      {
+        "date": "2026-10-15",
+        "event": "長岡技術科学大学 スタートアップ支援部門　PoC支援（第2回）　申請"
+      },
+      {
+        "date": "2026-10-13",
+        "event": "SN@P（スナップ新潟）起業家発掘養成事業　メンター（〜2027年3月）"
+      },
+      {
+        "date": "2026-10-09",
+        "event": "第15回 Geoアクティビティコンテスト（国土地理院）　事前審査（書類審査）選定　― 本審査（2027年1月）・Ｇ空間EXPO2027 出展へ"
+      },
+      {
         "date": "2026-10-02",
         "event": "第49回 情報理論とその応用シンポジウム（SITA2026・愛媛県松山市）　講演原稿 提出"
       },
@@ -43,11 +59,11 @@
       },
       {
         "date": "2026-07-01",
-        "event": "WNI財団 第16回気象文化大賞　研究期間 開始（〜2027年6月）"
+        "event": "WNI気象文化創造センター 第16回気象文化大賞　研究期間 開始（〜2027年6月）"
       },
       {
         "date": "2026-06-14",
-        "event": "前線自動記述システムの論文原稿（第1稿）完成　― 国際誌へ投稿準備中"
+        "event": "前線自動記述システムの論文原稿（第1稿）完成"
       },
       {
         "date": "2026-06-03",
@@ -55,7 +71,7 @@
       },
       {
         "date": "2026-06-01",
-        "event": "WNI財団 第16回気象文化大賞　研究助成　採択"
+        "event": "WNI気象文化創造センター 第16回気象文化大賞　研究助成　採択"
       },
       {
         "date": "2026-04-01",
@@ -90,6 +106,10 @@
         "event": "日本気象学会2025年度春季大会　発表"
       },
       {
+        "date": "2025-04-01",
+        "event": "長岡技術科学大学大学院 工学研究科 技術科学イノベーション専攻（5年一貫制博士課程）　入学"
+      },
+      {
         "date": "2025-03-14",
         "event": "情報処理学会2025全国大会　発表"
       },
@@ -114,7 +134,7 @@
         "event": "大規模言語モデル_2024　修了"
       },
       {
-        "date": "2024-10-04",
+        "date": "2024-11-12",
         "event": "日本気象学会2024年度秋季大会　発表"
       },
       {
@@ -231,7 +251,7 @@
     "items": [
       {
         "date": "2026-06-01",
-        "event": "WNI財団 第16回気象文化大賞　研究助成　採択",
+        "event": "WNI気象文化創造センター 第16回気象文化大賞　研究助成　採択",
         "image": "/bunka_16th.avif"
       },
       {
@@ -273,13 +293,13 @@
     "description3": "機械学習理論研究室所属",
     "extra_info1": "機械学習理論研究室に所属し、専門家（気象予報士）の暗黙知をモジュール化してLLMに渡す分離型アーキテクチャにより、事実性の高い気象解説文を自動生成する研究に取り組んでいます。",
     "extra_info2": "その研究成果を社会実装すべく、気象と現場の行動を解くシミュレーションエンジン「パーソナルキャスト」を開発し、起業に挑戦しています。天気を「予報」としてではなく「次の行動」として届けることを目指しています。",
-    "extra_info3": "これらの活動はNEDO NEP開拓コースやWNI財団 第16回気象文化大賞などに採択いただいており、ハッカソンやLT会への登壇を通じて得た開発力も活かしながら、研究・開発・事業化を一体で進めています。"
+    "extra_info3": "これらの活動はNEDO NEP開拓コースやWNI気象文化創造センター 第16回気象文化大賞などに採択いただいており、ハッカソンやLT会への登壇を通じて得た開発力も活かしながら、研究・開発・事業化を一体で進めています。"
   },
   "research": {
     "overview_title": "研究概要",
     "overview": [
       "「予測の精度」よりも「情報伝達の正確性」を重視し、専門家（気象予報士）が作成する日本全域の気象解説文の自動生成を題材に、専門ドメインの data-to-text（D2T）生成における中間表現の設計原則の確立を目指す知能情報学研究に取り組んでいます。",
-      "気象数値データ（ERA5など）から、①気象変数への重要度付与、②自己組織化マップ（SOM）による気圧配置型分類、③Swin-Unetによる前線推定の3モジュールで中間表現を構成し、LLMの役割を「文章化」に限定することで事実性を担保します。中間表現の「精度」と「時間構造」を独立変数として系統的に操作する診断実験を通じ、生成品質との関数関係を解明します。"
+      "その部品として、気圧配置の分類（自己組織化マップ（SOM）から、判定が分かれるラベルを曖昧さごと扱う identifiable VAE へ）と、天気図の作図の決まりに沿う前線の自動記述を研究しています。identifiable VAE では、ラベルに誤りが含まれるときに潜在空間がどこまで識別できるかを理論で調べ、SITA2026 で発表します（雲居先生との共著）。LLMの役割を「文章化」に限ることで、事実性を担保します。"
     ],
     "themes_title": "研究テーマ",
     "themes": [
@@ -288,8 +308,12 @@
         "description": "専門家の暗黙知を3モジュール化した中間表現を介し、事実性の高い気象解説文をLLMで生成する分離型アーキテクチャの研究。"
       },
       {
-        "title": "SOM気圧配置分類 / Swin-Unet前線推定",
-        "description": "構造類似度指標を統合したSOM気圧配置分類と、物理連続性損失を組み込んだSwin-Unet前線推定の開発。"
+        "title": "SOM気圧配置分類 / 前線の自動記述",
+        "description": "構造類似度指標を統合したSOMによる気圧配置分類と、Swin-Unetで推定した前線を天気図の作図の決まりに沿う線として描く、前線の自動記述の研究。"
+      },
+      {
+        "title": "ラベルに誤りがあるときの identifiable VAE の識別可能性",
+        "description": "補助変数（ラベル）の真の値と分析者が与える値のずれを遷移確率行列で表し、そのランクが潜在空間の識別可能性を決めることを示す理論研究（SITA2026 で発表予定・雲居先生との共著）。"
       },
       {
         "title": "生成AI活用時の認知負荷分析",
@@ -322,15 +346,21 @@
             "year": "2025"
           },
           {
+            "title": "Measuring Cognitive Load During Generative AI-Assisted Programming Tasks Using Non-invasive Biometric Metrics",
+            "authors": "Naoto Tani, Taichi Nakamura, Fukutaro Mori, Yusaku Kii, Takumi Takasuka, Wataru Kobayashi, Naoki Baba, Koki Shiono, Kyohei Shibata, Keitaro Nakasai, Gendo Kumoi, Katsuko T. Nakahira",
+            "venue": "The 2nd Kosen Research International Symposium (KRIS 2025), Tokyo",
+            "year": "2025"
+          },
+          {
             "title": "Towards Measuring Cognitive Load during Software Engineering Tasks Using Nasal Skin Temperature: Development of a Detection System",
             "authors": "Naoto Tani, Fukutaro Mori, Taichi Nakamura, Yusaku Kii, Takumi Takasuka, Shunsuke Moriya, Keitaro Nakasai, Yoshito Otake, Gendo Kumoi, Katsuko T. Nakahira",
-            "venue": "WIREDS 2024",
+            "venue": "WIREDS 2024（共著の発表として Best Presentation Award）",
             "year": "2024"
           },
           {
             "title": "Measuring the cognitive load of programming using generative AI",
             "authors": "Fukutaro Mori, Taichi Nakamura, Yusaku Kii, Naoto Tani, Takumi Takasuka, Shunsuke Moriya, Keitaro Nakasai, Gendo Kumoi, Katsuko T. Nakahira",
-            "venue": "9th STI-Gigaku 2024, STI-9-41",
+            "venue": "9th STI-Gigaku 2024, STI-9-41（共著の発表として Best Research Presentation Award）",
             "year": "2024"
           },
           {
@@ -355,7 +385,7 @@
           {
             "title": "認知負荷測定を用いたソフトウェア開発向けプロンプト設計戦略の分析",
             "authors": "塩野 航希, 柴田 恭兵, 馬場 直揮, 小林 航, 谷 直生士, 髙須賀 匠, 中才 恵太朗, 雲居 玄道, 中平 勝子",
-            "venue": "情報処理学会 第88回全国大会",
+            "venue": "情報処理学会 第88回全国大会（発表者が学生奨励賞を受賞・共著）",
             "year": "2026"
           },
           {
@@ -403,14 +433,14 @@
         "description": "9台の機器と17件のサイトを1画面で監視する自作基盤です。死活・資源・温度に加え、ディスクの伸び予測、TLS証明書の期限、バックアップの鮮度まで見ます。公開路の停止と再開を画面から操作でき、設定と実態がずれたときは自動で是正します。「落ちたこと」より「落ちたのに気づけないこと」を潰す設計とし、通知経路そのものの断絶も監視対象に含め、通知は回線が切れている間も溜めて後から送ります。GPUジョブの受託状況、アクセス解析、Claude の利用上限の残りも同じ画面で確認できます。Python標準ライブラリのみで実装しています。",
         "myPart": "設計、実装、運用（個人開発）",
         "gitHubUrl": "https://status.personalcast.net",
-        "image": "/status-dashboard-v2.avif"
+        "image": "/status-dashboard-20261023.avif"
       },
       {
         "title": "PersonalCast",
-        "description": "屋外の作業の「いつ・どこで・何をするか」を言葉で伝えると、気象庁などの発表値と、地形・建物・太陽の位置を決まった手順で照らし合わせ、条件に合う時間帯を3Dと文章で示すシミュレーションエンジンです。最初の応用は、外壁の赤外線調査の日取りと、旅行・ツアーの行程です。気象の照らし合わせと数値は決定論の計算とルールだけで行い、生成AIは言葉を計算の指示に直すことと、計算が出した語句をつなぐことだけに使います。同じ予報データなら何度計算しても同じ結果で、根拠の値・基準・出典をたどれる形で返します。独自の予報は行いません。研究成果の社会実装として開発しています。",
+        "description": "屋外の仕事の「いつ・どこで・何をするか」を伝えると、気象庁などの発表値と、地形・建物・太陽の位置を決まった手順で照らし合わせ、条件に合う時間帯を表・地図・3D・報告書で示すシミュレーションエンジンです。いまは、外壁の赤外線調査（建物の面ごとに、明日から14日間の日ごとの結果と1日の升目・3D）と、旅行・ツアーの行程（予定を入れるそばから区間ごとに照らし、離れた予定の間には移動を自動で挟み、ガイド向けの報告書を作る）の2つを作っています。照らし合わせと数値は決まった計算とルールだけで行い、自前のサーバーで動かす生成AIは、行程の文や資料を計算の指示に直すこと、言葉での指示から行程表の時刻や順を直すこと、計算が出した事実を報告書の文にすること（数値は計算の結果から差し込む）に使います。同じ予報データなら、照らし合わせの結果は何度計算しても同じで、根拠の値・基準・出典をたどれる形で返します。独自の予報は行いません。研究成果の社会実装として開発しています。",
         "myPart": "設計、バックエンド、データパイプライン、API、インフラ",
         "gitHubUrl": "https://app.personalcast.net",
-        "image": "/personalcast-screen-20261005.avif"
+        "image": "/personalcast-screen-20261022.avif"
       },
       {
         "title": "AI総合研究所ホームページ",

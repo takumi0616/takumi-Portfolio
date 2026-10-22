@@ -2,6 +2,22 @@
   "activity": {
     "items": [
       {
+        "date": "2026-10-17",
+        "event": "Geek Expo (Gikuten) 2026 - Passed the document screening (work: \"Secure Trip\"; preliminary round on Oct. 31)"
+      },
+      {
+        "date": "2026-10-15",
+        "event": "Nagaoka University of Technology, Startup Support - Applied for PoC Support (2nd round)"
+      },
+      {
+        "date": "2026-10-13",
+        "event": "SN@P (Snap Niigata) Entrepreneur Discovery and Development Program - Mentor (through March 2027)"
+      },
+      {
+        "date": "2026-10-09",
+        "event": "15th Geo Activity Contest (Geospatial Information Authority of Japan) - Selected in the preliminary (document) screening; final screening in Jan. 2027 and exhibition at G-Spatial EXPO 2027"
+      },
+      {
         "date": "2026-10-02",
         "event": "Submitted the manuscript for SITA2026 (49th Symposium on Information Theory and its Applications, Matsuyama, Ehime)"
       },
@@ -43,11 +59,11 @@
       },
       {
         "date": "2026-07-01",
-        "event": "Research period began for the WNI Foundation 16th Weather Culture Award (through June 2027)"
+        "event": "Research period began for the WNI Weather Culture Creation Center 16th Weather Culture Award (through June 2027)"
       },
       {
         "date": "2026-06-14",
-        "event": "Completed the first draft of a paper on the automatic frontal-description system (preparing for submission to an international journal)"
+        "event": "Completed the first draft of a paper on the automatic frontal-description system"
       },
       {
         "date": "2026-06-03",
@@ -55,7 +71,7 @@
       },
       {
         "date": "2026-06-01",
-        "event": "WNI Foundation 16th Weather Culture Award, Research Grant - Selected"
+        "event": "WNI Weather Culture Creation Center 16th Weather Culture Award, Research Grant - Selected"
       },
       {
         "date": "2026-04-01",
@@ -90,6 +106,10 @@
         "event": "Meteorological Society of Japan 2025 Spring Conference - Presentation"
       },
       {
+        "date": "2025-04-01",
+        "event": "Nagaoka University of Technology, Graduate School of Engineering, Department of Science of Technology Innovation (5-year doctoral program) - Enrolled"
+      },
+      {
         "date": "2025-03-14",
         "event": "IPSJ National Convention 2025 - Presentation"
       },
@@ -114,7 +134,7 @@
         "event": "Large Language Models 2024 - Completed"
       },
       {
-        "date": "2024-10-04",
+        "date": "2024-11-12",
         "event": "Meteorological Society of Japan 2024 Autumn Conference - Presentation"
       },
       {
@@ -231,7 +251,7 @@
     "items": [
       {
         "date": "2026-06-01",
-        "event": "WNI Foundation 16th Weather Culture Award, Research Grant - Selected",
+        "event": "WNI Weather Culture Creation Center 16th Weather Culture Award, Research Grant - Selected",
         "image": "/bunka_16th.avif"
       },
       {
@@ -273,13 +293,13 @@
     "description3": "Member of Machine Learning Theory Laboratory",
     "extra_info1": "In the Machine Learning Theory Laboratory, I research the automatic generation of highly factual weather commentary, using a decomposed architecture that modularizes the tacit knowledge of expert forecasters and feeds it to an LLM.",
     "extra_info2": "To bring this research into society, I am building \"PersonalCast,\" a simulation engine that works out on-site actions from the weather, and taking on the challenge of entrepreneurship. My goal is to deliver weather not as a \"forecast\" but as the \"next action\" to take.",
-    "extra_info3": "These efforts have been selected for programs such as the NEDO NEP Pioneer Course and the WNI Foundation's 16th Weather Culture Award. Drawing on the development skills gained through hackathons and lightning talks, I advance research, development, and commercialization as one."
+    "extra_info3": "These efforts have been selected for programs such as the NEDO NEP Pioneer Course and the WNI Weather Culture Creation Center's 16th Weather Culture Award. Drawing on the development skills gained through hackathons and lightning talks, I advance research, development, and commercialization as one."
   },
   "research": {
     "overview_title": "Research Overview",
     "overview": [
       "Prioritizing the \"accuracy of information delivery\" over \"predictive precision,\" I conduct intelligent-information-science research aimed at establishing design principles for intermediate representations in domain-specific data-to-text (D2T) generation, using the automatic generation of nationwide weather commentary written by expert forecasters as the subject.",
-      "From meteorological data such as ERA5, three modules — (1) importance weighting of meteorological variables, (2) synoptic pattern classification via Self-Organizing Maps (SOM), and (3) frontal estimation via Swin-Unet — build an intermediate representation, limiting the LLM's role to \"verbalization\" to ensure factuality. Through diagnostic experiments that systematically manipulate the \"accuracy\" and \"temporal structure\" of this representation as independent variables, I clarify their functional relationship with generation quality."
+      "As its building blocks, I study the classification of synoptic pressure patterns (moving from Self-Organizing Maps (SOM) to identifiable VAEs that handle disputed labels together with their ambiguity) and automatic frontal description that draws fronts following the drafting rules of weather charts. For identifiable VAEs, I examine theoretically how far the latent space remains identifiable when the labels contain errors, to be presented at SITA2026 (co-authored with Prof. Kumoi). Limiting the LLM's role to \"verbalization\" ensures factuality."
     ],
     "themes_title": "Research Themes",
     "themes": [
@@ -288,8 +308,12 @@
         "description": "A decomposed architecture that generates highly factual weather commentary with an LLM via an intermediate representation built from experts' modularized tacit knowledge."
       },
       {
-        "title": "SOM Synoptic Classification / Swin-Unet Frontal Estimation",
-        "description": "Development of SOM-based synoptic pattern classification with integrated structural-similarity metrics, and Swin-Unet frontal estimation with a physical-continuity loss."
+        "title": "SOM Synoptic Classification / Automatic Frontal Description",
+        "description": "SOM-based synoptic pattern classification with integrated structural-similarity metrics, and automatic frontal description that draws the fronts estimated by Swin-Unet as lines following the drafting rules of weather charts."
+      },
+      {
+        "title": "Identifiability of identifiable VAEs under Erroneous Labels",
+        "description": "A theoretical study showing that, when the gap between the true values of auxiliary variables (labels) and the values given by the analyst is represented by a transition-probability matrix, its rank determines the identifiability of the latent space (to be presented at SITA2026; co-authored with Prof. Kumoi)."
       },
       {
         "title": "Cognitive Load Analysis of Generative-AI Use",
@@ -322,15 +346,21 @@
             "year": "2025"
           },
           {
+            "title": "Measuring Cognitive Load During Generative AI-Assisted Programming Tasks Using Non-invasive Biometric Metrics",
+            "authors": "Naoto Tani, Taichi Nakamura, Fukutaro Mori, Yusaku Kii, Takumi Takasuka, Wataru Kobayashi, Naoki Baba, Koki Shiono, Kyohei Shibata, Keitaro Nakasai, Gendo Kumoi, Katsuko T. Nakahira",
+            "venue": "The 2nd Kosen Research International Symposium (KRIS 2025), Tokyo",
+            "year": "2025"
+          },
+          {
             "title": "Towards Measuring Cognitive Load during Software Engineering Tasks Using Nasal Skin Temperature: Development of a Detection System",
             "authors": "Naoto Tani, Fukutaro Mori, Taichi Nakamura, Yusaku Kii, Takumi Takasuka, Shunsuke Moriya, Keitaro Nakasai, Yoshito Otake, Gendo Kumoi, Katsuko T. Nakahira",
-            "venue": "WIREDS 2024",
+            "venue": "WIREDS 2024 (Best Presentation Award, as a co-authored presentation)",
             "year": "2024"
           },
           {
             "title": "Measuring the cognitive load of programming using generative AI",
             "authors": "Fukutaro Mori, Taichi Nakamura, Yusaku Kii, Naoto Tani, Takumi Takasuka, Shunsuke Moriya, Keitaro Nakasai, Gendo Kumoi, Katsuko T. Nakahira",
-            "venue": "9th STI-Gigaku 2024, STI-9-41",
+            "venue": "9th STI-Gigaku 2024, STI-9-41 (Best Research Presentation Award, as a co-authored presentation)",
             "year": "2024"
           },
           {
@@ -355,7 +385,7 @@
           {
             "title": "認知負荷測定を用いたソフトウェア開発向けプロンプト設計戦略の分析",
             "authors": "Kouki Shiono, Kyohei Shibata, Naoki Baba, Wataru Kobayashi, Naoto Tani, Takumi Takasuka, Keitaro Nakasai, Gendo Kumoi, Katsuko T. Nakahira",
-            "venue": "IPSJ 88th National Convention",
+            "venue": "IPSJ 88th National Convention (Student Encouragement Award to the presenter; co-authored)",
             "year": "2026"
           },
           {
@@ -403,14 +433,14 @@
         "description": "A self-built platform that monitors nine machines and seventeen sites on a single screen. Beyond liveness, resources, and temperature, it tracks disk growth forecasts, TLS certificate expiry, and backup freshness. Public routes can be stopped and resumed from the screen, and any drift between intent and reality is reconciled automatically. It is designed to eliminate not just outages but outages that go unnoticed — the notification path itself is monitored, and notifications are held during a network outage and sent afterwards. GPU job requests, site analytics, and the remaining usage limits of AI coding agents are shown on the same screen. Implemented using only the Python standard library.",
         "myPart": "Architecture, implementation, operations (solo project)",
         "gitHubUrl": "https://status.personalcast.net",
-        "image": "/status-dashboard-v2.avif"
+        "image": "/status-dashboard-20261023.avif"
       },
       {
         "title": "PersonalCast",
-        "description": "A simulation engine for specialized outdoor work. Tell it when, where and what you will do, and it checks the values published by the Japan Meteorological Agency and others against terrain, buildings and the position of the sun by a fixed procedure, then shows the time windows that fit your conditions in 3D and in text. Its first fields are scheduling infrared inspections of building walls and itineraries for trips and tours. Weather checks and numbers are produced only by deterministic calculation and rules; generative AI is limited to turning words into calculation instructions and joining the phrases the calculation produced. The same forecast data always gives the same result, and every result can be traced back to its values, criteria and sources. It makes no forecasts of its own. Built as a real-world application of my research.",
+        "description": "A simulation engine for specialized outdoor work. Tell it when, where and what you will do, and it checks the values published by the Japan Meteorological Agency and others against terrain, buildings and the position of the sun by a fixed procedure, then shows the time windows that fit your conditions as tables, maps, 3D and reports. It currently covers two kinds of work: infrared inspection of building walls (for each wall, a day-by-day result for the 14 days from tomorrow, a grid for the day and 3D) and itineraries for trips and tours (each leg is checked as you enter stops, a move is inserted automatically between stops that are far apart, and a report for guides is produced). Checks and numbers are produced only by fixed calculation and rules; generative AI running on my own server is used to turn itinerary sentences and documents into calculation instructions, to change the times and order of an itinerary from words, and to turn the facts produced by the calculation into the sentences of a report (numbers are inserted from the calculation). The same forecast data always gives the same checks, and every result can be traced back to its values, criteria and sources. It makes no forecasts of its own. Built as a real-world application of my research.",
         "myPart": "Architecture, backend, data pipeline, API, infrastructure",
         "gitHubUrl": "https://app.personalcast.net",
-        "image": "/personalcast-screen-20261005.avif"
+        "image": "/personalcast-screen-20261022.avif"
       },
       {
         "title": "AI Research Institute Website",
