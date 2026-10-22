@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     'Takasuka Takumi',
     'ポートフォリオ',
     'Portfolio',
-    'Front-end Engineer',
+    'Full-Stack Engineer',
     'Data Scientist',
     'Next.js',
     'React',
