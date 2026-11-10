@@ -55,7 +55,11 @@ export default function Works({ lang, onOpenModal }: WorksProps) {
       <div className="flex flex-col items-center justify-center">
         {worksData.map((work, index) => (
           <div key={index} className="work-card mb-20 mt-10">
-            <WorkCard {...work} onOpenModal={() => onOpenModal(work)} />
+            <WorkCard
+              {...work}
+              lang={lang}
+              onOpenModal={() => onOpenModal(work)}
+            />
           </div>
         ))}
       </div>
