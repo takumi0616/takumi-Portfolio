@@ -2,8 +2,20 @@
   "activity": {
     "items": [
       {
+        "date": "2026-11-06",
+        "event": "Ran the lab tours (Activity-C) as a student organizing committee member at the 11th STI-Gigaku 2026"
+      },
+      {
+        "date": "2026-11-02",
+        "event": "Geek Expo (Gikuten) 2026 - Passed the online preliminary round and advanced to the final (work: \"Secure Trip\"; final on Nov. 28, 2026 at TOKYO NODE HALL)"
+      },
+      {
+        "date": "2026-10-26",
+        "event": "Attended the NEDO NEP Pioneer Course mid-term one-day training and pitched the business"
+      },
+      {
         "date": "2026-10-17",
-        "event": "Geek Expo (Gikuten) 2026 - Passed the document screening (work: \"Secure Trip\"; preliminary round on Oct. 31)"
+        "event": "Geek Expo (Gikuten) 2026 - Passed the document screening (work: \"Secure Trip\")"
       },
       {
         "date": "2026-10-15",
@@ -291,7 +303,7 @@
     "description1": "Full-Stack Engineer / Data Scientist / Intelligent Information Science Researcher / Deep Tech Entrepreneur",
     "description2": "2nd-Year Student, Integrated 5-Year Doctoral Program, Science and Technology Innovation Program, Nagaoka University of Technology",
     "description3": "Member of Machine Learning Theory Laboratory",
-    "extra_info1": "In the Machine Learning Theory Laboratory, I research the automatic generation of highly factual weather commentary, using a decomposed architecture that modularizes the tacit knowledge of expert forecasters and feeds it to an LLM.",
+    "extra_info1": "In the Machine Learning Theory Laboratory, I research the automatic generation of highly factual weather commentary, using a decomposed design that encodes the judgments of expert forecasters as fixed calculations and rules and leaves only the verbalization to an LLM.",
     "extra_info2": "To bring this research into society, I am building \"PersonalCast,\" a simulation engine that works out on-site actions from the weather, and taking on the challenge of entrepreneurship. My goal is to deliver weather not as a \"forecast\" but as the \"next action\" to take.",
     "extra_info3": "These efforts have been selected for programs such as the NEDO NEP Pioneer Course and the WNI Weather Culture Creation Center's 16th Weather Culture Award. Drawing on the development skills gained through hackathons and lightning talks, I advance research, development, and commercialization as one."
   },
@@ -305,7 +317,7 @@
     "themes": [
       {
         "title": "Domain-specific D2T / Automatic Weather Commentary Generation",
-        "description": "A decomposed architecture that generates highly factual weather commentary with an LLM via an intermediate representation built from experts' modularized tacit knowledge."
+        "description": "Research on generating highly factual weather commentary with a decomposed design that encodes experts' judgments as fixed calculations and rules and leaves only the verbalization to an LLM."
       },
       {
         "title": "SOM Synoptic Classification / Automatic Frontal Description",
@@ -378,7 +390,7 @@
           {
             "title": "ノイズを含む補助変数の下でのidentifiable VAEの識別可能性 (Identifiability of Identifiable VAEs under Noisy Auxiliary Variables)",
             "authors": "Takumi Takasuka, Gendo Kumoi",
-            "venue": "49th Symposium on Information Theory and its Applications (SITA2026), Matsuyama, Ehime, Dec. 15-18, 2026 (to be presented)",
+            "venue": "49th Symposium on Information Theory and its Applications (SITA2026), Matsuyama, Ehime, Dec. 17, 2026 (to be presented)",
             "year": "2026",
             "pdf": "/download_file/ノイズを含む補助変数の下でのidentifiable_VAEの識別可能性.pdf"
           },
@@ -437,7 +449,7 @@
       },
       {
         "title": "PersonalCast",
-        "description": "A simulation engine for specialized outdoor work. Tell it when, where and what you will do, and it checks the values published by the Japan Meteorological Agency and others against terrain, buildings and the position of the sun by a fixed procedure, then shows the time windows that fit your conditions as tables, maps, 3D and reports. It currently covers two kinds of work: infrared inspection of building walls (for each wall, a day-by-day result for the 14 days from tomorrow, a grid for the day and 3D) and itineraries for trips and tours (each leg is checked as you enter stops, a move is inserted automatically between stops that are far apart, and a report for guides is produced). Checks and numbers are produced only by fixed calculation and rules; generative AI running on my own server is used to turn itinerary sentences and documents into calculation instructions, to change the times and order of an itinerary from words, and to turn the facts produced by the calculation into the sentences of a report (numbers are inserted from the calculation). The same forecast data always gives the same checks, and every result can be traced back to its values, criteria and sources. It makes no forecasts of its own. Built as a real-world application of my research.",
+        "description": "A simulation engine for specialized outdoor work. Tell it when, where and what you will do, and it checks the values published by the Japan Meteorological Agency and others against terrain, buildings and the position of the sun by a fixed procedure, then shows the time windows that fit your conditions as tables, maps, 3D and reports. It currently covers two kinds of work: infrared inspection of building walls (for each wall, a day-by-day result for the 14 days from tomorrow, a grid for the day and 3D) and itineraries for trips and tours (each leg is checked as you enter stops, a move is inserted automatically between stops that are far apart, and a report for guides is produced). Several partner companies are trying a demo version of the infrared wall inspection; trips and tours are in preparation. Checks and numbers are produced only by fixed calculation and rules; generative AI running on my own server is used, for trips and tours, to turn itinerary sentences and documents into calculation instructions, to change the times and order of an itinerary from words, and to turn the facts produced by the calculation into the sentences of a report (numbers are inserted from the calculation). Generative AI is not used for infrared wall inspection. The same forecast data always gives the same checks, and every result can be traced back to its values, criteria and sources. It makes no forecasts of its own. Built as a real-world application of my research.",
         "myPart": "Architecture, backend, data pipeline, API, infrastructure",
         "gitHubUrl": "https://app.personalcast.net",
         "image": "/personalcast-screen-20261022.avif"

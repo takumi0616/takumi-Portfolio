@@ -1,11 +1,13 @@
-import { t } from 'i18next'
 import React from 'react'
 import Image from 'next/image'
 import { FaExternalLinkAlt } from 'react-icons/fa'
 import { IoLogoGithub } from 'react-icons/io'
 import { WorkCardProps } from '@/app/types'
+import { useTranslation } from '@/i18n/client'
 
-const WorkCard: React.FC<WorkCardProps> = ({
+// lang はページの言語。i18next の大域の t は、サーバーでの描画では常に日本語になるため使わない（2026-11-10）。
+const WorkCard: React.FC<WorkCardProps & { lang: string }> = ({
+  lang,
   image,
   title,
   description,
@@ -13,6 +15,7 @@ const WorkCard: React.FC<WorkCardProps> = ({
   gitHubUrl,
   onOpenModal,
 }) => {
+  const { t } = useTranslation(lang)
   const handleImageClick = () => {
     onOpenModal({ image, title, description, myPart, gitHubUrl })
   }
