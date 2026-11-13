@@ -45,7 +45,7 @@ export interface WorkCardProps {
   title: string
   description: string
   myPart: string
-  gitHubUrl: string
+  gitHubUrl?: string
   onOpenModal: (work: Omit<WorkCardProps, 'onOpenModal'>) => void
 }
 

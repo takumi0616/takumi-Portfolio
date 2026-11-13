@@ -41,17 +41,19 @@ const WorkCard: React.FC<WorkCardProps & { lang: string }> = ({
           <p>
             {t('works.my_part_label')}：{myPart}
           </p>
-          <a
-            href={gitHubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="git-link-button flex items-center justify-center rounded border border-gray-800 px-4 py-2 text-lg no-underline hover:bg-[#f0f0f0]"
-            aria-label={`${title}のソースコードをGitHubで見る`}
-          >
-            <IoLogoGithub className="mr-2.5" />
-            <div className="button-text mr-2.5">GitHub</div>
-            <FaExternalLinkAlt />
-          </a>
+          {gitHubUrl && (
+            <a
+              href={gitHubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="git-link-button flex items-center justify-center rounded border border-gray-800 px-4 py-2 text-lg no-underline hover:bg-[#f0f0f0]"
+              aria-label={`${title}のソースコードをGitHubで見る`}
+            >
+              <IoLogoGithub className="mr-2.5" />
+              <div className="button-text mr-2.5">GitHub</div>
+              <FaExternalLinkAlt />
+            </a>
+          )}
         </div>
       </div>
     </div>
