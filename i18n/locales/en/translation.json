@@ -442,9 +442,8 @@
     "data": [
       {
         "title": "Integrated Server Monitoring Dashboard",
-        "description": "A self-built platform that monitors nine machines and seventeen sites on a single screen. Beyond liveness, resources, and temperature, it tracks disk growth forecasts, TLS certificate expiry, and backup freshness. Public routes can be stopped and resumed from the screen, and any drift between intent and reality is reconciled automatically. It is designed to eliminate not just outages but outages that go unnoticed — the notification path itself is monitored, and notifications are held during a network outage and sent afterwards. GPU job requests, site analytics, and the remaining usage limits of AI coding agents are shown on the same screen. Implemented using only the Python standard library.",
+        "description": "A self-built platform that monitors nine machines and sixteen sites on a single screen. Beyond liveness, resources, and temperature, it tracks disk growth forecasts, TLS certificate expiry, and backup freshness. Public routes can be stopped and resumed from the screen, and any drift between intent and reality is reconciled automatically. It is designed to eliminate not just outages but outages that go unnoticed — the notification path itself is monitored, and notifications are held during a network outage and sent afterwards. GPU job requests, site analytics, and the remaining usage limits of AI coding agents are shown on the same screen. Implemented using only the Python standard library.",
         "myPart": "Architecture, implementation, operations (solo project)",
-        "gitHubUrl": "https://status.personalcast.net",
         "image": "/status-dashboard-20261023.avif"
       },
       {
