@@ -43,3 +43,5 @@ next-env.d.ts
 /deploy/portfolio_latest.log
 /deploy/*.json
 /deploy/config.yml
+# 静的な書き出しの時に scripts/gen-images.mjs が作る画像の幅違い（作り直せる）。
+/public/_img/
