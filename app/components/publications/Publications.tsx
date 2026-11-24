@@ -53,7 +53,10 @@ export default function Publications({ lang }: PublicationsProps) {
       <div className="flex flex-col items-center justify-center">
         {publicationsData.map((publication, index) => (
           <div key={index} className="work-card mb-20 mt-10">
-            <PublicationCard {...publication} />
+            <PublicationCard
+              {...publication}
+              urlLabel={t('publications.url_label')}
+            />
           </div>
         ))}
       </div>

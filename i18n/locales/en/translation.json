@@ -2,6 +2,10 @@
   "activity": {
     "items": [
       {
+        "date": "2026-11-13",
+        "event": "Nagaoka University of Technology, Startup Support - PoC Support (2nd round): conditionally selected (field demonstration, through Feb. 2027)"
+      },
+      {
         "date": "2026-11-06",
         "event": "Ran the lab tours (Activity-C) as a student organizing committee member at the 11th STI-Gigaku 2026"
       },
@@ -52,6 +56,10 @@
       {
         "date": "2026-09-09",
         "event": "Submitted an entry to the 15th Geo Activity Contest (Geospatial Information Authority of Japan), Student Category"
+      },
+      {
+        "date": "2026-09-03",
+        "event": "NEDO NEP Pioneer Course: field trial in Ho Chi Minh City, Vietnam - ran PersonalCast outside Japan (through Sep. 8)"
       },
       {
         "date": "2026-08-26",
@@ -262,6 +270,11 @@
   "awards": {
     "items": [
       {
+        "date": "2026-11-13",
+        "event": "Nagaoka University of Technology, Startup Support - PoC Support (2nd round): conditionally selected",
+        "image": "/nagaoka.avif"
+      },
+      {
         "date": "2026-06-01",
         "event": "WNI Weather Culture Creation Center 16th Weather Culture Award, Research Grant - Selected",
         "image": "/bunka_16th.avif"
@@ -441,14 +454,20 @@
   "works": {
     "data": [
       {
+        "title": "Fleet Terminal",
+        "description": "A self-built web app that lets me browse and operate the terminals of several machines and my AI coding agent (Claude Code) sessions from a single browser tab. Alerts for pending approvals and completions, model/effort switching, a file browser and the monitoring screen live in one place, and it works the same from a phone or tablet. A private tool used only by me, built with Python (aiohttp) and xterm.js and protected by Cloudflare Access.",
+        "myPart": "Architecture, implementation, operations (solo project)",
+        "image": "/fleet-terminal-20261124.avif"
+      },
+      {
         "title": "Integrated Server Monitoring Dashboard",
-        "description": "A self-built platform that monitors nine machines and sixteen sites on a single screen. Beyond liveness, resources, and temperature, it tracks disk growth forecasts, TLS certificate expiry, and backup freshness. Public routes can be stopped and resumed from the screen, and any drift between intent and reality is reconciled automatically. It is designed to eliminate not just outages but outages that go unnoticed — the notification path itself is monitored, and notifications are held during a network outage and sent afterwards. GPU job requests, site analytics, and the remaining usage limits of AI coding agents are shown on the same screen. Implemented using only the Python standard library.",
+        "description": "A self-built platform that monitors nine machines and sixteen sites on a single screen; it now runs as one screen inside my self-built fleet terminal. Beyond liveness, resources, and temperature, it tracks disk growth forecasts, TLS certificate expiry, and backup freshness. Public routes can be stopped and resumed from the screen, and any drift between intent and reality is reconciled automatically. It is designed to eliminate not just outages but outages that go unnoticed — the notification path itself is monitored, and notifications are held during a network outage and sent afterwards. GPU job requests, site analytics, and the remaining usage limits of AI coding agents are shown on the same screen. Implemented using only the Python standard library.",
         "myPart": "Architecture, implementation, operations (solo project)",
         "image": "/status-dashboard-20261023.avif"
       },
       {
         "title": "PersonalCast",
-        "description": "A simulation engine for specialized outdoor work. Tell it when, where and what you will do, and it checks the values published by the Japan Meteorological Agency and others against terrain, buildings and the position of the sun by a fixed procedure, then shows the time windows that fit your conditions as tables, maps, 3D and reports. It currently covers two kinds of work: infrared inspection of building walls (for each wall, a day-by-day result for the 14 days from tomorrow, a grid for the day and 3D) and itineraries for trips and tours (each leg is checked as you enter stops, a move is inserted automatically between stops that are far apart, and a report for guides is produced). Several partner companies are trying a demo version of the infrared wall inspection; trips and tours are in preparation. Checks and numbers are produced only by fixed calculation and rules; generative AI running on my own server is used, for trips and tours, to turn itinerary sentences and documents into calculation instructions, to change the times and order of an itinerary from words, and to turn the facts produced by the calculation into the sentences of a report (numbers are inserted from the calculation). Generative AI is not used for infrared wall inspection. The same forecast data always gives the same checks, and every result can be traced back to its values, criteria and sources. It makes no forecasts of its own. Built as a real-world application of my research.",
+        "description": "A simulation engine for specialized outdoor work. Tell it when, where and what you will do, and it checks the values published by the Japan Meteorological Agency and others against terrain, buildings and the position of the sun by a fixed procedure, then shows the time windows that fit your conditions as tables, maps, 3D and reports. It currently covers two kinds of work: infrared inspection of building walls (for each wall, a day-by-day result for the 14 days from today, a grid for the day and 3D) and itineraries for trips and tours (each leg is checked as you enter stops, a move is inserted automatically between stops that are far apart, and a report for guides is produced). Several partner companies are trying a demo version of the infrared wall inspection; trips and tours are in preparation. Checks and numbers are produced only by fixed calculation and rules; generative AI running on my own server is used, for trips and tours, to turn itinerary sentences and documents into calculation instructions, to change the times and order of an itinerary from words, and to turn the facts produced by the calculation into the sentences of a report (numbers are inserted from the calculation). Generative AI is not used for infrared wall inspection. The same forecast data always gives the same checks, and every result can be traced back to its values, criteria and sources. It makes no forecasts of its own. Built as a real-world application of my research.",
         "myPart": "Architecture, backend, data pipeline, API, infrastructure",
         "gitHubUrl": "https://app.personalcast.net",
         "image": "/personalcast-screen-20261022.avif"
@@ -496,7 +515,8 @@
         "image": "/MMA.avif"
       }
     ],
-    "my_part_label": "My Role"
+    "my_part_label": "My Role",
+    "link_aria": "Open the link for {{title}}"
   },
   "publications": {
     "data": [
@@ -516,6 +536,7 @@
         "abstract": "Weather forecast text (weather comments) is created by meteorologists interpreting visualized information and verbalizing it. Previous research on automatic weather comment generation has two challenges: incorporating large-scale meteorological field information and generating natural sentences. In this study, we perform automatic generation of weather comments from surface weather map images using ChatGPT4-Vision, a multimodal AI. By conducting experiments that vary the tasks indicated in the prompts and the amount of information provided, and verifying the accuracy of the output comments, we explore the applicability of multimodal AI to weather comment generation. The experimental results showed that structuring prompts to clarify instructions and instructing step-by-step execution were effective. Additionally, few-shot learning demonstrated that ChatGPT4-Vision can understand and generalize new concepts and patterns. The results of this research are expected to contribute to the realization of personalized weather forecasts for each individual.",
         "url": "https://doi.org/10.24761/tenki.72.12_603"
       }
-    ]
+    ],
+    "url_label": "Citation URL"
   }
 }

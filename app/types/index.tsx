@@ -29,6 +29,8 @@ export interface PublicationCardProps {
   authors: string
   abstract: string
   url?: string
+  // 「引用URL」の文言（言語ごと。Publications が翻訳から渡す）
+  urlLabel?: string
 }
 
 export interface PublicationsProps {

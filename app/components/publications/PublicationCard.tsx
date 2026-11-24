@@ -10,6 +10,7 @@ const PublicationCard: React.FC<PublicationCardProps> = ({
   authors,
   abstract,
   url,
+  urlLabel,
 }) => {
   return (
     <div className="flex w-[90vw] flex-col items-center overflow-hidden">
@@ -38,10 +39,10 @@ const PublicationCard: React.FC<PublicationCardProps> = ({
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-blue-600 hover:underline"
-            aria-label="引用URLを開く"
+            aria-label={urlLabel}
           >
             <FaExternalLinkAlt aria-hidden="true" />
-            <span>引用URL</span>
+            <span>{urlLabel}</span>
           </a>
         )}
       </div>
